@@ -1,0 +1,31 @@
+.listing-header {
+	background: var(--color-background);
+
+	.section-title {
+		font-size: var(--font-size-10xl);
+		font-weight: 400;
+		letter-spacing: -1px;
+	}
+
+	.sort-label {
+		font-size: var(--font-size-xl);
+		font-weight: 700;
+	}
+
+	@media (max-width: #{$screen-md - 1}) {	
+		.row {
+			flex-direction: column;
+			gap: 1.3rem;
+			text-align: left;
+		}
+		.col-lg-3,
+		.col-lg-6 {
+			width: 100%;
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+		.col-lg-3:last-child {
+			justify-content: flex-start !important;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.gift-collection-section {
+	background-color: var(--color-background);
+
+	.collection-card {
+		height: 400px;
+		position: relative;
+
+		.collection-bg {
+			object-fit: cover;
+			height: 100%;
+			filter: brightness(0.6);
+		}
+
+		.collection-overlay {
+			z-index: 2;
+			padding: 1rem;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+			.collection-title,
+			i {
+				font-size: var(--font-size-11xl);
+				letter-spacing: 1.5px;
+				line-height: 0.9;
+			}
+
+			.btn-light {
+				border-radius: 8px;
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+				transition: all 0.3s;
+
+				padding: 14px 28px;
+
+				&:hover {
+					background-color: var(--color-background);
+				}
+			}
+		}
+	}
+
+	@media (max-width: #{$screen-md - 1}) {
+		.collection-card {
+			height: 310px;
+			.collection-title,
+			i {
+				font-size: var(--font-size-5xl);
+			}
+		}
+	}
+}

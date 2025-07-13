@@ -1,0 +1,42 @@
+.site-footer {
+  background-color: var(--color-light);
+
+  .footer-logo {
+    max-width: 160px;
+  }
+
+  .social-icons a {
+    color: #000;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  .footer-links {
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        font-size: var(--font-size-sm);
+        font-weight: 600;
+        text-decoration: none;
+        color: #111;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background-color: var(--color-dark);
+  }
+}

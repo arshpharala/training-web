@@ -1,0 +1,13 @@
+.pagination-section {
+	.pagination .page-link {
+		color: var(--color-accent);
+		border: none;
+		background: transparent;
+		font-weight: 500;
+		&:hover,
+		&.active {
+			background: #e8f4f4;
+			color: #006a7b;
+		}
+	}
+}

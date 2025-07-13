@@ -1,0 +1,41 @@
+.breadcrumb-bar {
+	background-color: var(--color-primary);
+	font-size: var(--font-size-sm);
+
+	.breadcrumb {
+		background: transparent;
+		padding-left: 0;
+		margin-bottom: 0;
+		flex-wrap: nowrap; // No wrapping
+		overflow: hidden;
+	}
+
+	.breadcrumb-item {
+		max-width: 85%; // Set your own preferred max-width
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: inline-block;
+		vertical-align: middle;
+		align-items: center !important;
+		line-height: 1.5;
+		position: relative;
+
+		&.active {
+			font-weight: 500;
+			color: var(--color-light) !important;
+		}
+
+		a{
+			text-decoration: none;
+		}
+	}
+
+	.breadcrumb-item + .breadcrumb-item::before {
+		content: "|";
+		color: var(--color-light);
+		padding: 0 0.5rem 0 0;
+		margin-top: -0.25rem;
+		font-size: var(--font-size-2xl);
+	}
+}

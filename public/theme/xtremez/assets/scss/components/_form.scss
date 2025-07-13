@@ -1,0 +1,152 @@
+.theme-select {
+	min-width: 140px;
+	font-size: var(--font-size-md);
+	font-weight: 500;
+	@include select-shared;
+
+	&:focus {
+		border-color: var(--color-primary);
+		outline: 0;
+		box-shadow: 0 0 0 0.07rem var(--color-primary);
+	}
+
+	option:checked {
+		background: var(--color-primary);
+		color: var(--color-light);
+	}
+}
+
+.theme-input-group {
+	border: none;
+	background: transparent;
+	font-size: var(--font-size-md);
+	font-weight: 700;
+	padding: 1rem;
+	outline: none;
+	box-shadow: none !important;
+}
+	
+.theme-input {
+	background: transparent;
+	font-size: var(--font-size-md);
+	padding: 1rem;
+	outline: none;
+	box-shadow: none !important;
+	border-radius: 0;
+	&:focus {
+		border-color: var(--color-primary);
+		// outline: 0;
+		box-shadow: 0 0 0 0.25rem var(--color-primary);
+	}
+}
+
+.theme-radio,
+.theme-checkbox {
+	&:checked {
+		background-color: var(--color-primary);
+		border-color: var(--color-primary);
+	}
+}
+
+.cc-form {
+	.cc-input-group {
+		border: none;
+		background: transparent;
+		font-size: var(--font-size-md);
+		font-weight: 700;
+		padding: 1rem;
+		outline: none;
+		box-shadow: none !important;
+
+		.cc-button {
+			border: none;
+			font-size: var(--font-size-3xl);
+			color: #222;
+			padding-right: 1.4rem;
+			padding-left: 0;
+		}
+	}
+
+	.form-control:focus {
+		box-shadow: none;
+		border-color: var(--color-light);
+	}
+}
+
+.cc-search-bar {
+	.search-group {
+		background: #fff;
+		overflow: hidden;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+	}
+	.search-input {
+		border: none;
+		background: transparent;
+		font-size: var(--font-size-md);
+		font-weight: 700;
+		padding: 1rem;
+		outline: none;
+		box-shadow: none !important;
+	}
+	.search-icon {
+		background: #fff;
+		border: none;
+		font-size: var(--font-size-4xl);
+		color: #222;
+		padding-right: 1.4rem;
+		padding-left: 0;
+	}
+	.form-control:focus {
+		box-shadow: none;
+		border-color: var(--color-light);
+	}
+}
+
+.cc-form-check-input:checked {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+
+.cc-price-range {
+	.noUi-target {
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		height: 4px;
+		margin-top: 0.5rem;
+		z-index: 2;
+	}
+	.noUi-base {
+		background: #222;
+		border-radius: 2px;
+		height: 2px;
+		z-index: 2;
+	}
+	.noUi-connect {
+		background: var(--color-accent);
+		height: 2px;
+		z-index: 2;
+	}
+	.noUi-horizontal .noUi-handle {
+		top: -7px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #fff;
+		border: 2px solid var(--color-accent);
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+		transition: border 0.2s;
+		z-index: 2;
+	}
+	.noUi-handle:after,
+	.noUi-handle:before {
+		display: none;
+	}
+	.price-label {
+		font-size: var(--font-size-md);
+		font-weight: 500;
+		color: #222;
+		z-index: 2;
+	}
+}
