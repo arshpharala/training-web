@@ -55,12 +55,6 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Shipments</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
                   <p>Invoices</p>
                 </a>
               </li>
@@ -76,27 +70,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('admin.catalog.products.index') }}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Products</p>
+                  <p>Courses</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.catalog.categories.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Categories</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.catalog.attributes.index') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Attributes</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.catalog.brands.index') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Brands</p>
                 </a>
               </li>
             </ul>
