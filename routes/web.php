@@ -1,12 +1,20 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\ProfileController;
 
+
+Route::get("/test",[TestController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/', [HomeController::class, 'home'])->name('home');
+
+Route::get('default/make/password', function () {
+    return Hash::make('password');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

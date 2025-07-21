@@ -125,6 +125,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       promotion: false
       // Use the default TinyMCE handler (no need for custom images_upload_handler!)
     });
+    $(document).ready(function() {
+        $('.select2').select2({
+            theme: "bootstrap4",
+            allowClear: true
+        });
+    });
   </script>
 
 
