@@ -30,8 +30,92 @@
 
 	<!-- Color Skin css -->
 	<link id="theme" rel="stylesheet" type="text/css" media="all" href="{{asset('theme/xacademia/assets/color-skins/color.css') }}" />
+<style>
+.link-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+    width: 220px;
+}
 
-    @stack('head')
+.link-list > li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.link-list > li.title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.link-list a {
+    color: #1a1a2e;
+    text-decoration: none;
+    display: block;
+    padding: 4px 10px;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.link-list a:hover {
+    color: #6c5ce7;
+}
+
+/* Submenu styling */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -1px;
+    padding: 8px 0;
+    list-style: none;
+    z-index: 999;
+    min-width: 260px;
+    background: #fff;
+    border: 1px solid #6c5ce7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
+/* Nested submenus */
+.submenu .has-submenu {
+    position: relative;
+}
+
+.submenu .submenu {
+    top: 0;
+    left: calc(100% + 1px);
+    margin-top: 0;
+    margin-left: -1px; /* aligns right next to the topic box */
+    border: 1px solid #6c5ce7;
+    background: #fff;
+    position: absolute;
+    min-width: 220px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Optional arrow indicator */
+.has-submenu > a::after {
+    content: ' ▶';
+    float: right;
+    font-size: 12px;
+    margin-right: 5px;
+    color: #aaa;
+}
+</style>
 </head>
 
 <body>
