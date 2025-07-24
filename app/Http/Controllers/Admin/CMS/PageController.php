@@ -7,6 +7,7 @@ use App\Models\Seo\Meta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 
 class PageController extends Controller
@@ -63,6 +64,7 @@ class PageController extends Controller
             'slug' => 'required|string|unique:pages,slug',
             'position' => 'nullable|integer',
             'is_active' => 'nullable|boolean',
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:3072',
             'title' => 'required|array',
             'title.*' => 'required|string|max:255',
             'content' => 'nullable|array',
@@ -71,11 +73,19 @@ class PageController extends Controller
         DB::beginTransaction();
 
         try {
+
+
             $page = Page::create([
                 'slug'      => $data['slug'],
                 'position'  => $data['position'] ?? 0,
                 'is_active' => $request->has('is_active'),
             ]);
+
+            if ($request->hasFile('banner')) {
+                $banner = $request->file('banner')->store('pages', 'public');
+                $page->banner = $banner;
+                $page->save();
+            }
 
             foreach (active_locals() as $locale) {
                 $page->translations()->create([
@@ -127,7 +137,62 @@ class PageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $page = Page::findOrFail($id);
+
+        $data = $request->validate([
+            'slug' => 'required|string|unique:pages,slug,' . $page->id,
+            'position' => 'nullable|integer',
+            'is_active' => 'nullable|boolean',
+            'banner' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:3072',
+            'title' => 'required|array',
+            'title.*' => 'required|string|max:255',
+            'content' => 'nullable|array',
+        ]);
+
+        DB::beginTransaction();
+
+        try {
+
+            $page->update([
+                'slug'      => $data['slug'],
+                'position'  => $data['position'] ?? 0,
+                'is_active' => $request->has('is_active'),
+            ]);
+
+            // Handle banner update and old banner deletion
+            if ($request->hasFile('banner')) {
+                if ($page->banner && Storage::disk('public')->exists($page->banner)) {
+                    Storage::disk('public')->delete($page->banner);
+                }
+
+                $page->banner = $request->file('banner')->store('pages', 'public');
+                $page->save();
+            }
+
+            // Update or create translations per locale
+            foreach (active_locals() as $locale) {
+                $page->translations()->updateOrCreate(
+                    ['locale' => $locale],
+                    [
+                        'title'   => $data['title'][$locale] ?? '',
+                        'content' => $data['content'][$locale] ?? '',
+                    ]
+                );
+            }
+
+            Meta::store($request, $page);
+
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            throw $th;
+        }
+
+
+        return response()->json([
+            'message' => 'Page created successfully.',
+            'redirect' => route('admin.cms.pages.index')
+        ]);
     }
 
     /**

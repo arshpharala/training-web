@@ -115,14 +115,13 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        $category       = Category::withTrashed()->with('translations', 'attributes')->findOrFail($id);
+        $category       = Category::withTrashed()->with('translations')->findOrFail($id);
         $categories     = Category::where('id', '!=', $category->id)->get();
-        $attributes     = Attribute::all();
+;
 
         $data['category']       = $category;
         $data['categories']     = $categories;
-        $data['attributes']     = $attributes;
-
+        
         return view('theme.adminlte.catalog.categories.edit', $data);
     }
 
@@ -173,7 +172,6 @@ class CategoryController extends Controller
             Meta::store($request, $category);
 
             DB::commit();
-
         } catch (\Throwable $th) {
             DB::rollBack();
             throw $th;

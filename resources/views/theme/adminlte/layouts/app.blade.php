@@ -86,6 +86,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- jQuery -->
   <script src="{{ asset('theme/adminlte/plugins/jquery/jquery.min.js') }}"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="{{ asset('theme/adminlte/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
   <!-- Bootstrap 4 -->
   {{-- <script src="{{ asset('theme/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script> --}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -124,6 +126,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       convert_urls: true,
       promotion: false
       // Use the default TinyMCE handler (no need for custom images_upload_handler!)
+    });
+    $(document).ready(function() {
+        $('.select2').select2({
+            theme: "bootstrap4",
+            allowClear: true
+        });
     });
   </script>
 

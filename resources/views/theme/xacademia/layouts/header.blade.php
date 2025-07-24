@@ -40,6 +40,43 @@
                                 <div class="container">
                                     <div class="megamenu-content">
                                         <div class="row">
+                                                                                        <ul class="link-list category-menu">
+                                                <li class="title">Course Categories</li>
+
+                                                <li class="has-submenu">
+                                                    <a href="#">Project Management</a>
+                                                    <ul class="submenu">
+                                                        <li class="has-submenu">
+                                                            <a href="#">PRINCE2® Training & Certification</a>
+                                                            <ul class="submenu">
+                                                                <li><a href="#">PRINCE2® Foundation and Practitioner</a></li>
+                                                                <li><a href="#">PRINCE2® Foundation</a></li>
+                                                                <li><a href="#">PRINCE2® Practitioner</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="has-submenu">
+                                                            <a href="#">Agile Project Management</a>
+                                                            <ul class="submenu">
+                                                                <li><a href="#">AgilePM Foundation</a></li>
+                                                                <li><a href="#">AgilePM Practitioner</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="has-submenu">
+                                                    <a href="#">Business Analysis</a>
+                                                    <ul class="submenu">
+                                                        <li class="has-submenu">
+                                                            <a href="#">BA Certification</a>
+                                                            <ul class="submenu">
+                                                                <li><a href="#">Foundation in BA</a></li>
+                                                                <li><a href="#">Practitioner in BA</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                             <ul class="col link-list">
                                                 <li class="title">Other pages</li>
                                                 <li><a href="page-list.html">Page List</a></li>

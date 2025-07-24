@@ -11,19 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('countries');
+
         Schema::create('countries', function (Blueprint $table) {
-            $table->string('code', 2)->primary(); // ISO-2
-            $table->string('name');
-            $table->string('currency_code', 3);
-            $table->timestamps();
+            $table->bigIncrements('id');
+            $table->string('name', 255)->nullable();
+            $table->string('iso3', 50)->nullable();
+            $table->string('iso2', 50)->nullable();
+            $table->string('icon', 10)->nullable();
+            $table->string('numeric_code', 50)->nullable();
+            $table->string('phone_code', 50)->nullable();
+            $table->string('currency', 50)->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
         });
 
-        Schema::create('currencies', function (Blueprint $table) {
-            $table->string('code', 3)->primary(); // ISO-3
-            $table->string('name');
-            $table->decimal('exchange_rate', 12, 6)->default(1.0);
-            $table->timestamps();
-        });
+        // Schema::create('currencies', function (Blueprint $table) {
+        //     $table->string('code', 3)->primary(); // ISO-3
+        //     $table->string('name');
+        //     $table->decimal('exchange_rate', 12, 6)->default(1.0);
+        //     $table->timestamps();
+        // });
     }
 
     /**

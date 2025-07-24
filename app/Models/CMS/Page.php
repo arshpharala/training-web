@@ -16,7 +16,7 @@ class Page extends Model
     public $incrementing = false;
     protected $keyType = 'string';
 
-    protected $fillable = ['slug', 'is_active', 'position'];
+    protected $fillable = ['slug', 'is_active', 'position', 'banner'];
 
     public function translations()
     {

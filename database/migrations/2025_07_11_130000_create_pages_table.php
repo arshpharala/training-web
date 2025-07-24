@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('slug')->unique();
+            $table->text('banner')->nullable();
             $table->boolean('is_active')->default(1);
             $table->integer('position')->default(0);
             $table->timestamps();

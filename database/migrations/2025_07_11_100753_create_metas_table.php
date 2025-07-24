@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('metas', function (Blueprint $table) {
             $table->id();
-            $table->uuidMorphs('metable');
+            $table->morphs('metable');
             $table->string('locale', 10)->index();
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();

@@ -26,6 +26,7 @@ class Meta extends Model
     public static function store(Request $request, $model)
     {
         foreach ($request->input('metas', []) as $locale => $metaData) {
+            
 
             $meta = $model->metas()->updateOrCreate(
                 ['locale' => $locale],
@@ -37,7 +38,7 @@ class Meta extends Model
 
 
             $keywordIds = [];
-            foreach ($metaData['meta_keywords'] as $word) {
+            foreach ($metaData['meta_keywords'] ?? [] as $word) {
                 $word = trim($word);
                 if ($word) {
                     $keyword = Keyword::firstOrCreate(['keyword' => $word]);

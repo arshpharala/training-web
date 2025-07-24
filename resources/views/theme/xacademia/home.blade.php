@@ -44,123 +44,28 @@
                 <p class="fs-18 lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             </div>
             <div class="ms-auto">
-                <a class="btn btn-light mt-3" href="javascript:void(0)"><i class="fe fe-arrow-right"></i> View More</a>
+                <a class="btn btn-light mt-3" href="{{ route('categories.index') }}"><i class="fe fe-arrow-right"></i> View More</a>
             </div>
         </div>
         <div class="item-all-cat education-categories">
             <div class="row">
+                @foreach ($categories as $category)
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
+                        <a href="{{ route('categories.show', ['category' => $category->slug]) }}" class="absolute-link"></a>
                         <div class="iteam-all-icon">
                             <i class="fe fe-book-open"></i>
                         </div>
                         <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Language</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
+                            <h5 class="mb-0">{{ $category->translation->name ?? '' }}</h5>
+                            <p class="mt-3">{{ $category->translation->short_description ?? '' }}</p>
+                            <a class="btn-link" href="{{ route('categories.show', ['category' => $category->slug]) }}"><i class="fe fe-chevron-right"></i> View
                                 More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-airplay"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">IT Courses</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-database"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Data Science</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-heart"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Health</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fa fa-balance-scale"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Law Course</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-hash"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Maths</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark mb-lg-0 item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-briefcase"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Business</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark mb-lg-0 item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-bar-chart"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Marketing</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View
-                                More</a>
-                        </div>
-                    </div>
-                </div>
+
+                @endforeach
             </div>
         </div>
     </div>
@@ -1606,7 +1511,7 @@
 <!--/Section-->
 
 <!--Section-->
-<section class="sptb">
+{{-- <section class="sptb">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-4">
@@ -1630,7 +1535,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--/Section-->
 
 <!--Section-->
@@ -1641,150 +1546,31 @@
             <p class="fs-18 lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
         <div id="defaultCarousel" class="owl-carousel Card-owlcarousel owl-carousel-icons">
-            <div class="item">
-                <div class="card mb-0">
-                    <div class="card-body p-4">
-                        <div class="item7-card-img">
-                            <a href="javascript:void(0)"></a>
-                            <img src="{{ asset('theme/xacademia/assets/images/media/0-1.jpg') }}" alt="img"
-                                class="cover-image br-7 mb-4 border">
-                        </div>
-                        <div class="item7-card-desc d-flex mb-2">
-                            <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>Dec-03-2018</a>
-                            <div class="ms-auto">
-                                <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>4 Comments</a>
+            @foreach($blogs as $key => $blog)
+                <div class="item">
+                    <div class="card mb-0">
+                        <div class="card-body p-4">
+                            <div class="item7-card-img">
+                                <a href="javascript:void(0)"></a>
+                                <img src="{{ asset('storage/'. $blog->banner) }}" alt="{{ $blog->translation->title }}"
+                                    class="cover-image br-7 mb-4 border">
                             </div>
+                            <div class="item7-card-desc d-flex mb-2">
+                                <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>{{ $blog->created_at->format('d M, Y') }}</a>
+                                {{-- <div class="ms-auto">
+                                    <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>4 Comments</a>
+                                </div> --}}
+                            </div>
+                            <a href="blog-details.html">
+                                <h4 class="font-weight-semibold mb-2 mt-3">{{ $blog->translation->title }}</h4>
+                            </a>
+                            <p class="mb-4">{!! $blog->short_description !!}</p>
+                            <a class="btn btn-primary" href="{{ route('blog.show', ['blog' => $blog->slug]) }}">Read More <i
+                                    class="fe fe-chevron-right"></i></a>
                         </div>
-                        <a href="blog-details.html">
-                            <h4 class="font-weight-semibold mb-2 mt-3">Nemo enim ipsam voluptatem</h4>
-                        </a>
-                        <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip commodo consequat </p>
-                        <a class="btn btn-primary" href="blog-details.html">Read More <i
-                                class="fe fe-chevron-right"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0">
-                    <div class="card-body p-4">
-                        <div class="item7-card-img">
-                            <a href="javascript:void(0)"></a>
-                            <img src="{{ asset('theme/xacademia/assets/images/media/0-2.jpg') }}" alt="img"
-                                class="cover-image br-7 mb-4 border">
-                        </div>
-                        <div class="item7-card-desc d-flex mb-2">
-                            <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>Nov-28-2018</a>
-                            <div class="ms-auto">
-                                <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>2 Comments</a>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h4 class="font-weight-semibold mb-2 mt-3">Sed ut perspiciatis unde iste</h4>
-                        </a>
-                        <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip commodo consequat </p>
-                        <a class="btn btn-primary" href="blog-details.html">Read More <i
-                                class="fe fe-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0">
-                    <div class="card-body p-4">
-                        <div class="item7-card-img">
-                            <a href="javascript:void(0)"></a>
-                            <img src="{{ asset('theme/xacademia/assets/images/media/0-3.jpg') }}" alt="img"
-                                class="cover-image br-7 mb-4 border">
-                        </div>
-                        <div class="item7-card-desc d-flex mb-2">
-                            <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>Nov-19-2018</a>
-                            <div class="ms-auto">
-                                <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>8 Comments</a>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h4 class="font-weight-semibold mb-2 mt-3">At vero eos et accusamus</h4>
-                        </a>
-                        <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip commodo consequat </p>
-                        <a class="btn btn-primary" href="blog-details.html">Read More <i
-                                class="fe fe-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0">
-                    <div class="card-body p-4">
-                        <div class="item7-card-img">
-                            <a href="javascript:void(0)"></a>
-                            <img src="{{ asset('theme/xacademia/assets/images/media/0-4.jpg') }}" alt="img"
-                                class="cover-image br-7 mb-4 border">
-                        </div>
-                        <div class="item7-card-desc d-flex mb-2">
-                            <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>Dec-03-2018</a>
-                            <div class="ms-auto">
-                                <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>4 Comments</a>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h4 class="font-weight-semibold mb-2 mt-3">Excepteur occaecat cupidatat</h4>
-                        </a>
-                        <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip commodo consequat </p>
-                        <a class="btn btn-primary" href="blog-details.html">Read More <i
-                                class="fe fe-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0">
-                    <div class="card-body p-4">
-                        <div class="item7-card-img">
-                            <a href="javascript:void(0)"></a>
-                            <img src="{{ asset('theme/xacademia/assets/images/media/0-5.jpg') }}" alt="img"
-                                class="cover-image br-7 mb-4 border">
-                        </div>
-                        <div class="item7-card-desc d-flex mb-2">
-                            <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>Nov-28-2018</a>
-                            <div class="ms-auto">
-                                <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>2 Comments</a>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h4 class="font-weight-semibold mb-2 mt-3">Sed ut perspiciatis iste</h4>
-                        </a>
-                        <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip commodo consequat </p>
-                        <a class="btn btn-primary" href="blog-details.html">Read More <i
-                                class="fe fe-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0">
-                    <div class="card-body p-4">
-                        <div class="item7-card-img">
-                            <a href="javascript:void(0)"></a>
-                            <img src="{{ asset('theme/xacademia/assets/images/media/0-6.jpg') }}" alt="img"
-                                class="cover-image br-7 mb-4 border">
-                        </div>
-                        <div class="item7-card-desc d-flex mb-2">
-                            <a href="javascript:void(0)"><i class="fe fe-calendar me-2"></i>Nov-19-2018</a>
-                            <div class="ms-auto">
-                                <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>8 Comments</a>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h4 class="font-weight-semibold mb-2 mt-3">At vero accusamus et iusto</h4>
-                        </a>
-                        <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip commodo consequat </p>
-                        <a class="btn btn-primary" href="blog-details.html">Read More <i
-                                class="fe fe-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

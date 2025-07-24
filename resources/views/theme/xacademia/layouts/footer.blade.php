@@ -145,7 +145,7 @@
 					</div>
 					<div class="col-lg col-lg-auto">
 						<div class="form-group d-flex mb-0">
-							<div class="me-4 w-200">
+							{{-- <div class="me-4 w-200">
 								<select class="form-control select2" data-placeholder="Select Country">
 									<option value="en">English</option>
 									<option value="en">Arabic</option>
@@ -160,7 +160,7 @@
 									<option value="en">INR</option>
 									<option value="en">GBP</option>
 								</select>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
@@ -170,7 +170,11 @@
 			<div class="container">
 				<div class="row d-flex">
 					<div class="col-lg-12 col-sm-12  mt-2 mb-2 text-center text-white">
-						Copyright © 2022 <a href="javascript:void(0)"  class="fs-14 text-primary">Edomi</a>. Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0)" class="fs-14 text-primary"> Spruko </a> All rights reserved.
+                        @if (!empty(setting('copyright')))
+                        {!! setting('copyright') !!}
+                        @else
+						Copyright © {{now()->year}} <a href="javascript:void(0)"  class="fs-14 text-primary">{{ env('APP_NAME') }}</a>. All rights reserved.
+                        @endif
 					</div>
 				</div>
 			</div>

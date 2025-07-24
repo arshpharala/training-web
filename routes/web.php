@@ -1,12 +1,21 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\CategoryController;
+use App\Http\Controllers\TestController;
 
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/', [HomeController::class, 'home'])->name('home');
+
+Route::get("/test",[TestController::class, 'index']);
+
+Route::get('courses', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('courses/{category}', [CategoryController::class, 'show'])->name('categories.show');
+
+Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
