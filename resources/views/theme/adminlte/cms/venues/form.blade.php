@@ -40,7 +40,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" @if($object->slug=="new-arrivals") @readonly(true) @endif class="form-control" placeholder="Enter Name" required value="{{ old('name', $object->name) }}">
+                                    <input type="text" name="name" class="form-control" placeholder="Enter Name" required value="{{ old('name', $object->name) }}">
                                 </div>
                             </div>
                             <div class="col-md-4">

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CMS\CityController;
+use App\Http\Controllers\Admin\CMS\NewsController;
 use App\Http\Controllers\Admin\CMS\PageController;
 use App\Http\Controllers\Admin\CMS\StateController;
 use App\Http\Controllers\Admin\CMS\VenueController;
@@ -40,6 +41,7 @@ Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
     Route::resource('states', StateController::class);
     Route::resource('cities', CityController::class);
     Route::resource('venues', VenueController::class);
+    Route::resource('news', NewsController::class);
 
     Route::post('/sort/rows',               [CommonController::class,'sortRows'])->name('sortRows');
 
