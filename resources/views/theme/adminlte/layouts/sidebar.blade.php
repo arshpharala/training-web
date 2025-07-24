@@ -83,6 +83,12 @@
                     <p>Cities</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.cms.venues.index') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Venues</p>
+                    </a>
+                </li>
             </ul>
           </li>
           <li class="nav-item">

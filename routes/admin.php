@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CMS\CityController;
 use App\Http\Controllers\Admin\CMS\PageController;
 use App\Http\Controllers\Admin\CMS\StateController;
+use App\Http\Controllers\Admin\CMS\VenueController;
+use App\Http\Controllers\Admin\CMS\CommonController;
 use App\Http\Controllers\Admin\CMS\LocaleController;
 use App\Http\Controllers\Admin\CMS\CountryController;
 use App\Http\Controllers\Admin\CMS\SettingController;
@@ -37,6 +39,9 @@ Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
     Route::resource('countries', CountryController::class);
     Route::resource('states', StateController::class);
     Route::resource('cities', CityController::class);
+    Route::resource('venues', VenueController::class);
+
+    Route::post('/sort/rows',               [CommonController::class,'sortRows'])->name('sortRows');
 
     Route::resource('attachments', AttachmentController::class);
     Route::resource('settings', SettingController::class);
