@@ -19,4 +19,8 @@ class Course extends Model
     {
         return $this->hasMany(CourseTranslation::class);
     }
+
+    function deliveryMethods(){
+        return $this->belongsToMany(DeliveryMethod::class, 'course_delivery_methods');
+    }
 }

@@ -17,11 +17,10 @@
     @php
         $locales = active_locals();
     @endphp
-    <form action="{{ route('admin.cms.pages.update', $page) }}" method="POST" class="ajax-form">
+    <form action="{{ route('admin.cms.pages.update', $page) }}" method="POST" class="ajax-form" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">
-
             <div class="col-md-8">
                 @foreach ($locales as $locale)
                     @php $trans = $page->translations->where('locale', $locale)->first(); @endphp
@@ -39,6 +38,11 @@
                         </div>
                     </div>
                 @endforeach
+
+
+                @include('theme.adminlte.components._page-sections', ['model' => $page])
+
+
             </div>
 
             <div class="col-md-4">
@@ -71,9 +75,9 @@
                                 <img src="{{ asset('storage/' . $page->banner) }}" class="mt-2" width="150">
                             @endif
                         </div>
-
                     </div>
                 </div>
+
                 @include('theme.adminlte.components._metas', ['model' => $page, 'grid' => 'col-md-12'])
             </div>
 

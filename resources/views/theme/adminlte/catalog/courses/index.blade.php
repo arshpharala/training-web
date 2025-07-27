@@ -19,9 +19,9 @@
                         <table class="table table-bordered data-table">
                             <thead>
                                 <tr>
-                                    <th>Icon</th>
                                     <th>Course</th>
                                     <th>Category</th>
+                                    <th>Duration</th>
                                     <th>Slug</th>
                                     <th>Created At</th>
                                     <th>Action</th>
@@ -48,18 +48,16 @@
                     //     name: 'id'
                     //   },
                     {
-                        data: 'icon',
-                        name: 'icon',
-                        orderable: false,
-                        searchable: false
-                    },
-                    {
                         data: 'name',
                         name: 'course_translations.name',
                     },
                     {
                         data: 'category_name',
                         name: 'category_translations.name'
+                    },
+                    {
+                        data: 'duration',
+                        name: 'courses.duration'
                     },
                     {
                         data: 'slug',

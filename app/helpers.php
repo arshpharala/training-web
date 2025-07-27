@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Catalog\Category;
 use App\Models\CMS\Locale;
 
 if (!function_exists('setting')) {
@@ -36,8 +37,7 @@ if (!function_exists('render_meta_tags')) {
     }
 }
 
-if(!function_exists("convertStringToSlug"))
-{
+if (!function_exists("convertStringToSlug")) {
     function convertStringToSlug($string)
     {
         // Remove HTML tags and get plain text content
@@ -58,5 +58,16 @@ if(!function_exists("convertStringToSlug"))
         $trimmedText = trim($trimmedText, '-');
 
         return $trimmedText;
+    }
+}
+
+if (!function_exists("menu_cataloge")) {
+    function menu_cataloge()
+    {
+        return Category::query()
+            ->has('courses')
+            ->with('translation', 'courses.translation')
+            ->orderBy('position')
+            ->get();
     }
 }

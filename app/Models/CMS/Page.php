@@ -22,4 +22,9 @@ class Page extends Model
     {
         return $this->hasMany(PageTranslation::class);
     }
+
+    public function sections()
+    {
+        return $this->hasMany(PageSection::class);
+    }
 }

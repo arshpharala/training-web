@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -10,10 +11,14 @@ use App\Http\Controllers\TestController;
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::get("/test",[TestController::class, 'index']);
+Route::get("/test", [TestController::class, 'index']);
+
+Route::get('about-us',      [PageController::class, 'about'])->name('about');
+Route::get('contact',       [PageController::class, 'contact'])->name('contact');
 
 Route::get('courses', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('courses/{category}', [CategoryController::class, 'show'])->name('categories.show');
+Route::get('courses/{category}/{course}', [CategoryController::class, 'show'])->name('courses.show');
 
 Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.show');
 
@@ -27,4 +32,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

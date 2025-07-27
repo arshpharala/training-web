@@ -4,9 +4,14 @@ namespace App\Http\Controllers\Admin\Catalog;
 
 use Illuminate\Http\Request;
 use App\Models\Catalog\Course;
-use App\Http\Controllers\Controller;
 use App\Models\Catalog\Category;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\StoreCourseRequest;
+use App\Http\Requests\UpdateCourseRequest;
+use App\Models\Catalog\DeliveryMethod;
+use App\Models\Seo\Meta;
 
 class CourseController extends Controller
 {
@@ -19,33 +24,28 @@ class CourseController extends Controller
             $locale = app()->getLocale();
 
             $query = Course::withTrashed()
-                ->leftJoin('course_translations as translations', function ($join) use ($locale) {
-                    $join->on('translations.course_id', 'courses.id')->where('translations.locale', $locale);
+                ->leftJoin('course_translations', function ($join) use ($locale) {
+                    $join->on('course_translations.course_id', 'courses.id')->where('course_translations.locale', $locale);
                 })
                 ->leftJoin('categories', 'categories.id', 'courses.category_id')
                 ->leftJoin('category_translations', function ($join) use ($locale) {
                     $join->on('category_translations.category_id', 'categories.id')->where('category_translations.locale', $locale);
                 })
-                ->select('courses.id', 'courses.icon', 'courses.is_featured', 'courses.slug', 'courses.created_at', 'courses.deleted_at', 'translations.name', 'category_translations.name as category_name')
+                ->select('courses.id', 'courses.duration', 'courses.is_featured', 'courses.slug', 'courses.created_at', 'courses.deleted_at', 'course_translations.name', 'category_translations.name as category_name')
                 ->groupBy('courses.id');
 
 
             return DataTables::of($query)
                 ->addColumn('action', function ($row) {
                     $editUrl = route('admin.catalog.courses.edit', $row->id);
-                    $deleteUrl = route('admin.catalog.courses.destroy', $row->id);
-                    $restoreUrl = route('admin.catalog.courses.restore', $row->id);
-                    return view('theme.adminlte.components._table-actions', compact('editUrl', 'deleteUrl', 'restoreUrl', 'row'))->render();
-                })
-                ->editColumn('icon', function ($row) {
-                    return $row->logo
-                        ? '<img src="' . asset('storage/' . $row->icon) . '" class="img-sm">'
-                        : '';
+                    // $deleteUrl = route('admin.catalog.courses.destroy', $row->id);
+                    // $restoreUrl = route('admin.catalog.courses.restore', $row->id);
+                    return view('theme.adminlte.components._table-actions', compact('editUrl', 'row'))->render();
                 })
                 ->editColumn('created_at', function ($row) {
                     return $row->created_at?->format('d-M-Y  h:m A');
                 })
-                ->rawColumns(['action', 'icon'])
+                ->rawColumns(['action'])
                 ->make(true);
         }
         return view('theme.adminlte.catalog.courses.index');
@@ -61,6 +61,7 @@ class CourseController extends Controller
 
         $data['categories'] = $categories;
         $data['course']     = $course;
+        $data['deliveryMethods'] = DeliveryMethod::all();
 
 
         return view('theme.adminlte.catalog.courses.create', $data);
@@ -69,9 +70,41 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCourseRequest $request)
     {
-        //
+        DB::beginTransaction();
+        try {
+            $data = $request->validated();
+
+            // File uploads
+            $data['logo'] = $request->hasFile('logo') ? $request->file('logo')->store('categories', 'public') : null;
+            $data['icon'] = $request->hasFile('icon') ? $request->file('icon')->store('categories', 'public') : null;
+            $data['banner'] = $request->hasFile('banner') ? $request->file('banner')->store('categories', 'public') : null;
+            $data['is_active'] = $request->boolean('is_active');
+            $data['is_featured'] = $request->boolean('is_featured');
+            $data['exam_included'] = $request->boolean('exam_included');
+
+            $course = Course::create($data);
+
+            foreach (active_locals() as $locale) {
+                $course->translations()->create([
+                    'locale' => $locale,
+                    'name' => $request->input("name.$locale"),
+                    'short_description' => $request->input("short_description.$locale"),
+                    'content' => $request->input("content.$locale"),
+                ]);
+            }
+
+            DeliveryMethod::sync($request, $course);
+            Meta::store($request, $course);
+
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            throw $th;
+        }
+
+        return response()->json(['message' => 'Course created successfully.', 'redirect' => route('admin.catalog.courses.index')]);
     }
 
     /**
@@ -87,15 +120,72 @@ class CourseController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $course         = Course::withTrashed()->with('translations')->findOrFail($id);
+        $categories     = Category::with('translation')->get();
+
+        $data['deliveryMethods']    = DeliveryMethod::all();
+        $data['course']             = $course;
+        $data['categories']         = $categories;
+
+        return view('theme.adminlte.catalog.courses.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateCourseRequest $request, string $id)
     {
-        //
+        $course = Course::findOrFail($id);
+
+        DB::beginTransaction();
+
+        try {
+            $data = $request->validated();
+
+            // File uploads
+            if ($request->hasFile('logo')) {
+                $data['logo'] = $request->file('logo')->store('courses', 'public');
+            } else {
+                unset($data['logo']);
+            }
+            if ($request->hasFile('icon')) {
+                $data['icon'] = $request->file('icon')->store('courses', 'public');
+            } else {
+                unset($data['icon']);
+            }
+            if ($request->hasFile('banner')) {
+                $data['banner'] = $request->file('banner')->store('courses', 'public');
+            } else {
+                unset($data['banner']);
+            }
+
+            $data['is_active']      = $request->boolean('is_active');
+            $data['is_featured']    = $request->boolean('is_featured');
+            $data['exam_included']  = $request->boolean('exam_included');
+
+            $course->update($data);
+
+            foreach (active_locals() as $locale) {
+                $course->translations()->updateOrCreate(
+                    ['locale' => $locale],
+                    [
+                        'name' => $request->input("name.$locale"),
+                        'short_description' => $request->input("short_description.$locale"),
+                        'content' => $request->input("content.$locale"),
+                    ]
+                );
+            }
+
+            DeliveryMethod::sync($request, $course);
+            Meta::store($request, $course);
+
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            throw $th;
+        }
+
+        return response()->json(['message' => 'Course updated successfully.', 'redirect' => route('admin.catalog.courses.index')]);
     }
 
     /**

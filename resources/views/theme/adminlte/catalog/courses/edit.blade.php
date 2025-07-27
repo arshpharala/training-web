@@ -2,7 +2,7 @@
 @section('content-header')
     <div class="row mb-2">
         <div class="col-sm-6">
-            <h1>Create Course</h1>
+            <h1>Edit Course</h1>
         </div>
         <div class="col-sm-6">
             <a href="{{ route('admin.catalog.courses.index') }}" class="btn btn-secondary float-sm-right">Back to List</a>
@@ -10,8 +10,10 @@
     </div>
 @endsection
 @section('content')
-    <form action="{{ route('admin.catalog.courses.store') }}" method="POST" enctype="multipart/form-data" class="ajax-form">
+    <form action="{{ route('admin.catalog.courses.update', $course) }}" method="POST" enctype="multipart/form-data"
+        class="ajax-form">
         @csrf
+        @method('PUT')
         <div class="row">
             <div class="col-md-8">
                 <div class="card card-secondary">
@@ -23,20 +25,21 @@
                             <div class="form-group">
                                 <label>Name ({{ strtoupper($locale) }})</label>
                                 <input type="text" name="name[{{ $locale }}]" class="form-control"
-                                    value="{{ old("name.$locale") }}" required>
+                                    value="{{ $course->translations->where('locale', $locale)->first()->name ?? null }}"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label>Short Description ({{ strtoupper($locale) }})</label>
-                                <textarea name="short_description[{{ $locale }}]" rows="6" class="form-control">{{ old("short_description.$locale") }}</textarea>
+                                <textarea name="short_description[{{ $locale }}]" rows="6" class="form-control">{{ $course->translations->where('locale', $locale)->first()->short_description ?? null }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Content ({{ strtoupper($locale) }})</label>
-                                <textarea name="content[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ old("content.$locale") }}</textarea>
+                                <textarea name="content[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->content ?? null }}</textarea>
                             </div>
                         @endforeach
                     </div>
                     <div class="card-footer text-right">
-                        <button type="submit" class="btn btn-secondary">Create Course</button>
+                        <button type="submit" class="btn btn-secondary">Update Course</button>
                     </div>
                 </div>
 
@@ -54,7 +57,8 @@
                                     <select name="category_id" id="" class="form-control" required>
                                         <option value="">Select Category</option>
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->translation->name }}
+                                            <option value="{{ $category->id }}" @selected($category->id == $course->category_id)>
+                                                {{ $category->translation->name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -63,34 +67,36 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="slug">Slug</label>
-                                    <input type="text" name="slug" id="slug" class="form-control" required>
+                                    <input type="text" name="slug" id="slug" value="{{ $course->slug }}"
+                                        class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Duration</label>
-                                    <input type="number" name="duration" class="form-control" required>
+                                    <input type="number" name="duration" value="{{ $course->duration }}"
+                                        class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Position</label>
                                     <input type="number" name="position" class="form-control"
-                                        value="{{ old('position') }}">
+                                        value="{{ old('position', $course->position) }}">
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Color</label>
-                                    <input type="color" name="color" class="form-control">
+                                    <input type="color" name="color" class="form-control"
+                                        value="{{ old('color', $course->color) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
                                         <input type="checkbox" name="is_active" value="1" class="custom-control-input"
-                                            id="is_active" {{ old('is_active', 1) ? 'checked' : '' }}>
+                                            id="is_active" @checked($course->is_active)>
                                         <label class="custom-control-label" for="is_active">Active</label>
                                     </div>
                                 </div>
@@ -99,8 +105,7 @@
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
                                         <input type="checkbox" name="is_featured" value="1"
-                                            class="custom-control-input" id="is_featured"
-                                            {{ old('is_featured') ? 'checked' : '' }}>
+                                            class="custom-control-input" id="is_featured" @checked($course->is_featured)>
                                         <label class="custom-control-label" for="is_featured">Featured</label>
                                     </div>
                                 </div>
@@ -109,8 +114,7 @@
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
                                         <input type="checkbox" name="exam_included" value="1"
-                                            class="custom-control-input" id="exam_included"
-                                            {{ old('exam_included') ? 'checked' : '' }}>
+                                            class="custom-control-input" id="exam_included" @checked($course->exam_included)>
                                         <label class="custom-control-label" for="exam_included">Exam Included</label>
                                     </div>
                                 </div>
@@ -121,12 +125,24 @@
                                 <div class="form-group">
                                     <label>Logo</label>
                                     <input type="file" name="logo" class="form-control" accept="image/*">
+                                    @if ($course->logo)
+                                        <div class="mt-1">
+                                            <img src="{{ asset('storage/' . $course->logo) }}"
+                                                style="width:50px; height:50px; object-fit:cover;">
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Icon</label>
                                     <input type="file" name="icon" class="form-control" accept="image/*">
+                                    @if ($course->icon)
+                                        <div class="mt-1">
+                                            <img src="{{ asset('storage/' . $course->icon) }}"
+                                                style="width:50px; height:50px; object-fit:cover;">
+                                        </div>
+                                    @endif
                                 </div>
 
                             </div>
@@ -134,6 +150,12 @@
                                 <div class="form-group">
                                     <label>Banner</label>
                                     <input type="file" name="banner" class="form-control" accept="image/*">
+                                    @if ($course->banner)
+                                        <div class="mt-1">
+                                            <img src="{{ asset('storage/' . $course->banner) }}"
+                                                style="width:100px; height:40px; object-fit:cover;">
+                                        </div>
+                                    @endif
                                 </div>
 
                             </div>
@@ -146,7 +168,6 @@
                     'model' => $course,
                     'deliveryMethods' => $deliveryMethods
                 ])
-
                 @include('theme.adminlte.components._metas', [
                     'model' => $course,
                     'grid' => 'col-12',

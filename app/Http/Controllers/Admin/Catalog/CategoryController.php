@@ -117,11 +117,10 @@ class CategoryController extends Controller
     {
         $category       = Category::withTrashed()->with('translations')->findOrFail($id);
         $categories     = Category::where('id', '!=', $category->id)->get();
-;
 
         $data['category']       = $category;
         $data['categories']     = $categories;
-        
+
         return view('theme.adminlte.catalog.categories.edit', $data);
     }
 

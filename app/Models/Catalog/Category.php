@@ -11,6 +11,10 @@ class Category extends Model
     use HasMeta, SoftDeletes;
     protected $guarded = ['id'];
 
+    public function courses() {
+        return $this->hasMany(Course::class);
+    }
+
     public function translation()
     {
         return $this->hasOne(CategoryTranslation::class)->where('category_translations.locale', app()->getLocale());

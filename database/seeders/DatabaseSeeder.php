@@ -16,14 +16,9 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
-            AdminSeeder::class,
-            LocaleSeeder::class,
-        ]);
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => 'password'
+            // AdminSeeder::class,
+            // LocaleSeeder::class,
+            DeliveryMethodSeeder::class
         ]);
     }
 }
