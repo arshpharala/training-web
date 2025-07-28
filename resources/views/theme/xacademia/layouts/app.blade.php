@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}"
+    style="--primary-05: rgba(0, 145, 203, 0.05); --primary-1: rgba(0, 145, 203, 0.1); --primary-2: rgba(0, 145, 203, 0.2); --primary-3: rgba(0, 145, 203, 0.3); --primary-4: rgba(0, 145, 203, 0.4); --primary-5: rgba(0, 145, 203, 0.5); --primary-6: rgba(0, 145, 203, 0.6); --primary-7: rgba(0, 145, 203, 0.7); --primary-8: rgba(0, 145, 203, 0.8); --primary-9: rgba(0, 145, 203, 0.9); --primary-bg-color: #0091cb; --primary-bg-hover: #0091cb95; --primary-bg-border: #0091cb; --primary-bg-transparentcolor: #0091cb20;">
 
 <head>
     <!-- Meta data -->
@@ -11,7 +12,8 @@
     @if (setting('site_favicon'))
         <link rel="icon" href="{{ asset('storage/' . setting('site_favicon')) }}" type="image/png">
     @else
-        <link rel="icon" type="image/x-icon" href="{{ asset('theme/xacademia/assets/images/brand/favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon"
+            href="{{ asset('theme/xacademia/assets/images/brand/favicon.ico') }}" />
     @endif
 
     <!-- Title -->
