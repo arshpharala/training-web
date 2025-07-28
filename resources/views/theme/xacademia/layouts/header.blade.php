@@ -7,7 +7,7 @@
             <div class="horizontal-header clearfix ">
                 <div class="container">
                     <a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
-                    <span class="smllogo"><img src="{{ asset('theme/xacademia/assets/images/brand/logo1.png') }}"
+                    <span class="smllogo"><img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}"
                             width="120" alt="img" /></span>
                     <span class="smllogo-white"><img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}"
                             width="120" alt="img" /></span>
@@ -21,7 +21,7 @@
         <div class="horizontal-main header-style1 p-0 bg-dark-transparent clearfix">
             <div class="horizontal-mainwrapper container clearfix">
                 <div class="desktoplogo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('theme/xacademia/assets/images/brand/logo1.png') }}"
+                    <a href="{{ route('home') }}"><img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}"
                             alt="img">
                     </a>
                 </div>
@@ -29,7 +29,7 @@
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" class="header-dark"
                             alt="img">
-                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo1.png') }}"
+                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}"
                             class="header-brand-img header-white" alt="logo">
                     </a>
                 </div>
