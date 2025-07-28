@@ -18,6 +18,15 @@ class Page extends Model
 
     protected $fillable = ['slug', 'is_active', 'position', 'banner'];
 
+    function scopeActive($query){
+        $query->where('is_active', 1);
+    }
+
+    public function translation()
+    {
+        return $this->hasOne(PageTranslation::class)->where('locale', app()->getLocale());
+    }
+
     public function translations()
     {
         return $this->hasMany(PageTranslation::class);

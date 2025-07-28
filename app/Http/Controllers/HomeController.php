@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catalog\Category;
+use App\Models\Catalog\Course;
 use App\Models\CMS\News;
 use App\Models\CMS\Page;
 use Illuminate\Http\Request;
@@ -11,17 +12,15 @@ class HomeController extends Controller
 {
     function home()
     {
-        $page = Page::with('metas')
-            ->where('slug', 'home')
-            ->where('is_active', operator: true)
-            ->first();
 
         $categories = Category::with('translation')->orderBy('categories.position')->get();
 
+        $latestCourses = Course::where('is_featured', 1)->get();
+
+        $data['latestCourses'] = $latestCourses;
+
         $data['categories'] = $categories;
-        $data['page'] = $page;
-        $data['meta'] = $page->meta ?? null;
-        $data['blogs'] =   News::with('translation')->get();
+        $data['blogs']      =   News::with('translation')->get();
 
         return view('theme.xacademia.home', $data);
     }

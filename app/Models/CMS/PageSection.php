@@ -30,6 +30,11 @@ class PageSection extends Model
         });
     }
 
+    public function translation()
+    {
+        return $this->hasOne(PageSectionTranslation::class)->where('locale', app()->getLocale());
+    }
+
     public function translations()
     {
         return $this->hasMany(PageSectionTranslation::class);

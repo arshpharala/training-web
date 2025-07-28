@@ -21,12 +21,12 @@
         <div class="horizontal-main header-style1 p-0 bg-dark-transparent clearfix">
             <div class="horizontal-mainwrapper container clearfix">
                 <div class="desktoplogo">
-                    <a href="index.html"><img src="{{ asset('theme/xacademia/assets/images/brand/logo1.png') }}"
+                    <a href="{{ route('home') }}"><img src="{{ asset('theme/xacademia/assets/images/brand/logo1.png') }}"
                             alt="img">
                     </a>
                 </div>
                 <div class="desktoplogo-1">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" class="header-dark"
                             alt="img">
                         <img src="{{ asset('theme/xacademia/assets/images/brand/logo1.png') }}"
@@ -54,7 +54,7 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li aria-haspopup="true"><a href="about.html">About Us </a></li>
+                        <li aria-haspopup="true"><a href="{{ route('about') }}">About Us </a></li>
                         <li aria-haspopup="true"><a href="javascript:void(0)">Resource <span
                                     class="fe fe-chevron-down m-0"></span></a>
                             <ul class="sub-menu">
@@ -66,7 +66,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li aria-haspopup="true"><a href="contact.html"> Contact Us</a></li>
+                        <li aria-haspopup="true"><a href="{{ route('contact') }}"> Contact Us</a></li>
                     </ul>
                     <ul class="mb-0">
                         <li aria-haspopup="true" class="d-none d-lg-block mt-2 top-postbtn">

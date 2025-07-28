@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Catalog\Category;
+use App\Models\CMS\Page;
 use App\Models\CMS\Locale;
+use App\Models\Catalog\Category;
 
 if (!function_exists('setting')) {
     function setting($key, $default = null)
@@ -9,6 +10,37 @@ if (!function_exists('setting')) {
         return \App\Models\Setting::where('key', $key)->value('value') ?? $default;
     }
 }
+
+if (!function_exists('page_content')) {
+    function page_content(string $sectionType, string $key, $default = null)
+    {
+        $slug = request()->segment(1) ?: 'home';
+        $locale = app()->getLocale();
+
+        $page = once(function () use ($slug, $locale) {
+            return Page::with([
+                'metas',
+                'translation',
+                'sections.translations' => fn($q) => $q->where('locale', $locale),
+            ])
+                ->where('slug', $slug)
+                ->where('is_active', true)
+                ->first();
+        });
+
+        if (!$page) return $default;
+
+        $section = $page->sections->firstWhere('type', $sectionType);
+        if (!$section) return $default;
+
+        if ($key == 'image') return  asset('storage/'. $section->image);
+
+
+        $translation = $section->translations->firstWhere('locale', $locale);
+        return $translation->{$key} ?? $default;
+    }
+}
+
 
 
 if (!function_exists('active_locals')) {

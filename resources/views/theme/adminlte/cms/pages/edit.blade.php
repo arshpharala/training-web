@@ -59,12 +59,12 @@
                         <div class="form-group">
                             <label for="position">Position</label>
                             <input type="number" name="position" class="form-control"
-                                value="{{ old('position', $page->position) }}">
+                                value="{{$page->position }}">
                         </div>
                         <div class="form-group">
                             <div class="custom-control custom-switch mb-2">
                                 <input type="checkbox" name="is_active" value="1" class="custom-control-input"
-                                    id="is_active" {{ old('is_active', $page->is_active) ? 'checked' : '' }}>
+                                    id="is_active" @checked($page->is_active)>
                                 <label class="custom-control-label" for="is_active">Active</label>
                             </div>
                         </div>

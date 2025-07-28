@@ -12,13 +12,14 @@ class PageController extends Controller
     {
         $slug = request()->segment(1);
 
-        $page = Page::with('metas')
+        $page = Page::with('metas', 'translation')
             ->where('slug', $slug)
-            ->where('is_active', true)
+            ->active()
             ->first();
-
+            
         $data['page'] = $page;
         $data['meta'] = $page->meta ?? null;
+
 
         return view('theme.xacademia.pages.about', $data);
     }
@@ -34,5 +35,4 @@ class PageController extends Controller
 
         return view('theme.xacademia.pages.about', $data);
     }
-
 }
