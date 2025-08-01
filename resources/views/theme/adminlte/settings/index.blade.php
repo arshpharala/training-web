@@ -5,10 +5,10 @@
       <h1 class="m-0">Setting</h1>
     </div>
     <div class="col-sm-6">
-        <div class="d-flex flex-row gap-2 justify-content-end">
-            <button class="btn btn-primary">Discard</button>
+        {{-- <div class="d-flex flex-row gap-2 justify-content-end">
+            <a class="btn btn-primary">Discard</a>
             <button class="btn btn-primary">Save</button>
-        </div>
+        </div> --}}
     </div>
   </div>
 @endsection
@@ -62,6 +62,9 @@
                     <img src="{{ asset('storage/' . setting('site_favicon')) }}" class="mt-2" width="32">
                   @endif
                 </div>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </div>
           </div>
