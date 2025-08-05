@@ -40,10 +40,10 @@
                                         </a>
                                     </li>
                                 @endif
-                                @if (!empty(setting('facebook')))
+                                @if (!empty(setting('instagram')))
                                 <li class="list-inline-item">
-                                    <a href="{{ setting('facebook') }}" class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
-                                        <i class="fa fa-twitter"></i>
+                                    <a href="{{ setting('instagram') }}" class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
+                                        <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
                                 @endif
