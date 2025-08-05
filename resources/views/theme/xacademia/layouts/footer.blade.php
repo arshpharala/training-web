@@ -41,25 +41,28 @@
                                     </li>
                                 @endif
                                 @if (!empty(setting('instagram')))
-                                <li class="list-inline-item">
-                                    <a href="{{ setting('instagram') }}" class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
+                                    <li class="list-inline-item">
+                                        <a href="{{ setting('instagram') }}"
+                                            class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
                                 @endif
                                 @if (!empty(setting('linkedin')))
-                                <li class="list-inline-item">
-                                    <a href="{{ setting('linkedin') }}" class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
+                                    <li class="list-inline-item">
+                                        <a href="{{ setting('linkedin') }}"
+                                            class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
                                 @endif
                                 @if (!empty(setting('twitter')))
-                                <li class="list-inline-item">
-                                    <a href="{{ setting('twitter') }}" class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
+                                    <li class="list-inline-item">
+                                        <a href="{{ setting('twitter') }}"
+                                            class="social-icons btn-sm rgba-white-slight waves-effect waves-light">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
                                 @endif
                             </ul>
                         </div>
@@ -80,16 +83,21 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="col-lg-4 col-md-12">
+                        <div class="col-lg-8 col-md-12">
                             <h6 class="font-weight-normal text-white">Courses</h6>
                             <ul class="list-unstyled mb-5 mb-lg-0">
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Angular</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Java</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> HTML</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Devops</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Php Laravel</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Digital Marketing</a>
-                                </li>
+                                @foreach (menu_cataloge() as $category)
+                                    @foreach ($category->courses as $course)
+                                        <li>
+                                            <a
+                                                href="{{ route('courses.show', ['category' => $category->slug, 'course' => $course->slug]) }}">
+                                                <i class="fe fe-chevron-right"></i>
+                                                {{ $course->translation->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                @endforeach
+
                             </ul>
                         </div>
                         <div class="col-lg-4 col-md-12">
@@ -101,18 +109,6 @@
                                 <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Services</a></li>
                                 <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Blog News</a></li>
                                 <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Online Classes</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <h6 class="font-weight-normal text-white">Support</h6>
-                            <ul class="list-unstyled mb-5 mb-lg-0">
-                                <li><a href="{{ route('home') }}"><i class="fe fe-chevron-right"></i> Home</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Sitemap</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Privacy Policy</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Cooky Policy</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Web User Plocy</a></li>
-                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Terms and Services</a>
-                                </li>
                             </ul>
                         </div>
                     </div>
