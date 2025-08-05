@@ -67,8 +67,11 @@
                             <h6 class="font-weight-normal text-white">Categories</h6>
                             <ul class="list-unstyled mb-5 mb-lg-0">
                                 @foreach (menu_cataloge() as $category)
-                                    <li><a href="{{ route('categories.show', ['category' => $category->slug]) }}"><i
-                                                class="fe fe-chevron-right"></i> {{ $category->translation->name }}</a>
+                                    <li>
+                                        <a href="{{ route('categories.show', ['category' => $category->slug]) }}">
+                                            <i class="fe fe-chevron-right"></i>
+                                            {{ $category->translation->name }}
+                                        </a>
                                     </li>
                                 @endforeach
                             </ul>
