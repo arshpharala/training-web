@@ -105,6 +105,13 @@
               </div>
             </div>
 
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="mb-3">TinyMC Key</h5>
+                <input type="text" class="form-control" name="copyright" value="{{ setting('tinymc_key') }}">
+              </div>
+            </div>
+
           </div>
         </div><!-- end row -->
       </form>
