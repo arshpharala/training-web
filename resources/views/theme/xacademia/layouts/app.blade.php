@@ -1,6 +1,7 @@
 <!doctype html>
+
 <html lang="{{ app()->getLocale() }}"
-    style="--primary-05: rgba(143, 143, 143, 0.05); --primary-1: rgba(143, 143, 143, 0.1); --primary-2: rgba(143, 143, 143, 0.2); --primary-3: rgba(143, 143, 143, 0.3); --primary-4: rgba(143, 143, 143, 0.4); --primary-5: rgba(143, 143, 143, 0.5); --primary-6: rgba(143, 143, 143, 0.6); --primary-7: rgba(143, 143, 143, 0.7); --primary-8: rgba(143, 143, 143, 0.8); --primary-9: rgba(143, 143, 143, 0.9); --primary-bg-color: #8f8f8f; --primary-bg-hover: #8f8f8f95; --primary-bg-border: #8f8f8f; --primary-bg-transparentcolor: #8f8f8f20;">
+    style="--primary-05: rgba(0, 87, 184, 0.05); --primary-1: rgba(0, 87, 184, 0.1); --primary-2: rgba(0, 87, 184, 0.2); --primary-3: rgba(0, 87, 184, 0.3); --primary-4: rgba(0, 87, 184, 0.4); --primary-5: rgba(0, 87, 184, 0.5); --primary-6: rgba(0, 87, 184, 0.6); --primary-7: rgba(0, 87, 184, 0.7); --primary-8: rgba(0, 87, 184, 0.8); --primary-9: rgba(0, 87, 184, 0.9); --primary-bg-color: #0057b8; --primary-bg-hover: #0057b895; --primary-bg-border: #0057b8; --primary-bg-transparentcolor: #0057b820;">
 
 <head>
     <!-- Meta data -->
