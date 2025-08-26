@@ -27,7 +27,8 @@
     <section class="sptb position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 text-center mb-5">
+            {!! $page->translation->content !!}
+                {{-- <div class="col-lg-12 col-md-12 col-sm-12 text-center mb-5">
                     <h1 class="mb-4 font-weight-bold">About Xcademia?</h1>
                     <p class="leading-normal lead-1">Majority have suffered alteration in some form, by injected humor</p>
                 </div>
@@ -56,7 +57,7 @@
                             sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                             laborum.</p>
                     </div>
-                </div>
+                </div> --}}
                 <div class="aboutlink">
                     <a href="#sec1" class="">
                         <i class="fa fa-angle-double-down"></i>
@@ -192,8 +193,8 @@
                             <div class="card">
                                 <div class="card-body text-center">
                                     <div class="feature">
-                                        <div class="fa-stack fa-lg  fea-icon mb-3">
-                                            <i class="fa fa-heart"></i>
+                                        <div class="fa-stack fa-lg bg-primary  fea-icon mb-3">
+                                            <i class="fa fa-heart  text-white"></i>
                                         </div>
                                         <h3 class="font-weight-semibold">{!! page_content('why-choose-us-2', 'heading', 'Online Intractive Classes') !!}</h3>
                                         <p>{!! page_content(
