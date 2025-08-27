@@ -73,10 +73,10 @@
                 </div>
             </div>
             <div class="row ">
-                <div class="col-md-12 col-lg-6 col-sm-12">
+                <div class="col-md-12 col-lg-7 col-sm-12">
                     {!! page_content('who-we-are', 'content') !!}
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <div class="feature-1 text-center ms-5">
                         <img src="{!! page_content('who-we-are', 'image') !!}" class="feature" alt="img">
                     </div>
