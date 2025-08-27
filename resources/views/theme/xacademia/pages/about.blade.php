@@ -6,7 +6,7 @@
     <!--Section-->
     <section>
         <div class="sptb-2 bannerimg">
-            <div class="header-text mb-0">
+            {{-- <div class="header-text mb-0">
                 <div class="container">
                     <div class="text-center text-white py-7">
                         <h1 class="">About Us</h1>
@@ -14,6 +14,45 @@
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">About Us</li>
                         </ol>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="header-text1 mb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-7 col-md-12">
+                            <div class="mt-7">
+                                <h1 class="text-white display-5 font-weight-semibold">Training that lifts teams and lives
+                                </h1>
+                                <p class="text-white lead">At <b>Xcademia</b>, we blend expert mentors with an AI-powered
+                                    learning engine to build practical skills you can use at work and in everyday life.
+                                    Focus areas include Cybersecurity, GRC, Cloud, Software, Leadership, and personal
+                                    effectiveness.</p>
+                                <a href="javascript:void(0)" class="btn btn-lg btn-white">Explore Programs</a><a
+                                    href="javascript:void(0)" class="btn btn-lg btn-outline-light ms-4 text-white">Talk to
+                                    Expert</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-12">
+                            <div class="card mt-7">
+                                <div class="card-body">
+                                    <div class="product-slider">
+                                        <ul class="list-unstyled video-list-thumbs">
+                                            <li class="mb-0">
+                                                <a data-bs-toggle="modal" data-bs-target="#homeVideo"
+                                                    class="class-video p-0">
+                                                    <img src="{{ asset('theme/xacademia/assets/images/media/0-13.jpg') }}" alt="img"
+                                                        class="img-responsive  border br-7">
+                                                    <span class="video-icon" href="javascript:void(0)">
+                                                        <i class="fe fe-play"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,7 +186,7 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                                                    content of a page when looking at its layout.',
+                                                                                                                                                                                                    content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
                             <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
@@ -183,7 +222,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                        every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -201,7 +240,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -219,7 +258,7 @@
                                             'why-choose-us-3',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                        every pain.',
+                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -236,7 +275,7 @@
                                             'why-choose-us-4',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                        every pain.',
+                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -263,16 +302,18 @@
                 <div class="container">
                     <div class="row text-center">
                         @foreach ($statistics as $statistic)
-                        <div class="col-lg-3 col-md-6">
-                            <div class="counter-status md-mb-0">
-                                <div class="counter-icon align-items-center">
-                                    <img src="{{ asset('storage/'. $statistic->icon) }}" style=" filter: brightness(0) invert(1);" height="35px" width="35px" alt="{{ $statistic->translation->name }}">
-                                    {{-- <i class="typcn typcn-group-outline"></i> --}}
+                            <div class="col-lg-3 col-md-6">
+                                <div class="counter-status md-mb-0">
+                                    <div class="counter-icon align-items-center">
+                                        <img src="{{ asset('storage/' . $statistic->icon) }}"
+                                            style=" filter: brightness(0) invert(1);" height="35px" width="35px"
+                                            alt="{{ $statistic->translation->name }}">
+                                        {{-- <i class="typcn typcn-group-outline"></i> --}}
+                                    </div>
+                                    <h5>{{ $statistic->translation->name }}</h5>
+                                    <h2 class="counter mb-0">{{ $statistic->number }}</h2>
                                 </div>
-                                <h5>{{ $statistic->translation->name }}</h5>
-                                <h2 class="counter mb-0">{{ $statistic->number }}</h2>
                             </div>
-                        </div>
                         @endforeach
 
                     </div>
