@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\CMS\CityController;
 use App\Http\Controllers\Admin\CMS\VenueController;
 use App\Http\Controllers\Admin\CMS\CommonController;
 use App\Http\Controllers\Admin\CMS\NewsController;
+use App\Http\Controllers\Admin\CMS\StatisticController;
 
 Route::get('dashboard',                             [DashboardController::class, 'dashboard'])->name('dashboard');
 
@@ -45,7 +46,7 @@ Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
     Route::resource('venues', VenueController::class);
     Route::resource('news', NewsController::class);
 
-    Route::post('/sort/rows',               [CommonController::class,'sortRows'])->name('sortRows');
+    Route::post('/sort/rows',               [CommonController::class, 'sortRows'])->name('sortRows');
 
     Route::resource('locales',                  LocaleController::class);
     Route::delete('locales/{product}/restore',      [LocaleController::class, 'restore'])->name('locales.restore');
@@ -53,6 +54,8 @@ Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
 
     Route::resource('pages',                    PageController::class);
     Route::delete('pages/{product}/restore',        [PageController::class, 'restore'])->name('pages.restore');
+
+    Route::resource('statistics',                       StatisticController::class);
 
     Route::post('upload/tinymce',                   [TinyMCEController::class, 'upload'])->name('upload.tinymce');
 });

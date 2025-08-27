@@ -6,6 +6,7 @@ use App\Models\Catalog\Category;
 use App\Models\Catalog\Course;
 use App\Models\CMS\News;
 use App\Models\CMS\Page;
+use App\Models\CMS\Statistic;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,6 +17,7 @@ class HomeController extends Controller
         $categories = Category::with('translation')->orderBy('categories.position')->get();
 
         $latestCourses = Course::where('is_featured', 1)->get();
+
 
         $data['latestCourses'] = $latestCourses;
 

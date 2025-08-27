@@ -27,7 +27,7 @@
     <section class="sptb position-relative">
         <div class="container">
             <div class="row">
-            {!! $page->translation->content !!}
+                {!! $page->translation->content !!}
                 {{-- <div class="col-lg-12 col-md-12 col-sm-12 text-center mb-5">
                     <h1 class="mb-4 font-weight-bold">About Xcademia?</h1>
                     <p class="leading-normal lead-1">Majority have suffered alteration in some form, by injected humor</p>
@@ -147,7 +147,7 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                            content of a page when looking at its layout.',
+                                                                                                    content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
                             <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
@@ -183,7 +183,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                            every pain.',
+                                                                                                                                        every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -201,7 +201,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                        every pain.',
+                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -214,9 +214,13 @@
                                         <div class="fa-stack fa-lg  fea-icon bg-secondary mb-3">
                                             <i class="fa fa-bookmark  text-white"></i>
                                         </div>
-                                         <h3 class="font-weight-semibold">{!! page_content('why-choose-us-3', 'heading', 'Realtime Project Work') !!}</h3>
-                                            <p>{!! page_content('why-choose-us-3', 'content', 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                every pain.') !!}</p>
+                                        <h3 class="font-weight-semibold">{!! page_content('why-choose-us-3', 'heading', 'Realtime Project Work') !!}</h3>
+                                        <p>{!! page_content(
+                                            'why-choose-us-3',
+                                            'content',
+                                            'our being able to do what we like best, every pleasure is to be welcomed and
+                                                                                        every pain.',
+                                        ) !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -227,9 +231,13 @@
                                             <i class="fa fa-line-chart   text-white"></i>
                                         </div>
 
-                                         <h3 class="font-weight-semibold">{!! page_content('why-choose-us-4', 'heading', '100% Job Assistance') !!}</h3>
-                                            <p>{!! page_content('why-choose-us-4', 'content', 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                every pain.') !!}</p>
+                                        <h3 class="font-weight-semibold">{!! page_content('why-choose-us-4', 'heading', '100% Job Assistance') !!}</h3>
+                                        <p>{!! page_content(
+                                            'why-choose-us-4',
+                                            'content',
+                                            'our being able to do what we like best, every pleasure is to be welcomed and
+                                                                                        every pain.',
+                                        ) !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -245,4 +253,32 @@
             </div>
         </div>
     </section><!--/Section-->
+
+
+    <!--Section-->
+    <section>
+        <div class="about-1 cover-image sptb bg-background-color"
+            data-bs-image-src="../assets/images/banners/banner5.jpg">
+            <div class="content-text mb-0 text-white info">
+                <div class="container">
+                    <div class="row text-center">
+                        @foreach ($statistics as $statistic)
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter-status md-mb-0">
+                                <div class="counter-icon align-items-center">
+                                    <img src="{{ asset('storage/'. $statistic->icon) }}" style=" filter: brightness(0) invert(1);" height="35px" width="35px" alt="{{ $statistic->translation->name }}">
+                                    {{-- <i class="typcn typcn-group-outline"></i> --}}
+                                </div>
+                                <h5>{{ $statistic->translation->name }}</h5>
+                                <h2 class="counter mb-0">{{ $statistic->number }}</h2>
+                            </div>
+                        </div>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Section-->
 @endsection

@@ -4,7 +4,7 @@
       <a href="index3.html" class="brand-link">
           <img src="{{ asset('theme/adminlte/dist/img/AdminLTELogo.png') }}" alt="Logo"
               class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">AdminLTE 3</span>
+          <span class="brand-text font-weight-light">Xcademia</span>
       </a>
 
       <!-- Sidebar -->
@@ -123,12 +123,27 @@
                       </ul>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('admin.cms.pages.index') }}" class="nav-link">
+                      <a href="#" class="nav-link">
                           <i class="nav-icon fas fa-file-alt"></i>
                           <p>
                               CMS
+                              <i class="right fas fa-angle-left"></i>
                           </p>
                       </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ route('admin.cms.pages.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Pages</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('admin.cms.statistics.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Statistics</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
 
                   <li class="nav-item">

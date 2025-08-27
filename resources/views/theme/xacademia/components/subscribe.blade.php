@@ -8,7 +8,7 @@
 						<div class="col-lg-6">
 							<div class="mt-0">
 								<h1 class="mb-2 font-weight-semibold">Subscribe</h1>
-								<p class="fs-18 mb-0">Many desktop publishing packages and web page editors.</p>
+								<p class="fs-18 mb-0">Enter your email and join our global learning community today!</p>
 							</div>
 						</div>
 						<div class="col-lg-6">

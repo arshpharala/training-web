@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Models\CMS\Page;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\CMS\Statistic;
 
 class PageController extends Controller
 {
@@ -16,8 +17,12 @@ class PageController extends Controller
             ->where('slug', $slug)
             ->active()
             ->first();
-            
+
+
+        $statistics = Statistic::where('is_active', 1)->get();
+
         $data['page'] = $page;
+        $data['statistics'] = $statistics;
         $data['meta'] = $page->meta ?? null;
 
 

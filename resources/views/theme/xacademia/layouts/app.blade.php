@@ -11,7 +11,7 @@
     {!! render_meta_tags($meta ?? null) !!}
     <!-- Favicon -->
     @if (setting('site_favicon'))
-        <link rel="icon" href="{{ asset('storage/' . setting('site_favicon')) }}" type="image/png">
+        <link rel="icon" href="{{ asset(setting('site_favicon')) }}" type="image/png">
     @else
         <link rel="icon" type="image/x-icon"
             href="{{ asset('theme/xacademia/assets/images/brand/favicon.ico') }}" />
