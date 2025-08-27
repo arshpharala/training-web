@@ -62,41 +62,34 @@
 @endsection
 
 @section('content')
+
+    <!--Section-->
+    <section class="sptb">
+        <div class="container">
+            <div class="section-title d-md-flex">
+                <div>
+                    <h2>{!! page_content('who-we-are', 'heading', 'Who we are?') !!}</h2>
+                    <p class="fs-18 lead">{!! page_content('why-choose-us', 'content', 'Majority have suffered alteration in some form, by injected humo') !!}</p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 col-lg-6 col-sm-12">
+                    {!! page_content('who-we-are', 'content') !!}
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-1 text-center ms-5">
+                        <img src="{!! page_content('who-we-are', 'image') !!}" class="feature" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/Section-->
+
     <!--section-->
-    <section class="sptb position-relative">
+    {{-- <section class="sptb position-relative">
         <div class="container">
             <div class="row">
                 {!! $page->translation->content !!}
-                {{-- <div class="col-lg-12 col-md-12 col-sm-12 text-center mb-5">
-                    <h1 class="mb-4 font-weight-bold">About Xcademia?</h1>
-                    <p class="leading-normal lead-1">Majority have suffered alteration in some form, by injected humor</p>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <p class="leading-normal  fs-16">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered by injected humour, or randomised words which don't look even slightly
-                        believable.
-                        If you are going to use a passage of Lorem Ipsum, you need to as necessary All the Lorem Ipsum
-                        generators on the Internet tend to repeat</p>
-                    <p class="leading-normal  fs-16">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered by injected humour, or randomised words which don't look even slightly
-                        believable.
-                        If you are going to use a passage of Lorem Ipsum, you need to as necessary All the Lorem Ipsum
-                        generators on the Internet tend to repeat</p>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="text-justify">
-                        <p class="leading-normal fs-16">It is a long established fact that a reader will be distracted by
-                            the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                            that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                            content here', making it look like readable English.</p>
-                        <p class="leading-normal mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum.</p>
-                    </div>
-                </div> --}}
                 <div class="aboutlink">
                     <a href="#sec1" class="">
                         <i class="fa fa-angle-double-down"></i>
@@ -104,7 +97,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--/section-->
 
     <!--section-->
@@ -186,7 +179,7 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                                                                                                                                                                            content of a page when looking at its layout.',
+                                                                                                                                                                                                                                                                                                    content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
                             <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
@@ -222,7 +215,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                    every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -240,7 +233,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -258,7 +251,7 @@
                                             'why-choose-us-3',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -275,7 +268,7 @@
                                             'why-choose-us-4',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -297,7 +290,7 @@
     <!--Section-->
     <section>
         <div class="about-1 cover-image sptb bg-background-color"
-            data-bs-image-src="../assets/images/banners/banner5.jpg">
+            data-bs-image-src="{{ asset('theme/xacademia/assets/images/banners/banner5.jpg') }}">
             <div class="content-text mb-0 text-white info">
                 <div class="container">
                     <div class="row text-center">
