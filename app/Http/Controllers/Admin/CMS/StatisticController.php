@@ -160,7 +160,7 @@ class StatisticController extends Controller
 
         return response()->json([
             'message'   => __('crud.updated', ['name' => 'Statistic']),
-            'redirect'  => route('admin.cms.statistic.index')
+            'redirect'  => route('admin.cms.statistics.index')
         ]);
     }
 
