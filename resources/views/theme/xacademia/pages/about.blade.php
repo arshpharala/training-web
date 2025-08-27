@@ -41,8 +41,8 @@
                                             <li class="mb-0">
                                                 <a data-bs-toggle="modal" data-bs-target="#homeVideo"
                                                     class="class-video p-0">
-                                                    <img src="{{ asset('theme/xacademia/assets/images/media/0-13.jpg') }}" alt="img"
-                                                        class="img-responsive  border br-7">
+                                                    <img src="{{ asset('theme/xacademia/assets/images/media/0-13.jpg') }}"
+                                                        alt="img" class="img-responsive  border br-7">
                                                     <span class="video-icon" href="javascript:void(0)">
                                                         <i class="fe fe-play"></i>
                                                     </span>
@@ -186,7 +186,7 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                                                                                                                                                    content of a page when looking at its layout.',
+                                                                                                                                                                                                                            content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
                             <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
@@ -222,7 +222,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                    every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -240,7 +240,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -258,7 +258,7 @@
                                             'why-choose-us-3',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -275,7 +275,7 @@
                                             'why-choose-us-4',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -322,4 +322,18 @@
         </div>
     </section>
     <!--/Section-->
+
+    <!-- Videoo Model -->
+    <div class="modal fade" id="homeVideo" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"> <button type="button" class="btn btn-default" data-bs-dismiss="modal"><i
+                        class="fa fa-times"></i></button>
+                <div class="embed-responsive embed-responsive-16by9"> <video id="gossVideo" class="embed-responsive-item"
+                        controls="controls">
+                        <source src="{{ asset('theme/xacademia/assets/video/14429931.mp4') }}" type="video/mp4">
+                    </video> </div>
+            </div>
+        </div>
+    </div>
+    <!-- Videoo Model -->
 @endsection
