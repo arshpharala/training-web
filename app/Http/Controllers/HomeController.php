@@ -18,7 +18,13 @@ class HomeController extends Controller
 
         $latestCourses = Course::where('is_featured', 1)->get();
 
+        $page = Page::with('metas', 'translation')
+            ->active()
+            ->findBySlug('home')
+            ->first();
 
+        $data['page'] = $page;
+        $data['meta'] = $page->metaForLocale() ?? null;
         $data['latestCourses'] = $latestCourses;
 
         $data['categories'] = $categories;

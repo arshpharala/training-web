@@ -23,7 +23,7 @@ class PageController extends Controller
 
         $data['page'] = $page;
         $data['statistics'] = $statistics;
-        $data['meta'] = $page->meta ?? null;
+        $data['meta'] = $page->metaForLocale() ?? null;
 
 
         return view('theme.xacademia.pages.about', $data);
@@ -36,7 +36,7 @@ class PageController extends Controller
             ->first();
 
         $data['page'] = $page;
-        $data['meta'] = $page->meta ?? null;
+        $data['meta'] = $page->metaForLocale() ?? null;
 
         return view('theme.xacademia.pages.about', $data);
     }

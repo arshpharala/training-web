@@ -22,6 +22,10 @@ class Page extends Model
         $query->where('is_active', 1);
     }
 
+    function scopeFindBySlug($query, $slug){
+        $query->where('slug', $slug);
+    }
+
     public function translation()
     {
         return $this->hasOne(PageTranslation::class)->where('locale', app()->getLocale());
