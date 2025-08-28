@@ -179,7 +179,7 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                                                                                                                                                                                                                                                                                                                                                    content of a page when looking at its layout.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
                             <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
@@ -215,7 +215,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -233,7 +233,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -251,7 +251,7 @@
                                             'why-choose-us-3',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -268,7 +268,7 @@
                                             'why-choose-us-4',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -331,8 +331,12 @@
                     <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                         <div class="servic-data mt-3">
                             <h4 class="font-weight-semibold mb-2">{!! page_content('build-for-1', 'heading', 'Organisations') !!}</h4>
-                            <p class="mb-0">{!! page_content('build-for-1', 'content', 'Upsill staff with job ready capability. Map courses to KPIs, audits, and
-                                projects. Measure ROI with simple dashboards.') !!}</p>
+                            <p class="mb-0">{!! page_content(
+                                'build-for-1',
+                                'content',
+                                'Upsill staff with job ready capability. Map courses to KPIs, audits, and
+                                                                                                                    projects. Measure ROI with simple dashboards.',
+                            ) !!}</p>
                         </div>
                     </div>
                 </div>
@@ -340,8 +344,12 @@
                     <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                         <div class="servic-data mt-3">
                             <h4 class="font-weight-semibold mb-2">{!! page_content('build-for-2', 'heading', 'Professionals') !!}</h4>
-                            <p class="mb-0">{!! page_content('build-for-2', 'content', 'Level up for promotions and role changes with practical labs, real scenarios,
-                                and mentor feedback.') !!}</p>
+                            <p class="mb-0">{!! page_content(
+                                'build-for-2',
+                                'content',
+                                'Level up for promotions and role changes with practical labs, real scenarios,
+                                                                                                                    and mentor feedback.',
+                            ) !!}</p>
                         </div>
                     </div>
                 </div>
@@ -349,14 +357,44 @@
                     <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                         <div class="servic-data mt-3">
                             <h4 class="font-weight-semibold mb-2">{!! page_content('build-for-3', 'heading', 'Students and Career Changers') !!}</h4>
-                            <p class="mb-0">{!! page_content('build-for-3', 'content', 'Foundation to advanced paths, portfolio projects, and confidence building
-                                life skills.') !!}</p>
+                            <p class="mb-0">{!! page_content(
+                                'build-for-3',
+                                'content',
+                                'Foundation to advanced paths, portfolio projects, and confidence building
+                                                                                                                    life skills.',
+                            ) !!}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section><!--/Section-->
+
+    <!--Section-->
+    <section class="sptb bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <img src="{!! page_content('roadmap', 'image') !!}"
+                        alt="img" class="absolute-student">
+                </div>
+                <div class="col-md-12 col-lg-8">
+                    <div class="section-title">
+                        <h2>{!! page_content('roadmap', 'heading', 'Ready to upskill your future') !!}</h2>
+                        <p class="fs-18 lead">{!! page_content('roadmap', 'content', 'Let us design a learning roadmap that moves your KPIs.') !!}</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="btn-list">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg mb-5 mb-lg-0">Book a discovery call</a>
+                            <a href="javascript:void(0)" class="btn btn-secondary btn-lg mb-5 mb-lg-0">Browse
+                                programmes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Section-->
 
     <!-- Videoo Model -->
     <div class="modal fade" id="homeVideo" tabindex="-1" style="display: none;" aria-hidden="true">
