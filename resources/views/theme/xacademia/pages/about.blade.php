@@ -323,7 +323,7 @@
                 <div>
                     <h2>{!! page_content('build-for', 'heading', 'Built for Teams and Individuals') !!}</h2>
                     <h2></h2>
-                    <p class="fs-18 lead">{!! page_content('build-for', 'heading', '') !!}</p>
+                    <p class="fs-18 lead">{!! page_content('build-for', 'content', '') !!}</p>
                 </div>
             </div>
             <div class="row">
