@@ -38,6 +38,6 @@ class PageController extends Controller
         $data['page'] = $page;
         $data['meta'] = $page->metaForLocale() ?? null;
 
-        return view('theme.xacademia.pages.about', $data);
+        return view('theme.xacademia.pages.contact', $data);
     }
 }
