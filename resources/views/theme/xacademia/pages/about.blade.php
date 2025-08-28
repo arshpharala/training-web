@@ -110,8 +110,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="mb-lg-0 mb-4 box-shadow about-2 p-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                    <div class="mb-lg-0 mb-4 box-shadow about-2 p-5 flex-fill">
                         <div class=" text-center">
                             <div class="icon-bg icon-service about">
                                 <img src="{!! page_content('why-us-1', 'image') !!}" alt="img">
@@ -123,8 +123,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="mb-lg-0 mb-4 box-shadow p-5 br-bl-10 about-2">
+                <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                    <div class="mb-lg-0 mb-4 box-shadow p-5 br-bl-10 about-2 flex-fill">
                         <div class="text-center">
                             <div class=" icon-bg icon-service about bg-white br-100">
                                 <img src="{!! page_content('why-us-2', 'image') !!}" alt="img">
@@ -136,8 +136,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="mb-sm-0 mb-4 box-shadow about-2 p-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                    <div class="mb-sm-0 mb-4 box-shadow about-2 p-5 flex-fill">
                         <div class="text-center">
                             <div class="icon-bg icon-service about">
                                 <img src="{!! page_content('why-us-3', 'image') !!}" alt="img">
@@ -150,8 +150,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="mb-sm-0 mb-4 box-shadow about-2 p-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                    <div class="mb-sm-0 mb-4 box-shadow about-2 p-5 flex-fill">
                         <div class="text-center">
                             <div class="icon-bg icon-service about">
                                 <img src="{!! page_content('why-us-4', 'image') !!}" alt="img">
