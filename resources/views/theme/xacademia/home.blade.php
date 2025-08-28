@@ -4,6 +4,12 @@
     @php
         $sections = $page->sections ?? null;
     @endphp
+    <style>
+        .bg-background-1:before,
+        .banner1:before {
+            background: none !important;
+        }
+    </style>
     <!--Section-->
     <section class="sptb-2 sptb-tab">
         <div class="header-text mb-0">
@@ -19,7 +25,7 @@
                                 'Hero',
                                 'content',
                                 'many variations of passages of Lorem Ipsum available, but the majority have
-                                                                                                                    suffered alteration <br> in some form, by injected humour, or randomised words',
+                                                                                                                                                suffered alteration <br> in some form, by injected humour, or randomised words',
                             ) !!}</p>
                         </div>
                         <div class="search-background bg-transparent typewrite-text">
