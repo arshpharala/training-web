@@ -43,9 +43,9 @@
                                                     class="class-video p-0">
                                                     <img src="{{ asset('theme/xacademia/assets/images/media/0-13.jpg') }}"
                                                         alt="img" class="img-responsive  border br-7">
-                                                    <span class="video-icon" href="javascript:void(0)">
+                                                    {{-- <span class="video-icon" href="javascript:void(0)">
                                                         <i class="fe fe-play"></i>
-                                                    </span>
+                                                    </span> --}}
                                                 </a>
                                             </li>
                                         </ul>
