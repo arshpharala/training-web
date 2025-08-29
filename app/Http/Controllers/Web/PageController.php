@@ -30,9 +30,11 @@ class PageController extends Controller
     }
     function contact()
     {
-        $page = Page::with('metas')
-            ->where('slug', 'home')
-            ->where('is_active', true)
+        $slug = request()->segment(1);
+
+        $page = Page::with('metas', 'translation')
+            ->where('slug', $slug)
+            ->active()
             ->first();
 
         $data['page'] = $page;
