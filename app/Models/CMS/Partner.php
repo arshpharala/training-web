@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\Catalog;
+namespace App\Models\CMS;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Brand extends Model
+class Partner extends Model
 {
     use HasFactory, HasUuids, SoftDeletes;
 
@@ -22,4 +22,13 @@ class Brand extends Model
         'is_active',
         'position'
     ];
+
+    protected $casts = [
+        'is_active' => 'boolean'
+    ];
+
+    function scopeActive($query)
+    {
+        $query->where('partners.is_active', 1);
+    }
 }

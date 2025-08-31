@@ -6,6 +6,7 @@ use App\Models\Catalog\Category;
 use App\Models\Catalog\Course;
 use App\Models\CMS\News;
 use App\Models\CMS\Page;
+use App\Models\CMS\Partner;
 use App\Models\CMS\Statistic;
 use App\Models\CMS\Testimonial;
 use Illuminate\Http\Request;
@@ -26,6 +27,7 @@ class HomeController extends Controller
 
         $latestNews = News::active()->limit(6)->with('translation')->get();
         $testimonials = Testimonial::active()->orderBy('position')->with('translation')->get();
+        $partners = Partner::active()->orderBy('position')->get();
 
 
         $statistics = Statistic::where('is_active', 1)->get();
@@ -33,6 +35,7 @@ class HomeController extends Controller
         $data['page'] = $page;
         $data['meta'] = $page->metaForLocale() ?? null;
 
+        $data['partners'] = $partners;
         $data['testimonials'] = $testimonials;
         $data['latestNews'] = $latestNews;
         $data['statistics'] = $statistics;

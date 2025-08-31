@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\Catalog\ProductController;
 use App\Http\Controllers\Admin\CMS\TestimonialController;
 use App\Http\Controllers\Admin\Catalog\CategoryController;
 use App\Http\Controllers\Admin\Catalog\AttributeController;
+use App\Http\Controllers\Admin\CMS\PartnerController;
 use App\Http\Controllers\Admin\Catalog\ProductVariantController;
 
 Route::get('dashboard',                             [DashboardController::class, 'dashboard'])->name('dashboard');
@@ -56,6 +57,10 @@ Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
 
     Route::resource('pages',                    PageController::class);
     Route::delete('pages/{product}/restore',        [PageController::class, 'restore'])->name('pages.restore');
+
+
+    Route::resource('partners',                               PartnerController::class);
+    Route::delete('partners/{partner}/restore',               [PartnerController::class, 'restore'])->name('partners.restore');
 
     Route::resource('statistics',                       StatisticController::class);
 

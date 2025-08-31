@@ -1170,41 +1170,13 @@
                 <p class="fs-18 lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             </div>
             <div id="small-categories" class="owl-carousel client-carousel">
+                @foreach ($partners as $partner)
                 <div class="item">
                     <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/1.png') }}" alt="img">
+                        <img src="{{ asset('storage/'. $partner->logo) }}" alt="{{ $partner->name }}">
                     </div>
                 </div>
-                <div class="item">
-                    <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/2.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/3.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/4.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/5.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/7.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="client-img">
-                        <img src="{{ asset('theme/xacademia/assets/images/clients/8.png') }}" alt="img">
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
