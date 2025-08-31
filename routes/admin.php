@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\Catalog\ProductController;
 use App\Http\Controllers\Admin\CMS\TestimonialController;
 use App\Http\Controllers\Admin\Catalog\CategoryController;
 use App\Http\Controllers\Admin\Catalog\AttributeController;
+use App\Http\Controllers\Admin\Catalog\DeliveryMethodController;
 use App\Http\Controllers\Admin\CMS\PartnerController;
 use App\Http\Controllers\Admin\Catalog\ProductVariantController;
 
@@ -34,6 +35,8 @@ Route::group(['prefix' => '/catalog', 'as' => 'catalog.'], function () {
 
 
     Route::resource('courses',                  CourseController::class);
+
+    Route::resource('delivery-methods',                  DeliveryMethodController::class);
 });
 
 

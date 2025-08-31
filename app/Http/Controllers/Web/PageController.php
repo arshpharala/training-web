@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Models\CMS\Page;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Catalog\DeliveryMethod;
 use App\Models\CMS\Statistic;
 
 class PageController extends Controller
@@ -20,9 +21,11 @@ class PageController extends Controller
 
 
         $statistics = Statistic::where('is_active', 1)->get();
+        $deliveryMethods = DeliveryMethod::active()->orderBy('position')->get();
 
         $data['page'] = $page;
         $data['statistics'] = $statistics;
+        $data['deliveryMethods'] = $deliveryMethods;
         $data['meta'] = $page->metaForLocale() ?? null;
 
 

@@ -9,7 +9,22 @@ use Illuminate\Http\Request;
 class DeliveryMethod extends Model
 {
     use SoftDeletes;
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'name',
+        'shot_description',
+        'icon',
+        'position',
+        'is_active',
+    ];
+
+    protected $casts = [
+        'is_active' => 'boolean'
+    ];
+
+    function scopeActive($query)
+    {
+        $query->where('delivery_methods.is_active', 1);
+    }
 
     function courses()
     {

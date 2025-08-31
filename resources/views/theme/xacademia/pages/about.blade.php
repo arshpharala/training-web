@@ -326,6 +326,58 @@
     </section>
     <!--/Section-->
 
+        <!--Section-->
+    <section class="sptb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-img">
+                        <img src="{!! page_content('our-trainers', 'image') !!}" alt="img" class="cover-image br-7">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-section mt-8 ms-lg-5 pt-5">
+                        <div class="">
+                            <h2 class="mt-0 font-weight-bold">{!! page_content('our-trainers', 'heading', 'Our Trainers and Mentors') !!}</h2>
+                        </div>
+                        <p class="lead leading-normal mt-4">{!! page_content('our-trainers', 'content', '') !!}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section-->
+
+    <!--section-->
+    <section class="sptb bg-white" id="sec1">
+        <div class="container">
+            <div class="section-title d-md-flex mb-5">
+                <div>
+                    <h2>{!! page_content('delivery-method', 'heading', 'Delivery that fits your world') !!}</h2>
+                    <p class="fs-18 lead">{!! page_content('delivery-method', 'content', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua') !!}</p>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($deliveryMethods as $deliveryMethod)
+                <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                    <div class="mb-lg-0 mb-4 box-shadow about-2 p-5 flex-fill">
+                        <div class=" text-center">
+                            <div class="icon-bg icon-service about">
+                                <img src="{!! asset('storage/'. $deliveryMethod->icon ) !!}" alt="{{ $deliveryMethod->name }}">
+                            </div>
+                            <div class="servic-data mt-3">
+                                <h4 class="font-weight-semibold mb-2">{!! $deliveryMethod->name !!}</h4>
+                                <p class="mb-0">{!! $deliveryMethod->shot_description !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section><!--/Section-->
+
     <!--Section-->
     <section class="sptb">
         <div class="container">

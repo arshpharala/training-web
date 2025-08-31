@@ -7,6 +7,7 @@
     <div class="col-sm-6 d-flex flex-row justify-content-end gap-2">
       <button data-url="{{ route('admin.cms.partners.create') }}" type="button" class="btn btn-secondary"
         onclick="getAside()"><i class="fa fa-plus"></i> @lang('crud.create')</button>
+
     </div>
   </div>
 @endsection
