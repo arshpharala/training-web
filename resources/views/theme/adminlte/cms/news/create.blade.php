@@ -49,14 +49,14 @@
 
                             <div class="form-group">
                                 <label for="intro_{{ $locale }}">Intro ({{ strtoupper($locale) }})</label>
-                                <textarea name="intro[{{ $locale }}]" class="form-control tinymce-editor" required></textarea>
+                                <textarea name="intro[{{ $locale }}]" class="form-control tinymce-editor"></textarea>
                             </div>
 
                             <div class="form-group">
                                 <label for="description_{{ $locale }}">Description
                                     ({{ strtoupper($locale) }})
                                 </label>
-                                <textarea name="description[{{ $locale }}]" class="form-control tinymce-editor" required></textarea>
+                                <textarea name="description[{{ $locale }}]" class="form-control tinymce-editor"></textarea>
                             </div>
                         @endforeach
 
@@ -116,12 +116,13 @@
                         </div>
 
                     </div>
-                    <div class="card-footer text-right">
-                        <button type="submit" class="btn btn-secondary">@lang('crud.create')</button>
-                    </div>
+
                 </div>
+                @include('theme.adminlte.components._metas', ['model' => $news, 'grid' => 'col-md-12'])
             </div>
-            @include('theme.adminlte.components._metas', ['model' => $news, 'grid' => 'col-md-12'])
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-secondary">@lang('crud.create')</button>
+            </div>
         </div>
     </form>
 @endsection

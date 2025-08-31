@@ -15,6 +15,7 @@ class News extends Model
         'is_guide',
         'position',
         'is_active',
+        'slug',
         'author',
         'published_at',
         'thumbnail',
@@ -24,6 +25,7 @@ class News extends Model
     protected $casts = [
         'is_active' => 'boolean',
         'is_guide' => 'boolean',
+        'published_at' => 'datetime'
     ];
 
     public function category()

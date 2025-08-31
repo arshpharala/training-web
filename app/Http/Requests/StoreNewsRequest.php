@@ -29,14 +29,14 @@ class StoreNewsRequest extends FormRequest
             'is_active'     => ['nullable'],
             'is_featured'   => ['nullable'],
             'category_id'   => ['required', 'integer'],
-            'banner'        => ['nullable', 'image', 'max:4096'],
+            'image'         => ['nullable', 'image', 'max:4096'],
             'color'         => ['nullable', 'string', 'max:7'],
-            'title'         => ['required', 'array'],
+            'author'        => ['required|sting']
         ];
         foreach ($locales as $locale) {
             $rules["title.$locale"] = ['required', 'string', "max:255"];
-            $rules["short_description.$locale"] = ['nullable', 'string'];
-            $rules["content.$locale"] = ['nullable', 'string'];
+            $rules["intro.$locale"] = ['nullable', 'string'];
+            $rules["description.$locale"] = ['nullable', 'string'];
         }
         return $rules;
     }

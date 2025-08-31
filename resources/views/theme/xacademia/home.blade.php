@@ -1567,12 +1567,12 @@
                             <div class="card-body p-4">
                                 <div class="item7-card-img">
                                     <a href="javascript:void(0)"></a>
-                                    <img src="{{ asset('storage/' . $blog->banner) }}"
+                                    <img src="{{ asset('storage/' . $blog->image) }}"
                                         alt="{{ $blog->translation->title }}" class="cover-image br-7 mb-4 border">
                                 </div>
                                 <div class="item7-card-desc d-flex mb-2">
                                     <a href="javascript:void(0)"><i
-                                            class="fe fe-calendar me-2"></i>{{ $blog->created_at->format('d M, Y') }}</a>
+                                            class="fe fe-calendar me-2"></i>{{ $blog->published_at->format('d M, Y') }}</a>
                                     {{-- <div class="ms-auto">
                                     <a href="javascript:void(0)"><i class="fe fe-message-circle me-2"></i>4 Comments</a>
                                 </div> --}}
@@ -1580,7 +1580,7 @@
                                 <a href="blog-details.html">
                                     <h4 class="font-weight-semibold mb-2 mt-3">{{ $blog->translation->title }}</h4>
                                 </a>
-                                <p class="mb-4">{!! $blog->short_description !!}</p>
+                                <p class="mb-4">{!! $blog->translation->intro !!}</p>
                                 <a class="btn btn-primary" href="{{ route('blog.show', ['blog' => $blog->slug]) }}">Read
                                     More <i class="fe fe-chevron-right"></i></a>
                             </div>

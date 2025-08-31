@@ -23,12 +23,15 @@ class HomeController extends Controller
             ->findBySlug('home')
             ->first();
 
+        $latestNews = News::latest()->limit(6)->with('translation')->get();
+
 
         $statistics = Statistic::where('is_active', 1)->get();
 
         $data['page'] = $page;
         $data['meta'] = $page->metaForLocale() ?? null;
 
+        $data['latestNews'] = $latestNews;
         $data['statistics'] = $statistics;
         $data['latestCourses'] = $latestCourses;
 

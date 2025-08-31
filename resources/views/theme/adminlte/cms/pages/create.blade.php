@@ -22,6 +22,7 @@
         <div class="row">
             <div class="col-md-8">
                 @foreach ($locales as $locale)
+                @php $trans = $page->translations->where('locale', $locale)->first(); @endphp
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
