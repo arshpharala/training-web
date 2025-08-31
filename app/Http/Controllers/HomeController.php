@@ -23,8 +23,13 @@ class HomeController extends Controller
             ->findBySlug('home')
             ->first();
 
+
+        $statistics = Statistic::where('is_active', 1)->get();
+
         $data['page'] = $page;
         $data['meta'] = $page->metaForLocale() ?? null;
+
+        $data['statistics'] = $statistics;
         $data['latestCourses'] = $latestCourses;
 
         $data['categories'] = $categories;

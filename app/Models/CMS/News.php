@@ -10,19 +10,34 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class News extends Model
 {
     use HasMeta, SoftDeletes;
-    protected $fillable = ['slug', 'banner', 'position', 'category_id', 'is_guide', 'created_by', 'color'];
+    protected $fillable = [
+        'category_id',
+        'is_guide',
+        'position',
+        'is_active',
+        'author',
+        'published_at',
+        'thumbnail',
+        'image'
+    ];
 
-    function category()
+    protected $casts = [
+        'is_active' => 'boolean',
+        'is_guide' => 'boolean',
+    ];
+
+    public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongTo(Category::class);
+    }
+
+    public function translations()
+    {
+        return $this->hasMany(NewsTranslation::class);
     }
 
     public function translation()
     {
-        return $this->hasOne(NewsTranslation::class)->where('news_translations.locale', app()->getLocale());
-    }
-    public function translations()
-    {
-        return $this->hasMany(NewsTranslation::class);
+        return $this->hasOne(NewsTranslation::class)->where('locale', app()->getLocale());
     }
 }

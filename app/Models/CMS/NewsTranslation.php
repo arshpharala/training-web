@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class NewsTranslation extends Model
 {
-    protected $guarded = ['id'];
+    public $timestamps = false;
 
-    public function news()
-    {
-        return $this->belongsTo(News::class);
-    }
+    protected $fillable = [
+        'news_id',
+        'locale',
+        'title',
+        'intro',
+        'description'
+    ];
 }

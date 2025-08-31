@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('slug')->unique();
-            $table->string('banner')->nullable();
-            $table->integer('position')->default(0);
             $table->integer('category_id');
+            $table->string('author');
+            $table->string('slug')->unique();
             $table->boolean('is_guide')->default(0);
-            $table->integer('created_by');
-            $table->integer('is_featured');
-            $table->string('color', 7)->nullable(); // HEX Color, e.g. #ff0000
+            $table->boolean('is_active')->default(0);
+            $table->integer('position')->default(99);
+            $table->timestamp('published_at')->default(now());
+            $table->string('thumbnail')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,10 +30,9 @@ return new class extends Migration
             $table->id();
             $table->integer('news_id');
             $table->string('locale', 5)->index();
-            $table->string('title');
-            $table->text('short_description')->nullable();
-            $table->longText('content')->nullable();
-            $table->timestamps();
+            $table->text('title');
+            $table->text('intro');
+            $table->text('description');
             $table->unique(['news_id', 'locale']);
         });
     }

@@ -91,12 +91,6 @@
                                   <p>Venues</p>
                               </a>
                           </li>
-                          <li class="nav-item">
-                              <a href="{{ route('admin.cms.news.index') }}" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>News</p>
-                              </a>
-                          </li>
                       </ul>
                   </li>
                   <li class="nav-item">
@@ -141,6 +135,12 @@
                               <a href="{{ route('admin.cms.statistics.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Statistics</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('admin.cms.news.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>News</p>
                               </a>
                           </li>
                       </ul>

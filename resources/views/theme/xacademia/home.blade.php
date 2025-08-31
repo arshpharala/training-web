@@ -413,52 +413,34 @@
     <!--/Section-->
 
     <!--Section-->
-    <section class="about-1 pt-9 pb-9 bg-background cover-image"
-        data-bs-image-src="{{ asset('theme/xacademia/assets/images/banners/pattern2.png') }}">
-        <div class="content-text mb-0">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="counter-status md-mb-0">
-                            <div class="counter-icon bg-primary">
-                                <i class="typcn typcn-group-outline text-white"></i>
+    <section>
+        <div class="about-1 cover-image sptb bg-background-color"
+            data-bs-image-src="{{ asset('theme/xacademia/assets/images/banners/banner5.jpg') }}">
+            <div class="content-text mb-0 text-white info">
+                <div class="container">
+                    <div class="row text-center">
+                        @foreach ($statistics as $statistic)
+                            <div class="col-lg-3 col-md-6">
+                                <div class="counter-status md-mb-0">
+                                    <div class="counter-icon align-items-center">
+                                        <img src="{{ asset('storage/' . $statistic->icon) }}"
+                                            style=" filter: brightness(0) invert(1);" height="35px" width="35px"
+                                            alt="{{ $statistic->translation->name }}">
+                                        {{-- <i class="typcn typcn-group-outline"></i> --}}
+                                    </div>
+                                    <h5>{{ $statistic->translation->name }}</h5>
+                                    <h2 class="counter mb-0">{{ $statistic->number }}</h2>
+                                </div>
                             </div>
-                            <h5>Total Learners</h5>
-                            <h2 class="counter mb-0">2569</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="counter-status status-1 md-mb-0">
-                            <div class="counter-icon bg-primary">
-                                <i class="typcn typcn-mortar-board text-white"></i>
-                            </div>
-                            <h5>Total Graduates</h5>
-                            <h2 class="counter mb-0">1765</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="counter-status status md-mb-0">
-                            <div class="counter-icon bg-primary">
-                                <i class="typcn typcn-globe-outline text-white"></i>
-                            </div>
-                            <h5>Total Countries</h5>
-                            <h2 class="counter mb-0">846</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="counter-status status">
-                            <div class="counter-icon bg-primary">
-                                <i class="typcn typcn-news text-white"></i>
-                            </div>
-                            <h5>Total Courses</h5>
-                            <h2 class="counter mb-0">7253</h2>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--/Section-->
+
 
     <!--Section-->
     <section class="sptb">

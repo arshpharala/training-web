@@ -2,11 +2,11 @@
 @section('content-header')
     <div class="row mb-2">
         <div class="col-sm-6">
-            <h1 class="m-0">News</h1>
+            <h1 class="m-0">@lang('crud.list_title', ['name' => 'News'])</h1>
         </div>
         <div class="col-sm-6">
-            <a href="{{ route('admin.cms.news.create') }}" class="btn btn-primary float-sm-right">Create
-                News</a>
+            <a href="{{ route('admin.cms.news.create') }}" class="btn btn-secondary float-sm-right"> <i
+                    class="fa fa-plus"></i> @lang('crud.create')</a>
         </div>
     </div>
 @endsection
@@ -19,9 +19,10 @@
                         <table class="table table-bordered data-table">
                             <thead>
                                 <tr>
-                                    <th>News Title</th>
-                                    <th>Category</th>
-                                    <th>Slug</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Author</th>
+                                    <th>Is Active</th>
                                     <th>Created At</th>
                                     <th>Action</th>
                                 </tr>
@@ -30,11 +31,9 @@
                         </table>
                     </div>
                 </div>
-                <!-- /.card-body -->
             </div>
         </div>
     </div>
-    <!-- /.card -->
 @endsection
 @push('scripts')
     <script>
@@ -44,25 +43,27 @@
                 serverSide: true,
                 ajax: '{{ route('admin.cms.news.index') }}',
                 columns: [
-                    //   {
-                    //     data: 'id',
-                    //     name: 'id'
-                    //   },
                     {
-                        data: 'title',
-                        name: 'translations.title',
+                        data: 'image',
+                        name: 'image',
+                        orderable: false,
+                        searchable: false
                     },
                     {
-                        data: 'category_name',
-                        name: 'category_translations.name'
+                        data: 'name',
+                        name: 'testimonial_translations.name'
                     },
                     {
-                        data: 'slug',
-                        name: 'news.slug'
+                        data: 'author',
+                        name: 'author'
+                    },
+                    {
+                        data: 'is_active',
+                        name: 'is_active'
                     },
                     {
                         data: 'created_at',
-                        name: 'news.created_at'
+                        name: 'created_at'
                     },
                     {
                         data: 'action',
@@ -71,6 +72,8 @@
                     }
                 ]
             });
+
+
         });
     </script>
 @endpush
