@@ -1370,154 +1370,42 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="myCarousel" class="owl-carousel testimonial-owl-carousel">
+                        @foreach ($testimonials as $testimonial)
                         <div class="item">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-12">
                                             <div class="testimonial-img"><img
-                                                    src="{{ asset('theme/xacademia/assets/images/users/female/4.jpg') }}"
-                                                    class="br-7 w-100 h-100" alt="img"></div>
+                                                    src="{{ asset('storage/' . $testimonial->image) }}"
+                                                    class="br-7 w-100 h-100" alt="{{ $testimonial->translation->name }}"></div>
                                         </div>
                                         <div class="col-md-9 col-sm-12 mt-2">
                                             <div class="d-md-flex">
                                                 <div>
-                                                    <h4 class="title font-weight-bold">Lilly Potter</h4>
-                                                    <span class="post">Web developer student</span>
+                                                    <h4 class="title font-weight-bold">{{ $testimonial->translation->name }}</h4>
+                                                    <span class="post">{{ $testimonial->designation }}</span>
                                                 </div>
                                                 <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
                                                     <div
                                                         class="stars stars-example-fontawesome stars-example-fontawesome-sm">
                                                         <select class="example-fontawesome" name="rating"
                                                             autocomplete="off">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4" selected>4</option>
-                                                            <option value="5">5</option>
+                                                            @foreach (range(1,5) as $range)
+                                                            <option value="{{$range }}" @selected($range == $testimonial->rating)>{{ $range }}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure
-                                                and praising</p>
+                                                {{ $testimonial->translation->description }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-12">
-                                            <div class="testimonial-img"><img
-                                                    src="{{ asset('theme/xacademia/assets/images/users/male/33.jpg') }}"
-                                                    class="br-7 w-100 h-100" alt="img"></div>
-                                        </div>
-                                        <div class="col-md-9 col-sm-12 mt-2">
-                                            <div class="d-md-flex">
-                                                <div>
-                                                    <h4 class="title font-weight-bold">John Joya</h4>
-                                                    <span class="post">Web developer student</span>
-                                                </div>
-                                                <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                    <div
-                                                        class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                        <select class="example-fontawesome" name="rating"
-                                                            autocomplete="off">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4" selected>4</option>
-                                                            <option value="5">5</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure
-                                                and praising</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-12">
-                                            <div class="testimonial-img"><img
-                                                    src="{{ asset('theme/xacademia/assets/images/users/female/1.jpg') }}"
-                                                    class="br-7 w-100 h-100" alt="img"></div>
-                                        </div>
-                                        <div class="col-md-9 col-sm-12 mt-2">
-                                            <div class="d-md-flex">
-                                                <div>
-                                                    <h4 class="title font-weight-bold">Rebacca wisely</h4>
-                                                    <span class="post">Web designer student</span>
-                                                </div>
-                                                <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                    <div
-                                                        class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                        <select class="example-fontawesome" name="rating"
-                                                            autocomplete="off">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4" selected>4</option>
-                                                            <option value="5">5</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure
-                                                and praising</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-12">
-                                            <div class="testimonial-img"><img
-                                                    src="{{ asset('theme/xacademia/assets/images/users/male/34.jpg') }}"
-                                                    class="br-7 w-100 h-100" alt="img"></div>
-                                        </div>
-                                        <div class="col-md-9 col-sm-12 mt-2">
-                                            <div class="d-md-flex">
-                                                <div>
-                                                    <h4 class="title font-weight-bold">williamson</h4>
-                                                    <span class="post">Web developer student</span>
-                                                </div>
-                                                <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                    <div
-                                                        class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                        <select class="example-fontawesome" name="rating"
-                                                            autocomplete="off">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4" selected>4</option>
-                                                            <option value="5">5</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i>
-                                                But I must explain to you how all this mistaken idea of denouncing pleasure
-                                                and praising</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

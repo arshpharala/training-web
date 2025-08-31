@@ -28,6 +28,10 @@ class News extends Model
         'published_at' => 'datetime'
     ];
 
+    function scopeActive($query){
+        $query->where('news.is_active', 1);
+    }
+
     public function category()
     {
         return $this->belongTo(Category::class);

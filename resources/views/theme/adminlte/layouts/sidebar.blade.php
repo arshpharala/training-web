@@ -143,6 +143,13 @@
                                   <p>News</p>
                               </a>
                           </li>
+
+                          <li class="nav-item">
+                              <a href="{{ route('admin.cms.testimonials.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Testimonials</p>
+                              </a>
+                          </li>
                       </ul>
                   </li>
 

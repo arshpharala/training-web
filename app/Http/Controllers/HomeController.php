@@ -7,6 +7,7 @@ use App\Models\Catalog\Course;
 use App\Models\CMS\News;
 use App\Models\CMS\Page;
 use App\Models\CMS\Statistic;
+use App\Models\CMS\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,8 @@ class HomeController extends Controller
             ->findBySlug('home')
             ->first();
 
-        $latestNews = News::latest()->limit(6)->with('translation')->get();
+        $latestNews = News::active()->limit(6)->with('translation')->get();
+        $testimonials = Testimonial::active()->orderBy('position')->with('translation')->get();
 
 
         $statistics = Statistic::where('is_active', 1)->get();
@@ -31,6 +33,7 @@ class HomeController extends Controller
         $data['page'] = $page;
         $data['meta'] = $page->metaForLocale() ?? null;
 
+        $data['testimonials'] = $testimonials;
         $data['latestNews'] = $latestNews;
         $data['statistics'] = $statistics;
         $data['latestCourses'] = $latestCourses;
