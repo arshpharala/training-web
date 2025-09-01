@@ -1,0 +1,5391 @@
+{
+  "IT Foundations & Tech Support": {
+    "slug": "it-foundations-and-tech-support",
+    "subs": {
+      "Support, OS & Networking": {
+        "slug": "support-os-and-networking",
+        "courses": [
+          {
+            "name": "Configuring Windows Server Hybrid Advanced Services AZ801",
+            "slug": "configuring-windows-server-hybrid-advanced-services-az801",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Troubleshooting Microsoft Azure Connectivity AZ-720 Course",
+            "slug": "troubleshooting-microsoft-azure-connectivity-az-720-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 1995.0
+          },
+          {
+            "name": "CCNA Certification",
+            "slug": "ccna-certification",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2595.0
+          },
+          {
+            "name": "CompTIA A+ Course",
+            "slug": "comptia-a-course",
+            "duration" : 0,
+            "track": "CompTIA A+",
+            "price": 2495.0
+          },
+          {
+            "name": "CompTIA Network+ Training Course",
+            "slug": "comptia-network-training-course",
+            "duration" : 0,
+            "track": "CompTIA Network+",
+            "price": 2895.0
+          },
+          {
+            "name": "CompTIA Linux+ Certification",
+            "slug": "comptia-linux-certification",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "CompTIA ITF+ Certification",
+            "slug": "comptia-itf-certification",
+            "duration" : 0,
+            "track": "CompTIA ITF+",
+            "price": 2995.0
+          },
+          {
+            "name": "Troubleshooting and Maintaining Cisco IP Networks",
+            "slug": "troubleshooting-and-maintaining-cisco-ip-networks",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "CCNA Cybersecurity Operation Training",
+            "slug": "ccna-cybersecurity-operation-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "AWS EC2 with Linux Training",
+            "slug": "aws-ec2-with-linux-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "LINUX Fundamentals Course",
+            "slug": "linux-fundamentals-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Linux Shell Programming",
+            "slug": "linux-shell-programming",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Alpine Linux Training",
+            "slug": "alpine-linux-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Fedora Linux Training",
+            "slug": "fedora-linux-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Introduction to Linux Mint Training",
+            "slug": "introduction-to-linux-mint-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Identity with Windows Server 2016 M55344AC",
+            "slug": "identity-with-windows-server-2016-m55344ac",
+            "duration" : 0,
+            "track" : 0,
+            "price": 6995.0
+          },
+          {
+            "name": "Fundamentals of a Windows Server Infrastructure M10967",
+            "slug": "fundamentals-of-a-windows-server-infrastructure-m10967",
+            "duration" : 0,
+            "track" : 0,
+            "price": 8995.0
+          },
+          {
+            "name": "Install and Configure Microsoft Windows Server and Active Directory Training",
+            "slug": "install-and-configure-microsoft-windows-server-and-active-directory-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Windows 11 Overview for the IT Professional Training Course",
+            "slug": "windows-11-overview-for-the-it-professional-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2295.0
+          },
+          {
+            "name": "Certified Helpdesk Support Technician",
+            "slug": "certified-helpdesk-support-technician",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Kali Linux Fundamentals",
+            "slug": "kali-linux-fundamentals",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "macOS Mojave Troubleshooting and Support Training",
+            "slug": "macos-mojave-troubleshooting-and-support-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Computer Hardware Troubleshooting Course",
+            "slug": "computer-hardware-troubleshooting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Cloud Computing & DevOps": {
+    "slug": "cloud-computing-and-devops",
+    "subs": {
+      "Cloud, Containers & Automation": {
+        "slug": "cloud-containers-and-automation",
+        "courses": [
+          {
+            "name": "SAFe® DevOps Certification",
+            "slug": "safe-devops-certification",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 1995.0
+          },
+          {
+            "name": "BCS Foundation Level Certificate in DevOps Training",
+            "slug": "bcs-foundation-level-certificate-in-devops-training",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 2995.0
+          },
+          {
+            "name": "Microsoft Azure Fundamentals AZ-900 Certification",
+            "slug": "microsoft-azure-fundamentals-az-900-certification",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 1295.0
+          },
+          {
+            "name": "Microsoft Azure Big Data Analytics Solutions M552241 Training",
+            "slug": "microsoft-azure-big-data-analytics-solutions-m552241-training",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 3995.0
+          },
+          {
+            "name": "Developing Solutions For Microsoft Azure AZ-204 Certification",
+            "slug": "developing-solutions-for-microsoft-azure-az-204-certification",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 4995.0
+          },
+          {
+            "name": "Microsoft Azure Security Technologies AZ500",
+            "slug": "microsoft-azure-security-technologies-az500",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2495.0
+          },
+          {
+            "name": "Designing And Implementing an Azure AI Solution AI-102 Course",
+            "slug": "designing-and-implementing-an-azure-ai-solution-ai-102-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2495.0
+          },
+          {
+            "name": "DP-100 Azure Data Scientist Associate Certification",
+            "slug": "dp-100-azure-data-scientist-associate-certification",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 4495.0
+          },
+          {
+            "name": "Designing And Implementing Microsoft DevOps Solutions AZ400",
+            "slug": "designing-and-implementing-microsoft-devops-solutions-az400",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 2595.0
+          },
+          {
+            "name": "Microsoft Azure For SAP Workloads AZ-120 Certification Course",
+            "slug": "microsoft-azure-for-sap-workloads-az-120-certification-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "DP-900 Azure Data Fundamentals Course",
+            "slug": "dp-900-azure-data-fundamentals-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 795.0
+          },
+          {
+            "name": "Data Engineering On Microsoft Azure DP-203 Certification",
+            "slug": "data-engineering-on-microsoft-azure-dp-203-certification",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2495.0
+          },
+          {
+            "name": "Microsoft Azure AI Fundamentals AI-900 Training",
+            "slug": "microsoft-azure-ai-fundamentals-ai-900-training",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 795.0
+          },
+          {
+            "name": "Designing Microsoft Azure Infrastructure Solutions AZ305",
+            "slug": "designing-microsoft-azure-infrastructure-solutions-az305",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 795.0
+          },
+          {
+            "name": "AZ-140 Configuring And Operating Azure Virtual Desktop Course",
+            "slug": "az-140-configuring-and-operating-azure-virtual-desktop-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 4495.0
+          },
+          {
+            "name": "Microsoft Azure Cosmos DB DP-420 Course",
+            "slug": "microsoft-azure-cosmos-db-dp-420-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Designing And Implementing Microsoft Azure Networking Solutions AZ-700 Training",
+            "slug": "designing-and-implementing-microsoft-azure-networking-solutions-az-700-training",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 1995.0
+          },
+          {
+            "name": "Implement a Machine Learning solution with Azure Databricks DP3014 Course",
+            "slug": "implement-a-machine-learning-solution-with-azure-databricks-dp3014-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Train and deploy a machine learning model with Azure Machine Learning DP3007 Course",
+            "slug": "train-and-deploy-a-machine-learning-model-with-azure-machine-learning-dp3007-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Develop custom copilots with Azure AI Studio AI3016 Course",
+            "slug": "develop-custom-copilots-with-azure-ai-studio-ai3016-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Implementing a Data Analytics Solution with Azure Synapse Analytics DP3012 Course",
+            "slug": "implementing-a-data-analytics-solution-with-azure-synapse-analytics-dp3012-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Secure Azure services and workloads with Defender for Cloud regulatory compliance controls SC5002 Course",
+            "slug": "secure-azure-services-and-workloads-with-defender-for-cloud-regulatory-compliance-controls-sc5002-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Build AI Apps with Azure Database for PostgreSQL AI3019 Course",
+            "slug": "build-ai-apps-with-azure-database-for-postgresql-ai3019-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Implementing a Data Analytics Solution with Azure Databricks DP3011 Course",
+            "slug": "implementing-a-data-analytics-solution-with-azure-databricks-dp3011-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Develop Generative AI Solutions with Azure OpenAI Service AI050 Course",
+            "slug": "develop-generative-ai-solutions-with-azure-openai-service-ai050-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Migrate SQL Server workload to Azure SQL DP3001 Course",
+            "slug": "migrate-sql-server-workload-to-azure-sql-dp3001-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Build a natural language processing solution with Azure AI Services AI3003 Course",
+            "slug": "build-a-natural-language-processing-solution-with-azure-ai-services-ai3003-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Build an Azure AI Vision Solution with Azure AI Services AI3004 Training Course",
+            "slug": "build-an-azure-ai-vision-solution-with-azure-ai-services-ai3004-training-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Create Document Intelligence Solutions with Azure AI Document Intelligence AI3002 Course",
+            "slug": "create-document-intelligence-solutions-with-azure-ai-document-intelligence-ai3002-course",
+            "duration" : 0,
+            "track": "Azure",
+            "price": 2995.0
+          },
+          {
+            "name": "Artificial Intelligence (AI) for DevOps",
+            "slug": "artificial-intelligence-ai-for-devops",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 1995.0
+          },
+          {
+            "name": "Certified DevOps Professional (CDOP)",
+            "slug": "certified-devops-professional-cdop",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 1995.0
+          },
+          {
+            "name": "Certified DevOps Security Professional (CDSOP)",
+            "slug": "certified-devops-security-professional-cdsop",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 1995.0
+          },
+          {
+            "name": "Ansible Essentials Training",
+            "slug": "ansible-essentials-training",
+            "duration" : 0,
+            "track": "Ansible",
+            "price": 1295.0
+          },
+          {
+            "name": "Jenkins Training for Continuous Integration",
+            "slug": "jenkins-training-for-continuous-integration",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3995.0
+          },
+          {
+            "name": "Kubernetes Training",
+            "slug": "kubernetes-training",
+            "duration" : 0,
+            "track": "Kubernetes",
+            "price": 1295.0
+          },
+          {
+            "name": "Docker Course",
+            "slug": "docker-course",
+            "duration" : 0,
+            "track": "Docker",
+            "price": 1295.0
+          },
+          {
+            "name": "ITSM for DevOps Training",
+            "slug": "itsm-for-devops-training",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 1295.0
+          },
+          {
+            "name": "DevOps Engineering Foundation Course",
+            "slug": "devops-engineering-foundation-course",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 2995.0
+          },
+          {
+            "name": "DevOps Foundation Certification Course",
+            "slug": "devops-foundation-certification-course",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 1295.0
+          },
+          {
+            "name": "DevOps Leader Certification Course",
+            "slug": "devops-leader-certification-course",
+            "duration" : 0,
+            "track": "DevOps",
+            "price": 2995.0
+          },
+          {
+            "name": "AWS Technical Essentials Training",
+            "slug": "aws-technical-essentials-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Big Data on AWS Training",
+            "slug": "big-data-on-aws-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Aurora Training",
+            "slug": "aws-aurora-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS DynamoDB Training",
+            "slug": "aws-dynamodb-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "Introduction to AWS IoT",
+            "slug": "introduction-to-aws-iot",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS CloudFormation Training",
+            "slug": "aws-cloudformation-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS RoboMaker Training",
+            "slug": "aws-robomaker-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Directory Service Training",
+            "slug": "aws-directory-service-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Lambda Training",
+            "slug": "aws-lambda-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Identity and Access Management (IAM) Training",
+            "slug": "aws-identity-and-access-management-iam-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Introduction to AWS Security",
+            "slug": "introduction-to-aws-security",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Deep Learning on AWS",
+            "slug": "deep-learning-on-aws",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Cloud9 Training",
+            "slug": "aws-cloud9-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS API Gateway Training",
+            "slug": "aws-api-gateway-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS EMR Training",
+            "slug": "aws-emr-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Kafka Training on AWS",
+            "slug": "kafka-training-on-aws",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Data Warehousing Training on AWS",
+            "slug": "data-warehousing-training-on-aws",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Specialty Machine Learning Training",
+            "slug": "aws-specialty-machine-learning-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Lightsail Training",
+            "slug": "aws-lightsail-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Migrating Applications to AWS Training",
+            "slug": "migrating-applications-to-aws-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Associate Solutions Architect Training",
+            "slug": "aws-associate-solutions-architect-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Database Migration Training",
+            "slug": "aws-database-migration-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Specialty Security Training",
+            "slug": "aws-specialty-security-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 3495.0
+          },
+          {
+            "name": "AWS Cloud Financial Management for Builders Training",
+            "slug": "aws-cloud-financial-management-for-builders-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "Building Data Lakes on AWS Training",
+            "slug": "building-data-lakes-on-aws-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2995.0
+          },
+          {
+            "name": "Planning and Designing Databases on AWS Training",
+            "slug": "planning-and-designing-databases-on-aws-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "Video Streaming Essentials for AWS Media Services Training",
+            "slug": "video-streaming-essentials-for-aws-media-services-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Database Offerings Training",
+            "slug": "aws-database-offerings-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Data Analytics Fundamentals",
+            "slug": "aws-data-analytics-fundamentals",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Developing Serverless Solutions on AWS",
+            "slug": "developing-serverless-solutions-on-aws",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2995.0
+          },
+          {
+            "name": "Running Containers on Amazon Elastic Kubernetes Service EKS Training",
+            "slug": "running-containers-on-amazon-elastic-kubernetes-service-eks-training",
+            "duration" : 0,
+            "track": "Kubernetes",
+            "price": 2495.0
+          },
+          {
+            "name": "Security Engineering on AWS Training",
+            "slug": "security-engineering-on-aws-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Cloud Practitioner Training",
+            "slug": "aws-cloud-practitioner-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Professional Solutions Architect Training",
+            "slug": "aws-professional-solutions-architect-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2995.0
+          },
+          {
+            "name": "AWS Professional DevOps Engineer Training",
+            "slug": "aws-professional-devops-engineer-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Specialty Advanced Networking Training",
+            "slug": "aws-specialty-advanced-networking-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Billing and Cost Management Training Course",
+            "slug": "aws-billing-and-cost-management-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Storage Services Training Course",
+            "slug": "aws-storage-services-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Developing .NET Application on AWS Training Course",
+            "slug": "developing-net-application-on-aws-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "Amazon AWS Keyspaces Training Course",
+            "slug": "amazon-aws-keyspaces-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS CloudTrail Training Course",
+            "slug": "aws-cloudtrail-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Security Hub Training Course",
+            "slug": "aws-security-hub-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Business Training Course",
+            "slug": "aws-business-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS AI Practitioner Training Course",
+            "slug": "aws-ai-practitioner-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 1995.0
+          },
+          {
+            "name": "AWS Associate Machine Learning Engineer Training Course",
+            "slug": "aws-associate-machine-learning-engineer-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 3995.0
+          },
+          {
+            "name": "AWS Associate Data Engineer Training Course",
+            "slug": "aws-associate-data-engineer-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price": 3995.0
+          },
+          {
+            "name": "AWS Associate Developer Training Course",
+            "slug": "aws-associate-developer-training-course",
+            "duration" : 0,
+            "track": "AWS",
+            "price" : 0
+          },
+          {
+            "name": "Google Cloud Platform Fundamentals",
+            "slug": "google-cloud-platform-fundamentals",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Architecting Infrastructure with Google Cloud Platform Training",
+            "slug": "architecting-infrastructure-with-google-cloud-platform-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 2995.0
+          },
+          {
+            "name": "Data Engineering with Google Cloud Platform",
+            "slug": "data-engineering-with-google-cloud-platform",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 2995.0
+          },
+          {
+            "name": "Networking with Google Cloud Platform",
+            "slug": "networking-with-google-cloud-platform",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Introduction to Google Cloud Security",
+            "slug": "introduction-to-google-cloud-security",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 2495.0
+          },
+          {
+            "name": "Developing Applications with Google Cloud Platform",
+            "slug": "developing-applications-with-google-cloud-platform",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 2495.0
+          },
+          {
+            "name": "Architecting with Google Cloud Compute Engine",
+            "slug": "architecting-with-google-cloud-compute-engine",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 2495.0
+          },
+          {
+            "name": "Google Cloud Storage Training",
+            "slug": "google-cloud-storage-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Dataflow Training",
+            "slug": "google-cloud-dataflow-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Spanner Training",
+            "slug": "google-cloud-spanner-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Firestore Training",
+            "slug": "google-cloud-firestore-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Big Data and Machine Learning with Google Cloud Platform",
+            "slug": "big-data-and-machine-learning-with-google-cloud-platform",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Bigtable Training",
+            "slug": "google-cloud-bigtable-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Python with Google Cloud Platform Training",
+            "slug": "python-with-google-cloud-platform-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Training",
+            "slug": "google-cloud-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Digital Leader Training",
+            "slug": "google-cloud-digital-leader-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "Google Cloud Developer Certification",
+            "slug": "google-cloud-developer-certification",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 1995.0
+          },
+          {
+            "name": "From Data to Insights with Google Cloud Platform Training Course",
+            "slug": "from-data-to-insights-with-google-cloud-platform-training-course",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 3995.0
+          },
+          {
+            "name": "Architecting with Google Kubernetes Engine Training",
+            "slug": "architecting-with-google-kubernetes-engine-training",
+            "duration" : 0,
+            "track": "Kubernetes",
+            "price": 3995.0
+          },
+          {
+            "name": "Architecting with Google Cloud Design and Process Training",
+            "slug": "architecting-with-google-cloud-design-and-process-training",
+            "duration" : 0,
+            "track": "Google Cloud",
+            "price": 3995.0
+          },
+          {
+            "name": "Customer Acquistion Traning",
+            "slug": "customer-acquistion-traning",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Saudi Arabia Labour Laws Training",
+            "slug": "saudi-arabia-labour-laws-training",
+            "duration" : 0,
+            "track": "AWS",
+            "price" : 0
+          },
+          {
+            "name": "Serverless Computing with Amazon Web Services",
+            "slug": "serverless-computing-with-amazon-web-services",
+            "duration" : 0,
+            "track": "AWS",
+            "price" : 0
+          },
+          {
+            "name": "Terraform Training",
+            "slug": "terraform-training",
+            "duration" : 0,
+            "track": "Terraform",
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Cybersecurity & Ethical Hacking": {
+    "slug": "cybersecurity-and-ethical-hacking",
+    "subs": {
+      "Certifications & Blue/Red/Purple": {
+        "slug": "certifications-and-blueredpurple",
+        "courses": [
+          {
+            "name": "CISSP Certification",
+            "slug": "cissp-certification",
+            "duration" : 0,
+            "track": "CISSP",
+            "price": 3695.0
+          },
+          {
+            "name": "CISA Certified Information Systems Auditor",
+            "slug": "cisa-certified-information-systems-auditor",
+            "duration" : 0,
+            "track": "CISA",
+            "price": 2295.0
+          },
+          {
+            "name": "CISM Certified Information Security Manager",
+            "slug": "cism-certified-information-security-manager",
+            "duration" : 0,
+            "track": "CISM",
+            "price": 2295.0
+          },
+          {
+            "name": "CCSP Certified Cloud Security Professional",
+            "slug": "ccsp-certified-cloud-security-professional",
+            "duration" : 0,
+            "track": "CCSP",
+            "price": 3695.0
+          },
+          {
+            "name": "CompTIA Security+ Certification",
+            "slug": "comptia-security-certification",
+            "duration" : 0,
+            "track": "CompTIA Security+",
+            "price": 2995.0
+          },
+          {
+            "name": "Configure SIEM Security Operations using Microsoft Sentinel SC5001 Course",
+            "slug": "configure-siem-security-operations-using-microsoft-sentinel-sc5001-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Configure SIEM Security Operations using Microsoft Sentinel SC5001 Course",
+            "slug": "configure-siem-security-operations-using-microsoft-sentinel-sc5001-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Digital Forensics Training",
+            "slug": "digital-forensics-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Incident Response Training",
+            "slug": "incident-response-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Artificial Intelligence, Data & Analytics": {
+    "slug": "artificial-intelligence-data-and-analytics",
+    "subs": {
+      "AI, Data & BI": {
+        "slug": "ai-data-and-bi",
+        "courses": [
+          {
+            "name": "BCS Essentials Certificate in Artificial Intelligence Training",
+            "slug": "bcs-essentials-certificate-in-artificial-intelligence-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "BCS Foundation Certificate in Artificial Intelligence Training",
+            "slug": "bcs-foundation-certificate-in-artificial-intelligence-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Microsoft Fabric Analytics Engineer DP600 Training Course",
+            "slug": "microsoft-fabric-analytics-engineer-dp600-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 4995.0
+          },
+          {
+            "name": "Develop dynamic reports with Microsoft Power BI DP605 Course",
+            "slug": "develop-dynamic-reports-with-microsoft-power-bi-dp605-course",
+            "duration" : 0,
+            "track": "Power BI",
+            "price": 2995.0
+          },
+          {
+            "name": "Microsoft AI for Business Leaders AI3017 Training Course",
+            "slug": "microsoft-ai-for-business-leaders-ai3017-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 4995.0
+          },
+          {
+            "name": "Microsoft Fabric Data Engineer DP700 Training Course",
+            "slug": "microsoft-fabric-data-engineer-dp700-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3995.0
+          },
+          {
+            "name": "Business Analytics with Excel Course",
+            "slug": "business-analytics-with-excel-course",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Software Developers Training",
+            "slug": "certified-artificial-intelligence-ai-for-software-developers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "ISTQB Certified Tester Foundation Level AI Testing Training",
+            "slug": "istqb-certified-tester-foundation-level-ai-testing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Introduction to Business Analytics Training",
+            "slug": "introduction-to-business-analytics-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "SAP Analytics Cloud Training",
+            "slug": "sap-analytics-cloud-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "SAP SQL Anywhere Training",
+            "slug": "sap-sql-anywhere-training",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1995.0
+          },
+          {
+            "name": "Introduction to SQL",
+            "slug": "introduction-to-sql",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1295.0
+          },
+          {
+            "name": "Advanced SQL",
+            "slug": "advanced-sql",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1795.0
+          },
+          {
+            "name": "SQL Server Reporting Services (SSRS) Masterclass",
+            "slug": "sql-server-reporting-services-ssrs-masterclass",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1295.0
+          },
+          {
+            "name": "R Programming course",
+            "slug": "r-programming-course",
+            "duration" : 0,
+            "track": "R",
+            "price": 1295.0
+          },
+          {
+            "name": "Pythen with Machine learning Training",
+            "slug": "pythen-with-machine-learning-training",
+            "duration" : 0,
+            "track": "Machine Learning",
+            "price": 2495.0
+          },
+          {
+            "name": "Python Data Science Course",
+            "slug": "python-data-science-course",
+            "duration" : 0,
+            "track": "Python",
+            "price": 2995.0
+          },
+          {
+            "name": "Probability and Statistics for Data Science Training",
+            "slug": "probability-and-statistics-for-data-science-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Pandas for Data Analysis Training",
+            "slug": "pandas-for-data-analysis-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Predictive Analytics Course",
+            "slug": "predictive-analytics-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Introduction to Knime Analytics Platform Training",
+            "slug": "introduction-to-knime-analytics-platform-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Decision Tree Modeling Using R Training",
+            "slug": "decision-tree-modeling-using-r-training",
+            "duration" : 0,
+            "track": "R",
+            "price": 1995.0
+          },
+          {
+            "name": "Advanced Data Science Certification",
+            "slug": "advanced-data-science-certification",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3495.0
+          },
+          {
+            "name": "Data Science with R Training",
+            "slug": "data-science-with-r-training",
+            "duration" : 0,
+            "track": "R",
+            "price": 2485.0
+          },
+          {
+            "name": "Data Science and Blockchain Training",
+            "slug": "data-science-and-blockchain-training",
+            "duration" : 0,
+            "track": "Blockchain",
+            "price": 1995.0
+          },
+          {
+            "name": "Introduction to AI Course",
+            "slug": "introduction-to-ai-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Machine Learning Course",
+            "slug": "machine-learning-course",
+            "duration" : 0,
+            "track": "Machine Learning",
+            "price": 1995.0
+          },
+          {
+            "name": "Deep Learning with TensorFlow Training",
+            "slug": "deep-learning-with-tensorflow-training",
+            "duration" : 0,
+            "track": "Machine Learning",
+            "price": 1995.0
+          },
+          {
+            "name": "AI and ML with Excel Training",
+            "slug": "ai-and-ml-with-excel-training",
+            "duration" : 0,
+            "track": "Machine Learning",
+            "price": 1995.0
+          },
+          {
+            "name": "Artificial Intelligence (AI) for Project Managers",
+            "slug": "artificial-intelligence-ai-for-project-managers",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Artificial Intelligence (AI) for Business Analysts",
+            "slug": "artificial-intelligence-ai-for-business-analysts",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Artificial Intelligence (AI) for IT Professionals (AI4IT)",
+            "slug": "artificial-intelligence-ai-for-it-professionals-ai4it",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Deep Learning Course",
+            "slug": "deep-learning-course",
+            "duration" : 0,
+            "track": "Machine Learning",
+            "price": 1995.0
+          },
+          {
+            "name": "Neural Networks with Deep Learning Training",
+            "slug": "neural-networks-with-deep-learning-training",
+            "duration" : 0,
+            "track": "Machine Learning",
+            "price": 1995.0
+          },
+          {
+            "name": "ChatGPT Prompt Engineering Certification",
+            "slug": "chatgpt-prompt-engineering-certification",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "AI Tools in Performance Marketing Training",
+            "slug": "ai-tools-in-performance-marketing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Duet AI for Workspace Training",
+            "slug": "duet-ai-for-workspace-training",
+            "duration" : 0,
+            "track": "Space/Satellite",
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI Course",
+            "slug": "generative-ai-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI in Software Development Training Course",
+            "slug": "generative-ai-in-software-development-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI in Cybersecurity Training Course",
+            "slug": "generative-ai-in-cybersecurity-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI in Business Training Course",
+            "slug": "generative-ai-in-business-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI in Marketing Training Course",
+            "slug": "generative-ai-in-marketing-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI in Prompt Engineering Training Course",
+            "slug": "generative-ai-in-prompt-engineering-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI in Project Management Training Course",
+            "slug": "generative-ai-in-project-management-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI for Business Analyst Training Course",
+            "slug": "generative-ai-for-business-analyst-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI for Cloud Professional Training Course",
+            "slug": "generative-ai-for-cloud-professional-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI for Data Analyst Training Course",
+            "slug": "generative-ai-for-data-analyst-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Generative AI for Operations Training Course",
+            "slug": "generative-ai-for-operations-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Data Science Analytics",
+            "slug": "data-science-analytics",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Data Analytics with R",
+            "slug": "data-analytics-with-r",
+            "duration" : 0,
+            "track": "R",
+            "price": 1995.0
+          },
+          {
+            "name": "Big Data Analytics & Data Science Integration Course",
+            "slug": "big-data-analytics-and-data-science-integration-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Big Data for Data Engineering Training",
+            "slug": "big-data-for-data-engineering-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Advanced Data Analytics Course",
+            "slug": "advanced-data-analytics-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3495.0
+          },
+          {
+            "name": "Certified Artificial Intelligence for Data Analysts Training",
+            "slug": "certified-artificial-intelligence-for-data-analysts-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Data Analytics for Project Managers Training",
+            "slug": "data-analytics-for-project-managers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Design Thinking for R&D Engineers Training",
+            "slug": "design-thinking-for-r-and-d-engineers-training",
+            "duration" : 0,
+            "track": "R",
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence for Leaders Training",
+            "slug": "certified-artificial-intelligence-for-leaders-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence for Managers Training",
+            "slug": "certified-artificial-intelligence-for-managers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Quality Managers Training",
+            "slug": "certified-artificial-intelligence-ai-for-quality-managers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Quality Managers Training",
+            "slug": "certified-artificial-intelligence-ai-for-quality-managers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence for Product Managers Training",
+            "slug": "certified-artificial-intelligence-for-product-managers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Oracle SQL Fundamentals",
+            "slug": "oracle-sql-fundamentals",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 2995.0
+          },
+          {
+            "name": "Oracle SQL Advanced Training",
+            "slug": "oracle-sql-advanced-training",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1995.0
+          },
+          {
+            "name": "Oracle Program Training with PL/SQL",
+            "slug": "oracle-program-training-with-plsql",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 2495.0
+          },
+          {
+            "name": "Oracle SQL & PL/SQL Fundamentals",
+            "slug": "oracle-sql-and-plsql-fundamentals",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 2995.0
+          },
+          {
+            "name": "Practical Data Science with Amazon SageMaker Training",
+            "slug": "practical-data-science-with-amazon-sagemaker-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Google Advanced Data Analytics Professional Training Course",
+            "slug": "google-advanced-data-analytics-professional-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "DB2 SQL Training",
+            "slug": "db2-sql-training",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 2495.0
+          },
+          {
+            "name": "Microsoft Power BI Course",
+            "slug": "microsoft-power-bi-course",
+            "duration" : 0,
+            "track": "Power BI",
+            "price": 995.0
+          },
+          {
+            "name": "Tableau Desktop Training",
+            "slug": "tableau-desktop-training",
+            "duration" : 0,
+            "track": "Tableau",
+            "price": 1295.0
+          },
+          {
+            "name": "Adobe Customer Journey Analytics Training",
+            "slug": "adobe-customer-journey-analytics-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Adobe Analytics Training",
+            "slug": "adobe-analytics-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Querying Data with Microsoft Transact-SQL DP080",
+            "slug": "querying-data-with-microsoft-transact-sql-dp080",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 2495.0
+          },
+          {
+            "name": "Microsoft Power BI Data Analyst PL300",
+            "slug": "microsoft-power-bi-data-analyst-pl300",
+            "duration" : 0,
+            "track": "Power BI",
+            "price": 2495.0
+          },
+          {
+            "name": "Microsoft Power BI for End Users 55400AC",
+            "slug": "microsoft-power-bi-for-end-users-55400ac",
+            "duration" : 0,
+            "track": "Power BI",
+            "price": 2495.0
+          },
+          {
+            "name": "Introduction to SQL Databases Training 10985C",
+            "slug": "introduction-to-sql-databases-training-10985c",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1995.0
+          },
+          {
+            "name": "Accelerated SQL Server 2016 Integration Services",
+            "slug": "accelerated-sql-server-2016-integration-services",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1495.0
+          },
+          {
+            "name": "Accelerated SQL Server 2016 Integration Services",
+            "slug": "accelerated-sql-server-2016-integration-services",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 1495.0
+          },
+          {
+            "name": "SQL Server Integration Services 55321AC Training",
+            "slug": "sql-server-integration-services-55321ac-training",
+            "duration" : 0,
+            "track": "SQL",
+            "price": 3295.0
+          },
+          {
+            "name": "Quick Powerful Graphics with Power View, PowerPivot, Power Query, Power Map and Power BI M55164",
+            "slug": "quick-powerful-graphics-with-power-view-powerpivot-power-query-power-map-and-power-bi-m55164",
+            "duration" : 0,
+            "track": "Power BI",
+            "price": 1795.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Health and Safety Professional Course",
+            "slug": "certified-artificial-intelligence-ai-for-health-and-safety-professional-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Data analytics Skills",
+            "slug": "data-analytics-skills",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Google Analytics course",
+            "slug": "google-analytics-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Data analytics for Marketing Professional",
+            "slug": "data-analytics-for-marketing-professional",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Social Media Analytics",
+            "slug": "social-media-analytics",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Marketing Analytics Training",
+            "slug": "marketing-analytics-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Digital Marketing Training",
+            "slug": "certified-artificial-intelligence-ai-for-digital-marketing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Sales Analytics Training",
+            "slug": "sales-analytics-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Accountants Training",
+            "slug": "certified-artificial-intelligence-ai-for-accountants-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for HR Managers Training",
+            "slug": "certified-artificial-intelligence-ai-for-hr-managers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "HR Analytics Course",
+            "slug": "hr-analytics-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "People Analytics for Decision-Making Training Course",
+            "slug": "people-analytics-for-decision-making-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Cloud Professionals Training",
+            "slug": "certified-artificial-intelligence-ai-for-cloud-professionals-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Web Analytics Course",
+            "slug": "web-analytics-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Fraud Analytics Training Course",
+            "slug": "fraud-analytics-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Certified Artificial Intelligence (AI) for Cyber Security Professionals Training",
+            "slug": "certified-artificial-intelligence-ai-for-cyber-security-professionals-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "IT Service, Governance & Compliance": {
+    "slug": "it-service-governance-and-compliance",
+    "subs": {
+      "ITSM, Standards & Privacy": {
+        "slug": "itsm-standards-and-privacy",
+        "courses": [
+          {
+            "name": "ITIL® 4 Foundation Certification Course",
+            "slug": "itil-4-foundation-certification-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Managing Professional Transition Module",
+            "slug": "itil-4-managing-professional-transition-module",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Create Deliver and Support Certification",
+            "slug": "itil-4-specialist-create-deliver-and-support-certification",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Drive Stakeholder Value Course",
+            "slug": "itil-4-specialist-drive-stakeholder-value-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 2295.0
+          },
+          {
+            "name": "ITIL® 4 Foundation Exam Resit",
+            "slug": "itil-4-foundation-exam-resit",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 995.0
+          },
+          {
+            "name": "ITIL® 4 Strategist: Direct, Plan and Improve Training",
+            "slug": "itil-4-strategist-direct-plan-and-improve-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: High Velocity IT Certification Course",
+            "slug": "itil-4-specialist-high-velocity-it-certification-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Leader: Digital and IT Strategy Certification",
+            "slug": "itil-4-leader-digital-and-it-strategy-certification",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Sustainability in Digital and IT Training ITIL® SDIT",
+            "slug": "itil-4-specialist-sustainability-in-digital-and-it-training-itil-sdit",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "Complete ITIL 4 Managing Professional (MP) certification Path",
+            "slug": "complete-itil-4-managing-professional-mp-certification-path",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 8995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: IT Asset Management Training",
+            "slug": "itil-4-specialist-it-asset-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Business Relationship Management Course",
+            "slug": "itil-4-specialist-business-relationship-management-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Incident Management Training",
+            "slug": "itil-4-practitioner-incident-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Service Request Management Certification",
+            "slug": "itil-4-practitioner-service-request-management-certification",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Service Desk Training",
+            "slug": "itil-4-practitioner-service-desk-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Problem Management Training",
+            "slug": "itil-4-practitioner-problem-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Monitoring and Event Management Training",
+            "slug": "itil-4-practitioner-monitoring-and-event-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Acquiring and Managing Cloud Services Training",
+            "slug": "itil-4-specialist-acquiring-and-managing-cloud-services-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1995.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Monitor, Support, and Fulfil Training Course",
+            "slug": "itil-4-specialist-monitor-support-and-fulfil-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 2995.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Deployment Management Training Course",
+            "slug": "itil-4-practitioner-deployment-management-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: IT Asset Management Training Course",
+            "slug": "itil-4-practitioner-it-asset-management-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Change Enablement Training Course",
+            "slug": "itil-4-practitioner-change-enablement-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Service Configuration Management Training",
+            "slug": "itil-4-practitioner-service-configuration-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Release Management Training Course",
+            "slug": "itil-4-practitioner-release-management-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Specialist: Plan, Implement and Control Training Course",
+            "slug": "itil-4-specialist-plan-implement-and-control-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 2995.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner Continual Improvement Training",
+            "slug": "itil-4-practitioner-continual-improvement-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner Relationship Management Training",
+            "slug": "itil-4-practitioner-relationship-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner Information Security Management Training",
+            "slug": "itil-4-practitioner-information-security-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner Service Level Management Training",
+            "slug": "itil-4-practitioner-service-level-management-training",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ITIL® 4 Specialist Collaborate, Assure and Improve Training Course",
+            "slug": "itil-4-specialist-collaborate-assure-and-improve-training-course",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 2995.0
+          },
+          {
+            "name": "ITIL® 4 Practitioner: Supplier Management Certification",
+            "slug": "itil-4-practitioner-supplier-management-certification",
+            "duration" : 0,
+            "track": "ITIL",
+            "price": 1495.0
+          },
+          {
+            "name": "ISO 9001 Foundation course",
+            "slug": "iso-9001-foundation-course",
+            "duration" : 0,
+            "track": "ISO 9001",
+            "price": 1295.0
+          },
+          {
+            "name": "ISO 9001 Internal Auditor Training",
+            "slug": "iso-9001-internal-auditor-training",
+            "duration" : 0,
+            "track": "ISO 9001",
+            "price": 1795.0
+          },
+          {
+            "name": "ISO 9001 Lead Auditor Course",
+            "slug": "iso-9001-lead-auditor-course",
+            "duration" : 0,
+            "track": "ISO 9001",
+            "price": 2495.0
+          },
+          {
+            "name": "ISO 9001 lead implementer certification",
+            "slug": "iso-9001-lead-implementer-certification",
+            "duration" : 0,
+            "track": "ISO 9001",
+            "price": 2295.0
+          },
+          {
+            "name": "Microsoft Azure Administrator AZ104",
+            "slug": "microsoft-azure-administrator-az104",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 4495.0
+          },
+          {
+            "name": "Administering Microsoft Azure SQL Solutions DP-300 Certification",
+            "slug": "administering-microsoft-azure-sql-solutions-dp-300-certification",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2595.0
+          },
+          {
+            "name": "Automating Administration With PowerShell AZ-040 Training",
+            "slug": "automating-administration-with-powershell-az-040-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2895.0
+          },
+          {
+            "name": "Administering Windows Server Hybrid Core Infrastructure AZ800",
+            "slug": "administering-windows-server-hybrid-core-infrastructure-az800",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "Certified EU General Data Protection Regulation (EU GDPR) Foundation and Practitioner",
+            "slug": "certified-eu-general-data-protection-regulation-eu-gdpr-foundation-and-practitioner",
+            "duration" : 0,
+            "track": "GDPR",
+            "price": 2295.0
+          },
+          {
+            "name": "Certified EU General Data Protection Regulation (EU GDPR) Foundation",
+            "slug": "certified-eu-general-data-protection-regulation-eu-gdpr-foundation",
+            "duration" : 0,
+            "track": "GDPR",
+            "price": 1795.0
+          },
+          {
+            "name": "Certified EU General Data Protection Regulation (EU GDPR) Practitioner",
+            "slug": "certified-eu-general-data-protection-regulation-eu-gdpr-practitioner",
+            "duration" : 0,
+            "track": "GDPR",
+            "price": 1795.0
+          },
+          {
+            "name": "GDPR Awareness Training",
+            "slug": "gdpr-awareness-training",
+            "duration" : 0,
+            "track": "GDPR",
+            "price": 1295.0
+          },
+          {
+            "name": "PostgreSQL Administration Training",
+            "slug": "postgresql-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1295.0
+          },
+          {
+            "name": "Hadoop Administration Training",
+            "slug": "hadoop-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1995.0
+          },
+          {
+            "name": "COBIT® Foundation",
+            "slug": "cobit-foundation",
+            "duration" : 0,
+            "track": "COBIT",
+            "price": 1995.0
+          },
+          {
+            "name": "Administering Cisco Unified Communications Manager",
+            "slug": "administering-cisco-unified-communications-manager",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "Business Administration Course",
+            "slug": "business-administration-course",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 995.0
+          },
+          {
+            "name": "Oracle Database 12c R2: New Features for 12c R1 Administrators Ed 1",
+            "slug": "oracle-database-12c-r2-new-features-for-12c-r1-administrators-ed-1",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Oracle Database 12c: Administration",
+            "slug": "oracle-database-12c-administration",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "Oracle Database 12cR2, 18c and 19c New Features for Administrators",
+            "slug": "oracle-database-12cr2-18c-and-19c-new-features-for-administrators",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "Oracle Database 19c Administration Training",
+            "slug": "oracle-database-19c-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "Oracle Database 18c Administration Training",
+            "slug": "oracle-database-18c-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "AWS Associate SysOps Administrator Training",
+            "slug": "aws-associate-sysops-administrator-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "Administering Linux Systems",
+            "slug": "administering-linux-systems",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Administrating UNIX Systems",
+            "slug": "administrating-unix-systems",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "CentOS Administration Training",
+            "slug": "centos-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Debian Administration Training",
+            "slug": "debian-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1995.0
+          },
+          {
+            "name": "Arch Linux for System Administrators Training",
+            "slug": "arch-linux-for-system-administrators-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1995.0
+          },
+          {
+            "name": "Citrix XenApp 6.5 Administration",
+            "slug": "citrix-xenapp-65-administration",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Citrix Virtual Apps and Desktops 7 Advanced Deployment, Troubleshooting, Security and Administration Training",
+            "slug": "citrix-virtual-apps-and-desktops-7-advanced-deployment-troubleshooting-security-and-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Citrix Virtual Apps and Desktops 7, App Layering and WEM Administration Training",
+            "slug": "citrix-virtual-apps-and-desktops-7-app-layering-and-wem-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "IBM Cognos BI Administration (V10.2)",
+            "slug": "ibm-cognos-bi-administration-v102",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Primavera P6 Application Administration",
+            "slug": "primavera-p6-application-administration",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2495.0
+          },
+          {
+            "name": "Primavera Unifier Administration 15",
+            "slug": "primavera-unifier-administration-15",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 3995.0
+          },
+          {
+            "name": "Windows Server Administration 55371AC",
+            "slug": "windows-server-administration-55371ac",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 8995.0
+          },
+          {
+            "name": "Administering Configuration Manager - Fundamentals and Asset Management 55313AC",
+            "slug": "administering-configuration-manager-fundamentals-and-asset-management-55313ac",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 3295.0
+          },
+          {
+            "name": "Microsoft Endpoint Administrator MD102",
+            "slug": "microsoft-endpoint-administrator-md102",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 3295.0
+          },
+          {
+            "name": "Microsoft 365 Administrator Training MS102",
+            "slug": "microsoft-365-administrator-training-ms102",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1495.0
+          },
+          {
+            "name": "Copilot for Microsoft 365 for Administrators MS4006 Training",
+            "slug": "copilot-for-microsoft-365-for-administrators-ms4006-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 2995.0
+          },
+          {
+            "name": "ISO 45001 Foundation",
+            "slug": "iso-45001-foundation",
+            "duration" : 0,
+            "track": "ISO 45001",
+            "price": 1295.0
+          },
+          {
+            "name": "ISO 45001 Lead Auditor",
+            "slug": "iso-45001-lead-auditor",
+            "duration" : 0,
+            "track": "ISO 45001",
+            "price": 2495.0
+          },
+          {
+            "name": "ISO 45001 Lead Implementer",
+            "slug": "iso-45001-lead-implementer",
+            "duration" : 0,
+            "track": "ISO 45001",
+            "price": 2295.0
+          },
+          {
+            "name": "ISO 45001 Internal Auditor",
+            "slug": "iso-45001-internal-auditor",
+            "duration" : 0,
+            "track": "ISO 45001",
+            "price": 1795.0
+          },
+          {
+            "name": "ISO 14001 Foundation Certification",
+            "slug": "iso-14001-foundation-certification",
+            "duration" : 0,
+            "track": "ISO 14001",
+            "price": 1295.0
+          },
+          {
+            "name": "ISO 14001 Internal Auditor Training",
+            "slug": "iso-14001-internal-auditor-training",
+            "duration" : 0,
+            "track": "ISO 14001",
+            "price": 1795.0
+          },
+          {
+            "name": "ISO 14001 Lead Auditor Course",
+            "slug": "iso-14001-lead-auditor-course",
+            "duration" : 0,
+            "track": "ISO 14001",
+            "price": 2495.0
+          },
+          {
+            "name": "ISO 14001 Lead Implementer Course",
+            "slug": "iso-14001-lead-implementer-course",
+            "duration" : 0,
+            "track": "ISO 14001",
+            "price": 2295.0
+          },
+          {
+            "name": "Administrative Assistant Training",
+            "slug": "administrative-assistant-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 995.0
+          },
+          {
+            "name": "Certified Service Desk Support Technician",
+            "slug": "certified-service-desk-support-technician",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Service Desk Analyst (SDA)",
+            "slug": "service-desk-analyst-sda",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3295.0
+          },
+          {
+            "name": "Certified Service Desk Manager (CSDM)",
+            "slug": "certified-service-desk-manager-csdm",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2295.0
+          },
+          {
+            "name": "Service Desk Senior Analyst Training",
+            "slug": "service-desk-senior-analyst-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Accounts Administration Course",
+            "slug": "accounts-administration-course",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1995.0
+          },
+          {
+            "name": "Certified Pension Administration Training",
+            "slug": "certified-pension-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price": 1995.0
+          },
+          {
+            "name": "Microsoft Identity and Access Administrator SC300",
+            "slug": "microsoft-identity-and-access-administrator-sc300",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          },
+          {
+            "name": "Microsoft Information Protection Administrator SC400",
+            "slug": "microsoft-information-protection-administrator-sc400",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          },
+          {
+            "name": "Microsoft Information Protection Administrator SC400",
+            "slug": "microsoft-information-protection-administrator-sc400",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          },
+          {
+            "name": "Linux OpenStack Administration Training",
+            "slug": "linux-openstack-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          },
+          {
+            "name": "ISO 27001 Foundation",
+            "slug": "iso-27001-foundation",
+            "duration" : 0,
+            "track": "ISO 27001",
+            "price" : 0
+          },
+          {
+            "name": "ISO 27001 Internal Auditor",
+            "slug": "iso-27001-internal-auditor",
+            "duration" : 0,
+            "track": "ISO 27001",
+            "price" : 0
+          },
+          {
+            "name": "ISO 27001 Lead Auditor",
+            "slug": "iso-27001-lead-auditor",
+            "duration" : 0,
+            "track": "ISO 27001",
+            "price" : 0
+          },
+          {
+            "name": "ISO 27001 Lead Implementer",
+            "slug": "iso-27001-lead-implementer",
+            "duration" : 0,
+            "track": "ISO 27001",
+            "price" : 0
+          },
+          {
+            "name": "ISO 27035 Information Security Incident Management Training",
+            "slug": "iso-27035-information-security-incident-management-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Ubuntu Linux Server Administration Training",
+            "slug": "ubuntu-linux-server-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          },
+          {
+            "name": "Nginx Web Server Administration Training",
+            "slug": "nginx-web-server-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          },
+          {
+            "name": "BIND DNS Administration Training",
+            "slug": "bind-dns-administration-training",
+            "duration" : 0,
+            "track": "NIST",
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Business, Leadership & Project Management": {
+    "slug": "business-leadership-and-project-management",
+    "subs": {
+      "Leadership & People": {
+        "slug": "leadership-and-people",
+        "courses": [
+          {
+            "name": "Supervisor Training",
+            "slug": "supervisor-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Leadership Skills Training",
+            "slug": "leadership-skills-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Leadership and Management Course",
+            "slug": "leadership-and-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Executive Leadership Coaching Training",
+            "slug": "executive-leadership-coaching-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Women's Leadership Training",
+            "slug": "womens-leadership-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Executive Leadership Presence Training",
+            "slug": "executive-leadership-presence-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Ethical Leadership Training",
+            "slug": "ethical-leadership-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "NEBOSH HSE Certificate in Health and Safety Leadership Excellence Training",
+            "slug": "nebosh-hse-certificate-in-health-and-safety-leadership-excellence-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 1495.0
+          },
+          {
+            "name": "Health and Safety Training for Managers and Supervisors",
+            "slug": "health-and-safety-training-for-managers-and-supervisors",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Health and Safety Training for Managers and Supervisors",
+            "slug": "health-and-safety-training-for-managers-and-supervisors",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Supervisor Leadership Skills for a Safe Workplace",
+            "slug": "supervisor-leadership-skills-for-a-safe-workplace",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Coaching skills Training",
+            "slug": "coaching-skills-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Coaching and Monitering Training Course",
+            "slug": "coaching-and-monitering-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "CIPD Level 5 Associate Diploma in People Management Course",
+            "slug": "cipd-level-5-associate-diploma-in-people-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ILM Level 2 Award in Leadership and Team Skills",
+            "slug": "ilm-level-2-award-in-leadership-and-team-skills",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 2 Certificate in Leadership and Team Skills",
+            "slug": "ilm-level-2-certificate-in-leadership-and-team-skills",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 3 Award in Leadership and Management",
+            "slug": "ilm-level-3-award-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 3 Certificate in Leadership and Management",
+            "slug": "ilm-level-3-certificate-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 3 Diploma in Leadership and Management",
+            "slug": "ilm-level-3-diploma-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 3 Certificate in Principles of Leadership and Management",
+            "slug": "ilm-level-3-certificate-in-principles-of-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 3 Award in Effective Coaching",
+            "slug": "ilm-level-3-award-in-effective-coaching",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 3 Certificate in Effective Coaching",
+            "slug": "ilm-level-3-certificate-in-effective-coaching",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 3 Certificate in Leadership",
+            "slug": "ilm-level-3-certificate-in-leadership",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 3 Certificate in Effective Coaching and Mentoring",
+            "slug": "ilm-level-3-certificate-in-effective-coaching-and-mentoring",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 4 Award in Leadership and Management",
+            "slug": "ilm-level-4-award-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 4 Certificate in Leadership and Management",
+            "slug": "ilm-level-4-certificate-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 4 Diploma in Leadership and Management",
+            "slug": "ilm-level-4-diploma-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 4 Diploma in Principles of Leadership and Management",
+            "slug": "ilm-level-4-diploma-in-principles-of-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 4 Certificate in Principles of Leadership and Management Course",
+            "slug": "ilm-level-4-certificate-in-principles-of-leadership-and-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ILM Level 4 Award in Leadership Course",
+            "slug": "ilm-level-4-award-in-leadership-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ILM Level 5 Award in Leadership and Management",
+            "slug": "ilm-level-5-award-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 5 Certificate in Leadership and Management",
+            "slug": "ilm-level-5-certificate-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 5 Diploma in Leadership and Management",
+            "slug": "ilm-level-5-diploma-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 5 Certificate in Effective Coaching and Mentoring",
+            "slug": "ilm-level-5-certificate-in-effective-coaching-and-mentoring",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 5 Diploma in Effective Coaching and Mentoring",
+            "slug": "ilm-level-5-diploma-in-effective-coaching-and-mentoring",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 5 Award in Leadership",
+            "slug": "ilm-level-5-award-in-leadership",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 5 Certificate in Leadership",
+            "slug": "ilm-level-5-certificate-in-leadership",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 5 Award in Leadership and Management Skills",
+            "slug": "ilm-level-5-award-in-leadership-and-management-skills",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 5 Diploma in Principles of Leadership and Management",
+            "slug": "ilm-level-5-diploma-in-principles-of-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 5 NVQ Diploma in Management and Leadership",
+            "slug": "ilm-level-5-nvq-diploma-in-management-and-leadership",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 6 Certificate in Leadership and Management",
+            "slug": "ilm-level-6-certificate-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 6 Award in Leadership and Management",
+            "slug": "ilm-level-6-award-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "ILM Level 6 Diploma in Leadership and Management",
+            "slug": "ilm-level-6-diploma-in-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 7 NVQ Diploma in Strategic Management and Leadership",
+            "slug": "ilm-level-7-nvq-diploma-in-strategic-management-and-leadership",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 7 Diploma for Coaching Supervisors",
+            "slug": "ilm-level-7-diploma-for-coaching-supervisors",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 7 Certificate for Coaching Supervisors",
+            "slug": "ilm-level-7-certificate-for-coaching-supervisors",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 7 Certificate Strategic Leadership and Management",
+            "slug": "ilm-level-7-certificate-strategic-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "ILM Level 7 Extended Diploma in Strategic Leadership and Management",
+            "slug": "ilm-level-7-extended-diploma-in-strategic-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ILM Level 7 Diploma Strategic Leadership and Management",
+            "slug": "ilm-level-7-diploma-strategic-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "ILM Level 7 Award in Strategic Leadership and Management",
+            "slug": "ilm-level-7-award-in-strategic-leadership-and-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Bid and Tender Management Skills",
+            "slug": "bid-and-tender-management-skills",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Certified Leadership Development Training Course",
+            "slug": "certified-leadership-development-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "AI for Leadership and HR Data Analytics Training Course",
+            "slug": "ai-for-leadership-and-hr-data-analytics-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Successful People Management and Team Leadership",
+            "slug": "successful-people-management-and-team-leadership",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "CMI Level 3 Award in Principles of Management and Leadership Training Course",
+            "slug": "cmi-level-3-award-in-principles-of-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 3 Certificate in Principles of Management and Leadership Training Course",
+            "slug": "cmi-level-3-certificate-in-principles-of-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 3 Diploma in Principles of Management and Leadership Training Course",
+            "slug": "cmi-level-3-diploma-in-principles-of-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 3 Award in Coaching and Mentoring Training Course",
+            "slug": "cmi-level-3-award-in-coaching-and-mentoring-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 3 Diploma in Coaching and Mentoring Training Course",
+            "slug": "cmi-level-3-diploma-in-coaching-and-mentoring-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 3 Certificate in Coaching and Mentoring Training Course",
+            "slug": "cmi-level-3-certificate-in-coaching-and-mentoring-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 4 Award in Management and Leadership Training Course",
+            "slug": "cmi-level-4-award-in-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 4 Certificate in Management and Leadership Training Course",
+            "slug": "cmi-level-4-certificate-in-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 4 Diploma in Management and Leadership Training Course",
+            "slug": "cmi-level-4-diploma-in-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 5 Award in Management and Leadership Training",
+            "slug": "cmi-level-5-award-in-management-and-leadership-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 5 Certificate in Management and Leadership Training Course",
+            "slug": "cmi-level-5-certificate-in-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 5 Diploma in Management and Leadership Training Course",
+            "slug": "cmi-level-5-diploma-in-management-and-leadership-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 6 Award in Professional Management and Leadership Practice Training Course",
+            "slug": "cmi-level-6-award-in-professional-management-and-leadership-practice-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 6 Certificate in Professional Management and Leadership Practice Training Course",
+            "slug": "cmi-level-6-certificate-in-professional-management-and-leadership-practice-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 6 Diploma in Professional Management and Leadership Practice Training Course",
+            "slug": "cmi-level-6-diploma-in-professional-management-and-leadership-practice-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 7 Award in Strategic Management and Leadership Practice Training Course",
+            "slug": "cmi-level-7-award-in-strategic-management-and-leadership-practice-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 7 Certificate in Strategic Management and Leadership Practice Training",
+            "slug": "cmi-level-7-certificate-in-strategic-management-and-leadership-practice-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 7 Diploma in Strategic Management and Leadership Practice Training",
+            "slug": "cmi-level-7-diploma-in-strategic-management-and-leadership-practice-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 7 Award in Leadership Coaching and Mentoring Training Course",
+            "slug": "cmi-level-7-award-in-leadership-coaching-and-mentoring-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 7 Certificate in Leadership Coaching and Mentoring Training Course",
+            "slug": "cmi-level-7-certificate-in-leadership-coaching-and-mentoring-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CMI Level 7 Diploma in Leadership Coaching and Mentoring Training Course",
+            "slug": "cmi-level-7-diploma-in-leadership-coaching-and-mentoring-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      },
+      "Project/Programme & Change": {
+        "slug": "projectprogramme-and-change",
+        "courses": [
+          {
+            "name": "PRINCE2® Foundation & Practitioner Training Course",
+            "slug": "prince2-foundation-and-practitioner-training-course",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 2795.0
+          },
+          {
+            "name": "PRINCE2® Foundation",
+            "slug": "prince2-foundation",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 1795.0
+          },
+          {
+            "name": "PRINCE2® Practitioner",
+            "slug": "prince2-practitioner",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 1795.0
+          },
+          {
+            "name": "PRINCE2® Practitioner Exam Resit",
+            "slug": "prince2-practitioner-exam-resit",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 995.0
+          },
+          {
+            "name": "PRINCE2 Agile® Practitioner",
+            "slug": "prince2-agile-practitioner",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 1795.0
+          },
+          {
+            "name": "PRINCE2® Foundation Exam Resit",
+            "slug": "prince2-foundation-exam-resit",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 995.0
+          },
+          {
+            "name": "PRINCE2 Agile® Foundation",
+            "slug": "prince2-agile-foundation",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 1795.0
+          },
+          {
+            "name": "PRINCE2 Agile® Foundation and Practitioner",
+            "slug": "prince2-agile-foundation-and-practitioner",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 3295.0
+          },
+          {
+            "name": "PRINCE2 Agile® Foundation Exam Resit",
+            "slug": "prince2-agile-foundation-exam-resit",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 995.0
+          },
+          {
+            "name": "PRINCE2 Agile® Practitioner Exam Resit",
+            "slug": "prince2-agile-practitioner-exam-resit",
+            "duration" : 0,
+            "track": "PRINCE2",
+            "price": 995.0
+          },
+          {
+            "name": "Lean Six Sigma Green Belt",
+            "slug": "lean-six-sigma-green-belt",
+            "duration" : 0,
+            "track": "Lean Six Sigma",
+            "price": 2495.0
+          },
+          {
+            "name": "Lean Six Sigma Yellow Belt",
+            "slug": "lean-six-sigma-yellow-belt",
+            "duration" : 0,
+            "track": "Lean Six Sigma",
+            "price": 1495.0
+          },
+          {
+            "name": "Lean Six Sigma Black Belt",
+            "slug": "lean-six-sigma-black-belt",
+            "duration" : 0,
+            "track": "Lean Six Sigma",
+            "price": 4595.0
+          },
+          {
+            "name": "Lean Six Sigma Black Belt Upgrade",
+            "slug": "lean-six-sigma-black-belt-upgrade",
+            "duration" : 0,
+            "track": "Lean Six Sigma",
+            "price": 2995.0
+          },
+          {
+            "name": "Lean Six Sigma Master Black Belt (MBB)",
+            "slug": "lean-six-sigma-master-black-belt-mbb",
+            "duration" : 0,
+            "track": "Lean Six Sigma",
+            "price": 2995.0
+          },
+          {
+            "name": "Lean Six Sigma Master Black Belt Upgrade",
+            "slug": "lean-six-sigma-master-black-belt-upgrade",
+            "duration" : 0,
+            "track": "Lean Six Sigma",
+            "price": 4195.0
+          },
+          {
+            "name": "Certified Professional in Agile Project Management (CPAPM)",
+            "slug": "certified-professional-in-agile-project-management-cpapm",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Certified Scaled Agile Framework Leading SAFe® 6.0 Training and Exam",
+            "slug": "certified-scaled-agile-framework-leading-safe-60-training-and-exam",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Agile Programme Management (AgilePgM®)",
+            "slug": "agile-programme-management-agilepgm",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 2295.0
+          },
+          {
+            "name": "Agile Overview",
+            "slug": "agile-overview",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 995.0
+          },
+          {
+            "name": "Agile for Teams",
+            "slug": "agile-for-teams",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 995.0
+          },
+          {
+            "name": "Agile User Stories",
+            "slug": "agile-user-stories",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 995.0
+          },
+          {
+            "name": "AgileSHIFT",
+            "slug": "agileshift",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 3795.0
+          },
+          {
+            "name": "Agile Change Agent",
+            "slug": "agile-change-agent",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 3795.0
+          },
+          {
+            "name": "SAFe® Agile Product Management Training",
+            "slug": "safe-agile-product-management-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1995.0
+          },
+          {
+            "name": "SAFe® Agile Software Engineering Training",
+            "slug": "safe-agile-software-engineering-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 2995.0
+          },
+          {
+            "name": "Certified Artificial Intelligence for Agile Projects Training",
+            "slug": "certified-artificial-intelligence-for-agile-projects-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1295.0
+          },
+          {
+            "name": "ICAgile - Agile fundamentals (ICP) Training",
+            "slug": "icagile-agile-fundamentals-icp-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 3995.0
+          },
+          {
+            "name": "AgilePM® Foundation & Practitioner (AgilePM® v3)",
+            "slug": "agilepm-foundation-and-practitioner-agilepm-v3",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 2495.0
+          },
+          {
+            "name": "Agile Project Management Foundation (AgilePM® v3)",
+            "slug": "agile-project-management-foundation-agilepm-v3",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Agile Project Management Practitioner (AgilePM® v3)",
+            "slug": "agile-project-management-practitioner-agilepm-v3",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Scrum Master Certification",
+            "slug": "scrum-master-certification",
+            "duration" : 0,
+            "track": "Scrum",
+            "price": 1695.0
+          },
+          {
+            "name": "Scrum Product Owner Certification",
+            "slug": "scrum-product-owner-certification",
+            "duration" : 0,
+            "track": "Scrum",
+            "price": 1495.0
+          },
+          {
+            "name": "Scrum Developer Training",
+            "slug": "scrum-developer-training",
+            "duration" : 0,
+            "track": "Scrum",
+            "price": 1995.0
+          },
+          {
+            "name": "Managing Agile Projects with Scrum",
+            "slug": "managing-agile-projects-with-scrum",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 995.0
+          },
+          {
+            "name": "Scrum for Teams",
+            "slug": "scrum-for-teams",
+            "duration" : 0,
+            "track": "Scrum",
+            "price": 995.0
+          },
+          {
+            "name": "Agile and Scrum Awareness",
+            "slug": "agile-and-scrum-awareness",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 995.0
+          },
+          {
+            "name": "Scrum Overview",
+            "slug": "scrum-overview",
+            "duration" : 0,
+            "track": "Scrum",
+            "price": 995.0
+          },
+          {
+            "name": "Certified Artificial Intelligence for Scrum Master Training",
+            "slug": "certified-artificial-intelligence-for-scrum-master-training",
+            "duration" : 0,
+            "track": "Scrum",
+            "price": 1295.0
+          },
+          {
+            "name": "PMP® Exam Prep Boot Camp",
+            "slug": "pmp-exam-prep-boot-camp",
+            "duration" : 0,
+            "track": "PMP",
+            "price" : 0
+          },
+          {
+            "name": "PMP® Certification Training Course",
+            "slug": "pmp-certification-training-course",
+            "duration" : 0,
+            "track": "PMP",
+            "price": 3395.0
+          },
+          {
+            "name": "PMI-ACP® Certification Training",
+            "slug": "pmi-acp-certification-training",
+            "duration" : 0,
+            "track": "PMI-ACP",
+            "price": 2495.0
+          },
+          {
+            "name": "PMI Professional In Business Analysis PMI PBA® Certification",
+            "slug": "pmi-professional-in-business-analysis-pmi-pba-certification",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 2495.0
+          },
+          {
+            "name": "Disciplined Agile® Scrum Master (DASM) Training",
+            "slug": "disciplined-agile-scrum-master-dasm-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 3995.0
+          },
+          {
+            "name": "Disciplined Agile® Senior Scrum Master (DASSM) Training",
+            "slug": "disciplined-agile-senior-scrum-master-dassm-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 6995.0
+          },
+          {
+            "name": "Disciplined Agile® Coach (DAC) Certification",
+            "slug": "disciplined-agile-coach-dac-certification",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 2495.0
+          },
+          {
+            "name": "Disciplined Agile® Value Stream Consultant (DAVSC) Certification",
+            "slug": "disciplined-agile-value-stream-consultant-davsc-certification",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 3995.0
+          },
+          {
+            "name": "BCS Certificate in Business Analysis Practice",
+            "slug": "bcs-certificate-in-business-analysis-practice",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 1995.0
+          },
+          {
+            "name": "BCS International Diploma in Business Analysis",
+            "slug": "bcs-international-diploma-in-business-analysis",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 5295.0
+          },
+          {
+            "name": "BCS Foundation Certificate in Agile",
+            "slug": "bcs-foundation-certificate-in-agile",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1995.0
+          },
+          {
+            "name": "BCS Business Analysis Diploma Oral Preparation Workshop",
+            "slug": "bcs-business-analysis-diploma-oral-preparation-workshop",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 995.0
+          },
+          {
+            "name": "BCS Foundation Certificate in Business Analysis",
+            "slug": "bcs-foundation-certificate-in-business-analysis",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 1995.0
+          },
+          {
+            "name": "BCS Advanced International Diploma in Business Analysis",
+            "slug": "bcs-advanced-international-diploma-in-business-analysis",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 14995.0
+          },
+          {
+            "name": "BCS Professional Certificate in Agile Business Analysis Training",
+            "slug": "bcs-professional-certificate-in-agile-business-analysis-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 3995.0
+          },
+          {
+            "name": "Change Management Foundation & Practitioner",
+            "slug": "change-management-foundation-and-practitioner",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3795.0
+          },
+          {
+            "name": "Change Management Foundation",
+            "slug": "change-management-foundation",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Certified Professional Change Management CPCM",
+            "slug": "certified-professional-change-management-cpcm",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Change Management Practitioner",
+            "slug": "change-management-practitioner",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Change Management Re-Registration",
+            "slug": "change-management-re-registration",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Change Management Black Belt",
+            "slug": "change-management-black-belt",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Change Management Green Belt",
+            "slug": "change-management-green-belt",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Complete Change Management Assessments Training",
+            "slug": "complete-change-management-assessments-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Managing Change with Agile Methodology Training",
+            "slug": "managing-change-with-agile-methodology-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 995.0
+          },
+          {
+            "name": "MSP® Foundation & Practitioner",
+            "slug": "msp-foundation-and-practitioner",
+            "duration" : 0,
+            "track": "MSP",
+            "price": 3295.0
+          },
+          {
+            "name": "MSP® Foundation",
+            "slug": "msp-foundation",
+            "duration" : 0,
+            "track": "MSP",
+            "price": 1795.0
+          },
+          {
+            "name": "MSP® Practitioner",
+            "slug": "msp-practitioner",
+            "duration" : 0,
+            "track": "MSP",
+            "price": 1795.0
+          },
+          {
+            "name": "Retired : MSP® Advanced Practitioner",
+            "slug": "retired-msp-advanced-practitioner",
+            "duration" : 0,
+            "track": "MSP",
+            "price" : 0
+          },
+          {
+            "name": "MSP® Re-Registration",
+            "slug": "msp-re-registration",
+            "duration" : 0,
+            "track": "MSP",
+            "price": 1795.0
+          },
+          {
+            "name": "MSP® Foundation Exam Resit",
+            "slug": "msp-foundation-exam-resit",
+            "duration" : 0,
+            "track": "MSP",
+            "price": 995.0
+          },
+          {
+            "name": "MSP® Practitioner Exam Resit",
+            "slug": "msp-practitioner-exam-resit",
+            "duration" : 0,
+            "track": "MSP",
+            "price": 995.0
+          },
+          {
+            "name": "IIBA® Certified Business Analysis Professional (CBAP®)",
+            "slug": "iiba-certified-business-analysis-professional-cbap",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 1995.0
+          },
+          {
+            "name": "IIBA® Certification of Competency in Business Analysis (CCBA®)",
+            "slug": "iiba-certification-of-competency-in-business-analysis-ccba",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 1995.0
+          },
+          {
+            "name": "IIBA® Entry Certificate in Business Analysis (ECBA™)",
+            "slug": "iiba-entry-certificate-in-business-analysis-ecba",
+            "duration" : 0,
+            "track": "Business Analysis",
+            "price": 1695.0
+          },
+          {
+            "name": "ISTQB Agile Foundation Extension",
+            "slug": "istqb-agile-foundation-extension",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1695.0
+          },
+          {
+            "name": "ISTQB Advanced Agile Technical Tester Training",
+            "slug": "istqb-advanced-agile-technical-tester-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 2995.0
+          },
+          {
+            "name": "Agile Business Analyst Foundation and Practitioner (AgileBA®)",
+            "slug": "agile-business-analyst-foundation-and-practitioner-agileba",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 2995.0
+          },
+          {
+            "name": "Agile Business Analyst Foundation (AgileBA®)",
+            "slug": "agile-business-analyst-foundation-agileba",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1995.0
+          },
+          {
+            "name": "Agile Business Analyst Practitioner (AgileBA®)",
+            "slug": "agile-business-analyst-practitioner-agileba",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1995.0
+          },
+          {
+            "name": "Agile Business Analysis in a Scrum Environment",
+            "slug": "agile-business-analysis-in-a-scrum-environment",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Agile Business Analyst Professional (CABAP)",
+            "slug": "certified-agile-business-analyst-professional-cabap",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "P3O® Foundation & Practitioner",
+            "slug": "p3o-foundation-and-practitioner",
+            "duration" : 0,
+            "track": "P3O",
+            "price": 2995.0
+          },
+          {
+            "name": "P3O® Foundation",
+            "slug": "p3o-foundation",
+            "duration" : 0,
+            "track": "P3O",
+            "price": 1795.0
+          },
+          {
+            "name": "P3O® Practitioner",
+            "slug": "p3o-practitioner",
+            "duration" : 0,
+            "track": "P3O",
+            "price": 1795.0
+          },
+          {
+            "name": "P3O® Re-Registration",
+            "slug": "p3o-re-registration",
+            "duration" : 0,
+            "track": "P3O",
+            "price": 1795.0
+          },
+          {
+            "name": "P3O® Foundation Exam Resit",
+            "slug": "p3o-foundation-exam-resit",
+            "duration" : 0,
+            "track": "P3O",
+            "price": 995.0
+          },
+          {
+            "name": "P3O® Practitioner Exam Resit",
+            "slug": "p3o-practitioner-exam-resit",
+            "duration" : 0,
+            "track": "P3O",
+            "price": 3695.0
+          },
+          {
+            "name": "Management of Portfolios (MoP®) Foundation & Practitioner",
+            "slug": "management-of-portfolios-mop-foundation-and-practitioner",
+            "duration" : 0,
+            "track": "MoP",
+            "price": 3395.0
+          },
+          {
+            "name": "Management of Portfolios (MoP®) Foundation",
+            "slug": "management-of-portfolios-mop-foundation",
+            "duration" : 0,
+            "track": "MoP",
+            "price": 1795.0
+          },
+          {
+            "name": "Management of Portfolios (MoP®) Practitioner Upgrade",
+            "slug": "management-of-portfolios-mop-practitioner-upgrade",
+            "duration" : 0,
+            "track": "MoP",
+            "price": 1795.0
+          },
+          {
+            "name": "Management of Portfolios (MoP®) Foundation Exam Resit",
+            "slug": "management-of-portfolios-mop-foundation-exam-resit",
+            "duration" : 0,
+            "track": "MoP",
+            "price": 1795.0
+          },
+          {
+            "name": "Management of Portfolios (MoP®) Practitioner Exam Resit",
+            "slug": "management-of-portfolios-mop-practitioner-exam-resit",
+            "duration" : 0,
+            "track": "MoP",
+            "price": 995.0
+          },
+          {
+            "name": "MoV® Foundation & Practitioner",
+            "slug": "mov-foundation-and-practitioner",
+            "duration" : 0,
+            "track": "MoV",
+            "price": 3295.0
+          },
+          {
+            "name": "MoV® Foundation",
+            "slug": "mov-foundation",
+            "duration" : 0,
+            "track": "MoV",
+            "price": 1795.0
+          },
+          {
+            "name": "MoV® Practitioner",
+            "slug": "mov-practitioner",
+            "duration" : 0,
+            "track": "MoV",
+            "price": 1795.0
+          },
+          {
+            "name": "MoV® Foundation Exam Resit",
+            "slug": "mov-foundation-exam-resit",
+            "duration" : 0,
+            "track": "MoV",
+            "price": 995.0
+          },
+          {
+            "name": "MoV® Practitioner Exam Resit",
+            "slug": "mov-practitioner-exam-resit",
+            "duration" : 0,
+            "track": "MoV",
+            "price": 995.0
+          },
+          {
+            "name": "Agile Leadership Training",
+            "slug": "agile-leadership-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Agile DevOps Professional (CADOP)",
+            "slug": "certified-agile-devops-professional-cadop",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1995.0
+          },
+          {
+            "name": "Certified Kanban Foundation and Practitioner Training",
+            "slug": "certified-kanban-foundation-and-practitioner-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Certified Kanban Foundation Training",
+            "slug": "certified-kanban-foundation-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Kanban Practitioner Training",
+            "slug": "certified-kanban-practitioner-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Certified Agile IT Service Manager (CAITSM)",
+            "slug": "certified-agile-it-service-manager-caitsm",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Agile Software Testing",
+            "slug": "agile-software-testing",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Agile Tester Training",
+            "slug": "agile-tester-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price": 1795.0
+          },
+          {
+            "name": "Agile Software Development Training",
+            "slug": "agile-software-development-training",
+            "duration" : 0,
+            "track": "Agile",
+            "price" : 0
+          },
+          {
+            "name": "PeopleCert ProPath Agile Project Expert",
+            "slug": "peoplecert-propath-agile-project-expert",
+            "duration" : 0,
+            "track": "Agile",
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Soft Skills & Personal Growth": {
+    "slug": "soft-skills-and-personal-growth",
+    "subs": {
+      "Communication & Career Skills": {
+        "slug": "communication-and-career-skills",
+        "courses": [
+          {
+            "name": "Time Management Training",
+            "slug": "time-management-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Stress Management Course",
+            "slug": "stress-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Emotional Intelligence Training",
+            "slug": "emotional-intelligence-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Communication and Influencing skill Training",
+            "slug": "communication-and-influencing-skill-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Conflict Management Training",
+            "slug": "conflict-management-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Productivity and Time Management",
+            "slug": "productivity-and-time-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Contract Negotiation Training Course",
+            "slug": "contract-negotiation-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Microsoft 365 Certified Collaboration Communications Systems Engineer Associate Training Course",
+            "slug": "microsoft-365-certified-collaboration-communications-systems-engineer-associate-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Optimise productivity with Copilot for Microsoft 365 MS4004 Course",
+            "slug": "optimise-productivity-with-copilot-for-microsoft-365-ms4004-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Microsoft 365 Certified Collaboration Communications Systems Engineer MS721 Training",
+            "slug": "microsoft-365-certified-collaboration-communications-systems-engineer-ms721-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 4995.0
+          },
+          {
+            "name": "Effective Communication Skills",
+            "slug": "effective-communication-skills",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Public Speaking Course",
+            "slug": "public-speaking-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Negotiation Skills Training",
+            "slug": "negotiation-skills-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Cross Cultural Communications Training",
+            "slug": "cross-cultural-communications-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Visual Communication Course",
+            "slug": "visual-communication-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Business Communication Course",
+            "slug": "business-communication-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Executive Communication Training",
+            "slug": "executive-communication-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "B2B Communications Training",
+            "slug": "b2b-communications-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Conflict Resolution and Negotiation for Change Training",
+            "slug": "conflict-resolution-and-negotiation-for-change-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Nonverbal Communication Training",
+            "slug": "nonverbal-communication-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "NonVerbal Communication Training",
+            "slug": "nonverbal-communication-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Presentation Skills Trainig",
+            "slug": "presentation-skills-trainig",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Sales Negotiation Training",
+            "slug": "sales-negotiation-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Emotional Intelligence in the Workplace Training Course",
+            "slug": "emotional-intelligence-in-the-workplace-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Implement Retention, eDiscovery, and Communication Compliance in Microsoft Purview SC5007 Course",
+            "slug": "implement-retention-ediscovery-and-communication-compliance-in-microsoft-purview-sc5007-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Implement Retention, eDiscovery, and Communication Compliance in Microsoft Purview SC5007 Course",
+            "slug": "implement-retention-ediscovery-and-communication-compliance-in-microsoft-purview-sc5007-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Mindfulness Training",
+            "slug": "mindfulness-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Finance, Accounting & Business Skills": {
+    "slug": "finance-accounting-and-business-skills",
+    "subs": {
+      "Finance & Analysis": {
+        "slug": "finance-and-analysis",
+        "courses": [
+          {
+            "name": "BCS Practitioner Certificate in Modelling Business Processes Training",
+            "slug": "bcs-practitioner-certificate-in-modelling-business-processes-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "BCS Practitioner Award in Business Skills for the IT Professional Training",
+            "slug": "bcs-practitioner-award-in-business-skills-for-the-it-professional-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "BCS Practitioner Certificate in Systems Modelling and Development Training",
+            "slug": "bcs-practitioner-certificate-in-systems-modelling-and-development-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2895.0
+          },
+          {
+            "name": "Microsoft Excel Course",
+            "slug": "microsoft-excel-course",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 995.0
+          },
+          {
+            "name": "Microsoft Excel VBA and Macro Training",
+            "slug": "microsoft-excel-vba-and-macro-training",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 995.0
+          },
+          {
+            "name": "Excel for Accounting Course",
+            "slug": "excel-for-accounting-course",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 1295.0
+          },
+          {
+            "name": "Excel Training with Gantt Charts",
+            "slug": "excel-training-with-gantt-charts",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 1295.0
+          },
+          {
+            "name": "SAP Financial Accounting",
+            "slug": "sap-financial-accounting",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Data Analysis Training using MS Excel",
+            "slug": "data-analysis-training-using-ms-excel",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 2495.0
+          },
+          {
+            "name": "Advanced Microsoft Excel 2019 55270AC",
+            "slug": "advanced-microsoft-excel-2019-55270ac",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 1495.0
+          },
+          {
+            "name": "Microsoft Excel Expert MO201",
+            "slug": "microsoft-excel-expert-mo201",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 3495.0
+          },
+          {
+            "name": "Microsoft Excel Associate MO200",
+            "slug": "microsoft-excel-associate-mo200",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 1795.0
+          },
+          {
+            "name": "Intermediate Microsoft Excel 2019 M55269 Training",
+            "slug": "intermediate-microsoft-excel-2019-m55269-training",
+            "duration" : 0,
+            "track": "Excel",
+            "price": 895.0
+          },
+          {
+            "name": "CIMA’s CGMA® Fundamentals of Management Accounting (BA2) Course",
+            "slug": "cimas-cgma-fundamentals-of-management-accounting-ba2-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CIMA’s CGMA® Fundamentals of Financial Accounting (BA3) Course",
+            "slug": "cimas-cgma-fundamentals-of-financial-accounting-ba3-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CIMA’s CGMA® Management Accounting (P1) Course",
+            "slug": "cimas-cgma-management-accounting-p1-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CIMA’s CGMA® Financial Reporting Training (F1) Training",
+            "slug": "cimas-cgma-financial-reporting-training-f1-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CIMA’s CGMA® Advanced Management Accounting (P2) Course",
+            "slug": "cimas-cgma-advanced-management-accounting-p2-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CIMA’s CGMA® Advanced Financial Reporting (F2) Course",
+            "slug": "cimas-cgma-advanced-financial-reporting-f2-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "CIMA’s CGMA® Financial Strategy (F3) Course",
+            "slug": "cimas-cgma-financial-strategy-f3-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Wave Accounting Training",
+            "slug": "wave-accounting-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Project Accounting Course",
+            "slug": "project-accounting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Accounting Course",
+            "slug": "accounting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Accounting and Financial Statement Analysis Training",
+            "slug": "accounting-and-financial-statement-analysis-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Accounting and Finance Policies Course",
+            "slug": "accounting-and-finance-policies-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Fixed Assets Accounting and Management Course",
+            "slug": "fixed-assets-accounting-and-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Inventory Accounting and Costing Course",
+            "slug": "inventory-accounting-and-costing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Financial Accountant Course",
+            "slug": "financial-accountant-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Capital Accounting Course",
+            "slug": "capital-accounting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Management Accounting Course",
+            "slug": "management-accounting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Certified Wealth Management Course",
+            "slug": "certified-wealth-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Financial Accounting Course",
+            "slug": "financial-accounting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Digital Transformation in Financial Services Course",
+            "slug": "digital-transformation-in-financial-services-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Financial Risk Management Certification Training",
+            "slug": "financial-risk-management-certification-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Financial Management Course",
+            "slug": "financial-management-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Financial Modelling Course",
+            "slug": "financial-modelling-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Financial Modelling and Forecasting Training",
+            "slug": "financial-modelling-and-forecasting-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Corporate Finance Training",
+            "slug": "corporate-finance-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "International Financial Reporting Standards Training Course",
+            "slug": "international-financial-reporting-standards-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Financial Controller Certification Training",
+            "slug": "financial-controller-certification-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "Finance for Non Financial Managers",
+            "slug": "finance-for-non-financial-managers",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Diploma for Financial Advisers DipFA Training",
+            "slug": "diploma-for-financial-advisers-dipfa-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Financial Analyst Training Course",
+            "slug": "financial-analyst-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Microsoft 365 Copilot for Excel Training",
+            "slug": "microsoft-365-copilot-for-excel-training",
+            "duration" : 0,
+            "track": "Excel",
+            "price" : 0
+          },
+          {
+            "name": "Real Estate Financial Modelling Training",
+            "slug": "real-estate-financial-modelling-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Real Estate Valuation and Appraisal Training Course",
+            "slug": "real-estate-valuation-and-appraisal-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Systems Modelling Techniques Course",
+            "slug": "systems-modelling-techniques-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Dimensional Modelling Foundations Training",
+            "slug": "dimensional-modelling-foundations-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Digital Marketing, Design & Creative Tech": {
+    "slug": "digital-marketing-design-and-creative-tech",
+    "subs": {
+      "Marketing, UX & Creative Tools": {
+        "slug": "marketing-ux-and-creative-tools",
+        "courses": [
+          {
+            "name": "BCS Practitioner Certificate in Requirements Engineering",
+            "slug": "bcs-practitioner-certificate-in-requirements-engineering",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "SoapUI Training",
+            "slug": "soapui-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "SAP Marketing Cloud Training",
+            "slug": "sap-marketing-cloud-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1995.0
+          },
+          {
+            "name": "UX Design Course",
+            "slug": "ux-design-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "UI UX Design Course",
+            "slug": "ui-ux-design-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3495.0
+          },
+          {
+            "name": "Building a WordPress Website Training",
+            "slug": "building-a-wordpress-website-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3995.0
+          },
+          {
+            "name": "jQuery UI Development Training",
+            "slug": "jquery-ui-development-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Swift UI Training",
+            "slug": "swift-ui-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "ISO 22301 Certified Business Continuity Management",
+            "slug": "iso-22301-certified-business-continuity-management",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2295.0
+          },
+          {
+            "name": "Requirements Gathering Training",
+            "slug": "requirements-gathering-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Cisco Video Infrastructure Training",
+            "slug": "cisco-video-infrastructure-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2495.0
+          },
+          {
+            "name": "Building Business Relationships",
+            "slug": "building-business-relationships",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Confidence Building Training",
+            "slug": "confidence-building-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Building an Empowering Mindset Training",
+            "slug": "building-an-empowering-mindset-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Building a Customer-Centric Service Culture Training",
+            "slug": "building-a-customer-centric-service-culture-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "InDesign Course",
+            "slug": "indesign-course",
+            "duration" : 0,
+            "track": "InDesign",
+            "price": 995.0
+          },
+          {
+            "name": "Adobe Illustrator Training",
+            "slug": "adobe-illustrator-training",
+            "duration" : 0,
+            "track": "Adobe Illustrator",
+            "price": 995.0
+          },
+          {
+            "name": "Photoshop Course",
+            "slug": "photoshop-course",
+            "duration" : 0,
+            "track": "Adobe Photoshop",
+            "price": 995.0
+          },
+          {
+            "name": "Adobe Premiere Pro Course",
+            "slug": "adobe-premiere-pro-course",
+            "duration" : 0,
+            "track": "Premiere Pro",
+            "price": 995.0
+          },
+          {
+            "name": "Adobe After Effects Course",
+            "slug": "adobe-after-effects-course",
+            "duration" : 0,
+            "track": "After Effects",
+            "price": 995.0
+          },
+          {
+            "name": "Salesforce Platform App builder training",
+            "slug": "salesforce-platform-app-builder-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Create and Manage Canvas Apps with Power Apps PL7001 Course",
+            "slug": "create-and-manage-canvas-apps-with-power-apps-pl7001-course",
+            "duration" : 0,
+            "track": "Canva",
+            "price": 2995.0
+          },
+          {
+            "name": "Build Plugins and Connectors for Microsoft Copilot for Microsoft 365 MS4010 Course",
+            "slug": "build-plugins-and-connectors-for-microsoft-copilot-for-microsoft-365-ms4010-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Display Screen Equipment DSE Training",
+            "slug": "display-screen-equipment-dse-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "First Aid Requirements and RIDDOR Training",
+            "slug": "first-aid-requirements-and-riddor-training",
+            "duration" : 0,
+            "track": "First Aid",
+            "price": 1295.0
+          },
+          {
+            "name": "Fire Extinguisher Training",
+            "slug": "fire-extinguisher-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Social Media Markeytting course",
+            "slug": "social-media-markeytting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Seo course",
+            "slug": "seo-course",
+            "duration" : 0,
+            "track": "SEO",
+            "price": 995.0
+          },
+          {
+            "name": "Google Ads Certification",
+            "slug": "google-ads-certification",
+            "duration" : 0,
+            "track": "Google Ads",
+            "price": 1995.0
+          },
+          {
+            "name": "Copywriting course",
+            "slug": "copywriting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Linkedin Marketing Course",
+            "slug": "linkedin-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Affiliate Marketing Course",
+            "slug": "affiliate-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Data Driven Marketing Course",
+            "slug": "data-driven-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Digital Email Marketing Masterclass",
+            "slug": "digital-email-marketing-masterclass",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Direct Marketing Trainig",
+            "slug": "direct-marketing-trainig",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Influencer Marketing Course",
+            "slug": "influencer-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Pinterest Marketing Course",
+            "slug": "pinterest-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Instagram Marketing Course",
+            "slug": "instagram-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Privacy and Compliance Marketing Masterclass",
+            "slug": "privacy-and-compliance-marketing-masterclass",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "X Marketing Course",
+            "slug": "x-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Web and Email Copywriting Course",
+            "slug": "web-and-email-copywriting-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Youtube Marketing Course",
+            "slug": "youtube-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Product Content for E-Commerce Training",
+            "slug": "product-content-for-e-commerce-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Personal Branding Course",
+            "slug": "personal-branding-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Design and Create Engaging Content for Social Media Training",
+            "slug": "design-and-create-engaging-content-for-social-media-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Programmatic Marketing Training",
+            "slug": "programmatic-marketing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Performance Marketing Training",
+            "slug": "performance-marketing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Social Media KPIs and Reports Training",
+            "slug": "social-media-kpis-and-reports-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Business Branding Course",
+            "slug": "business-branding-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Google AdSense Course",
+            "slug": "google-adsense-course",
+            "duration" : 0,
+            "track": "Google Ads",
+            "price": 995.0
+          },
+          {
+            "name": "Digital Marketing Tools Training",
+            "slug": "digital-marketing-tools-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Neuro Linguistic Programming",
+            "slug": "neuro-linguistic-programming",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Building Rapport with Customers",
+            "slug": "building-rapport-with-customers",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "QuickBooks Training",
+            "slug": "quickbooks-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Recruitment Training",
+            "slug": "recruitment-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Recruiting for Success Training",
+            "slug": "recruiting-for-success-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Safer Recruitment Training",
+            "slug": "safer-recruitment-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Recruitment Assessment and Selection Training",
+            "slug": "recruitment-assessment-and-selection-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Talent Acquisition Training",
+            "slug": "talent-acquisition-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Building Your Food Safety Culture Training",
+            "slug": "building-your-food-safety-culture-training",
+            "duration" : 0,
+            "track": "Food Safety",
+            "price" : 0
+          },
+          {
+            "name": "Real Estate Marketing Training Course",
+            "slug": "real-estate-marketing-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Building Chatbots with Alexa Skills and Amazon Lex",
+            "slug": "building-chatbots-with-alexa-skills-and-amazon-lex",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Virtual Social Media Manager Training",
+            "slug": "virtual-social-media-manager-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Online Virtual Recruitment Training",
+            "slug": "online-virtual-recruitment-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Introduction to Marketing Training",
+            "slug": "introduction-to-marketing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Email Marketing Course",
+            "slug": "email-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Content Marketing Course",
+            "slug": "content-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Mobile Marketing Course",
+            "slug": "mobile-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Explainer Videos Training",
+            "slug": "explainer-videos-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Integrated Marketing Training",
+            "slug": "integrated-marketing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Marketing Budget Course",
+            "slug": "marketing-budget-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Business Marketing Strategies Training",
+            "slug": "business-marketing-strategies-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Marketing Research Training",
+            "slug": "marketing-research-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Strategic Marketing Course",
+            "slug": "strategic-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Video Marketing Course",
+            "slug": "video-marketing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "WhatsApp Marketing Training Course",
+            "slug": "whatsapp-marketing-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ISO 15189 Requirements for Quality and Competence Training",
+            "slug": "iso-15189-requirements-for-quality-and-competence-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ISO 15189 Requirements for Quality and Competence Training",
+            "slug": "iso-15189-requirements-for-quality-and-competence-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ISO 37500 Guidance on Outsourcing Training",
+            "slug": "iso-37500-guidance-on-outsourcing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Guitar Course",
+            "slug": "guitar-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Video Editing Course",
+            "slug": "video-editing-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Figma Course",
+            "slug": "figma-course",
+            "duration" : 0,
+            "track": "Figma",
+            "price" : 0
+          },
+          {
+            "name": "Video Production Training Course",
+            "slug": "video-production-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Robotic Process Automation using UiPath",
+            "slug": "robotic-process-automation-using-uipath",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Certified Business Continuity Management Professional (CBCMP)",
+            "slug": "certified-business-continuity-management-professional-cbcmp",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Google G Suite Training",
+            "slug": "google-g-suite-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Building Interactive Dashboards Training",
+            "slug": "building-interactive-dashboards-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Microsoft Fluid Framework Training",
+            "slug": "microsoft-fluid-framework-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Health, Safety & Sustainability": {
+    "slug": "health-safety-and-sustainability",
+    "subs": {
+      "H&S, Environment & Wellbeing": {
+        "slug": "h-and-s-environment-and-wellbeing",
+        "courses": [
+          {
+            "name": "Business Sustainability Course",
+            "slug": "business-sustainability-course",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price": 995.0
+          },
+          {
+            "name": "IOSH Managing Safely Course",
+            "slug": "iosh-managing-safely-course",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 2295.0
+          },
+          {
+            "name": "IOSH Working Safely Course",
+            "slug": "iosh-working-safely-course",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1295.0
+          },
+          {
+            "name": "IOSH Managing Sustainably Training",
+            "slug": "iosh-managing-sustainably-training",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 2995.0
+          },
+          {
+            "name": "IOSH Managing Occupational Health and Wellbeing Training",
+            "slug": "iosh-managing-occupational-health-and-wellbeing-training",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1995.0
+          },
+          {
+            "name": "IOSH Fire Safety for Managers Course",
+            "slug": "iosh-fire-safety-for-managers-course",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1995.0
+          },
+          {
+            "name": "IOSH Safety Health and Environment for Construction Site Managers Training",
+            "slug": "iosh-safety-health-and-environment-for-construction-site-managers-training",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 3995.0
+          },
+          {
+            "name": "IOSH Fire Safety Awareness Training Course",
+            "slug": "iosh-fire-safety-awareness-training-course",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1995.0
+          },
+          {
+            "name": "IOSH Managing Safely Refresher Training Course",
+            "slug": "iosh-managing-safely-refresher-training-course",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1995.0
+          },
+          {
+            "name": "IOSH Environment for Business Training Course",
+            "slug": "iosh-environment-for-business-training-course",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1995.0
+          },
+          {
+            "name": "IOSH Safety, Health, And Environment for Construction Workers Training",
+            "slug": "iosh-safety-health-and-environment-for-construction-workers-training",
+            "duration" : 0,
+            "track": "IOSH",
+            "price": 1995.0
+          },
+          {
+            "name": "NEBOSH Award in Health and Safety at Work",
+            "slug": "nebosh-award-in-health-and-safety-at-work",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 2295.0
+          },
+          {
+            "name": "NEBOSH National General Certificate in Occupational Health and Safety",
+            "slug": "nebosh-national-general-certificate-in-occupational-health-and-safety",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 2995.0
+          },
+          {
+            "name": "NEBOSH Award in Environmental Awareness at Work",
+            "slug": "nebosh-award-in-environmental-awareness-at-work",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price" : 0
+          },
+          {
+            "name": "NEBOSH HSE Introduction to Incident Investigation Training",
+            "slug": "nebosh-hse-introduction-to-incident-investigation-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 1495.0
+          },
+          {
+            "name": "NEBOSH Working with Wellbeing Training",
+            "slug": "nebosh-working-with-wellbeing-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 1495.0
+          },
+          {
+            "name": "NEBOSH HSE Certificate in Process Safety Management",
+            "slug": "nebosh-hse-certificate-in-process-safety-management",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 2295.0
+          },
+          {
+            "name": "NEBOSH International General Certificate in Occupational Health and Safety Training",
+            "slug": "nebosh-international-general-certificate-in-occupational-health-and-safety-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 3995.0
+          },
+          {
+            "name": "NEBOSH HSE Award in Managing Risks and Risk Assessment at Work Training",
+            "slug": "nebosh-hse-award-in-managing-risks-and-risk-assessment-at-work-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price": 1495.0
+          },
+          {
+            "name": "NEBOSH HSE Certificate in Managing Stress at Work Training",
+            "slug": "nebosh-hse-certificate-in-managing-stress-at-work-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price" : 0
+          },
+          {
+            "name": "NEBOSH HSE Certificate in Manual Handling Risk Assessment Training",
+            "slug": "nebosh-hse-certificate-in-manual-handling-risk-assessment-training",
+            "duration" : 0,
+            "track": "NEBOSH",
+            "price" : 0
+          },
+          {
+            "name": "First Aid at Work",
+            "slug": "first-aid-at-work",
+            "duration" : 0,
+            "track": "First Aid",
+            "price": 995.0
+          },
+          {
+            "name": "Environmental Awareness Training",
+            "slug": "environmental-awareness-training",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price": 1295.0
+          },
+          {
+            "name": "Advanced First Aid Training",
+            "slug": "advanced-first-aid-training",
+            "duration" : 0,
+            "track": "First Aid",
+            "price": 1295.0
+          },
+          {
+            "name": "food safety training",
+            "slug": "food-safety-training",
+            "duration" : 0,
+            "track": "Food Safety",
+            "price": 995.0
+          },
+          {
+            "name": "Fire Marshal Training Course",
+            "slug": "fire-marshal-training-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "HACCP Training Course",
+            "slug": "haccp-training-course",
+            "duration" : 0,
+            "track": "Food Safety",
+            "price": 1995.0
+          },
+          {
+            "name": "IEMA Environmental Sustainability Skills for the Workforce",
+            "slug": "iema-environmental-sustainability-skills-for-the-workforce",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price": 1995.0
+          },
+          {
+            "name": "IEMA Environmental Sustainability Skills for Managers",
+            "slug": "iema-environmental-sustainability-skills-for-managers",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price": 1995.0
+          },
+          {
+            "name": "IEMA Foundation Certificate in Environmental Management",
+            "slug": "iema-foundation-certificate-in-environmental-management",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price": 2995.0
+          },
+          {
+            "name": "Environmental, Social, and Governance (ESG) Training Course",
+            "slug": "environmental-social-and-governance-esg-training-course",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price": 1495.0
+          },
+          {
+            "name": "Food Safety and Hygiene Course",
+            "slug": "food-safety-and-hygiene-course",
+            "duration" : 0,
+            "track": "Food Safety",
+            "price" : 0
+          },
+          {
+            "name": "Food Safety Manager Training",
+            "slug": "food-safety-manager-training",
+            "duration" : 0,
+            "track": "Food Safety",
+            "price" : 0
+          },
+          {
+            "name": "Food Safety for Warehousing and Distribution Training",
+            "slug": "food-safety-for-warehousing-and-distribution-training",
+            "duration" : 0,
+            "track": "Food Safety",
+            "price" : 0
+          },
+          {
+            "name": "Mental Health and Wellbeing Training",
+            "slug": "mental-health-and-wellbeing-training",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Work Place Stress and Mental Health Identification for Manager",
+            "slug": "work-place-stress-and-mental-health-identification-for-manager",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "ISO 20121 Event Sustainability Management System Training",
+            "slug": "iso-20121-event-sustainability-management-system-training",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price" : 0
+          },
+          {
+            "name": "ISO 20121 Event Sustainability Management System Training",
+            "slug": "iso-20121-event-sustainability-management-system-training",
+            "duration" : 0,
+            "track": "Sustainability",
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Future Skills & Emerging Tech": {
+    "slug": "future-skills-and-emerging-tech",
+    "subs": {
+      "Web3, Quantum, XR & Space": {
+        "slug": "web3-quantum-xr-and-space",
+        "courses": [
+          {
+            "name": "Web3 Professional Certification Training Course",
+            "slug": "web3-professional-certification-training-course",
+            "duration" : 0,
+            "track": "Web3",
+            "price": 1295.0
+          },
+          {
+            "name": "Developing Solutions Using Cisco IoT and Edge Platforms (DEVIOT) Training",
+            "slug": "developing-solutions-using-cisco-iot-and-edge-platforms-deviot-training",
+            "duration" : 0,
+            "track": "IoT",
+            "price": 2495.0
+          },
+          {
+            "name": "Amazon Managed Blockchain Training",
+            "slug": "amazon-managed-blockchain-training",
+            "duration" : 0,
+            "track": "Blockchain",
+            "price": 1995.0
+          },
+          {
+            "name": "Amazon WorkSpaces Training",
+            "slug": "amazon-workspaces-training",
+            "duration" : 0,
+            "track": "Space/Satellite",
+            "price": 1995.0
+          },
+          {
+            "name": "Amazon Quantum Ledger Database (QLDB) Training",
+            "slug": "amazon-quantum-ledger-database-qldb-training",
+            "duration" : 0,
+            "track": "Quantum",
+            "price": 1995.0
+          },
+          {
+            "name": "Confined Space Training",
+            "slug": "confined-space-training",
+            "duration" : 0,
+            "track": "Space/Satellite",
+            "price": 1295.0
+          },
+          {
+            "name": "Quantum Computing Training",
+            "slug": "quantum-computing-training",
+            "duration" : 0,
+            "track": "Quantum",
+            "price" : 0
+          },
+          {
+            "name": "Virtual Reality (VR) Training",
+            "slug": "virtual-reality-vr-training",
+            "duration" : 0,
+            "track": "AR/VR",
+            "price" : 0
+          },
+          {
+            "name": "Satellite Communication Course",
+            "slug": "satellite-communication-course",
+            "duration" : 0,
+            "track": "Space/Satellite",
+            "price" : 0
+          },
+          {
+            "name": "Internet of Things IoT Systems and Applications Training",
+            "slug": "internet-of-things-iot-systems-and-applications-training",
+            "duration" : 0,
+            "track": "IoT",
+            "price" : 0
+          },
+          {
+            "name": "Security and Privacy in Internet of Things (IoT) Training",
+            "slug": "security-and-privacy-in-internet-of-things-iot-training",
+            "duration" : 0,
+            "track": "IoT",
+            "price" : 0
+          },
+          {
+            "name": "Blockchain Training Course",
+            "slug": "blockchain-training-course",
+            "duration" : 0,
+            "track": "Blockchain",
+            "price" : 0
+          }
+        ]
+      }
+    }
+  },
+  "Bespoke Training Solutions": {
+    "slug": "bespoke-training-solutions",
+    "subs": {
+      "Custom & Corporate": {
+        "slug": "custom-and-corporate",
+        "courses": [
+          {
+            "name": "Dealing with Subject Access Requests (SAR) - An Executive Briefing",
+            "slug": "dealing-with-subject-access-requests-sar-an-executive-briefing",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1795.0
+          },
+          {
+            "name": "Exceptional Customer Service Training",
+            "slug": "exceptional-customer-service-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Strategic Annual Review with Your Customer Training",
+            "slug": "strategic-annual-review-with-your-customer-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Call Control Strategies for Customer Service",
+            "slug": "call-control-strategies-for-customer-service",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Handling Abusive Customers Training",
+            "slug": "handling-abusive-customers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Customer Relation Management Training",
+            "slug": "customer-relation-management-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Customer Experience Training",
+            "slug": "customer-experience-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Corporate Social Responsibility CSR Training",
+            "slug": "corporate-social-responsibility-csr-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Amazon Virtual Private Cloud (VPC) Training",
+            "slug": "amazon-virtual-private-cloud-vpc-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1495.0
+          },
+          {
+            "name": "Create and Extend Custom Copilots in Microsoft Copilot Studio PL7008 Course",
+            "slug": "create-and-extend-custom-copilots-in-microsoft-copilot-studio-pl7008-course",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Microsoft Dynamics 365 Customer Service MB230",
+            "slug": "microsoft-dynamics-365-customer-service-mb230",
+            "duration" : 0,
+            "track" : 0,
+            "price": 2995.0
+          },
+          {
+            "name": "Microsoft Dynamics 365 Customisation and Configuration M55242",
+            "slug": "microsoft-dynamics-365-customisation-and-configuration-m55242",
+            "duration" : 0,
+            "track" : 0,
+            "price": 3295.0
+          },
+          {
+            "name": "Customer Insight Training",
+            "slug": "customer-insight-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Customer Retention Training",
+            "slug": "customer-retention-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "CIMA’s CGMA® Fundamentals of Ethics, Corporate Governance and Business Law (BA4) Course",
+            "slug": "cimas-cgma-fundamentals-of-ethics-corporate-governance-and-business-law-ba4-course",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          },
+          {
+            "name": "Advanced Lean Techniques and Understanding Customers Training",
+            "slug": "advanced-lean-techniques-and-understanding-customers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Corporate Governance Training",
+            "slug": "corporate-governance-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Corporate Selling Training",
+            "slug": "corporate-selling-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Start Positive Conversations with Challenging Customers Training",
+            "slug": "start-positive-conversations-with-challenging-customers-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 995.0
+          },
+          {
+            "name": "Introduction to UAE Corporate Tax Training",
+            "slug": "introduction-to-uae-corporate-tax-training",
+            "duration" : 0,
+            "track" : 0,
+            "price": 1295.0
+          },
+          {
+            "name": "Cake Decorating Getting Started Workshop",
+            "slug": "cake-decorating-getting-started-workshop",
+            "duration" : 0,
+            "track" : 0,
+            "price" : 0
+          }
+        ]
+      }
+    }
+  }
+}

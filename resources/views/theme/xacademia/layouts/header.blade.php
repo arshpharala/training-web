@@ -91,36 +91,51 @@
                                 @endforeach
                             </ul>
                         </li> --}}
-                        <li class="nav-item dropdown dropdown-mega position-static">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Explore Courses
+                        <li aria-haspopup="true" class="mega-menu-trigger">
+                            <a href="javascript:void(0)">
+                                Explore Courses <span class="fe fe-chevron-down"></span>
                             </a>
-
-                            <div class="dropdown-menu w-100 shadow border-0 mt-0 p-3">
+                            <div class="horizontal-megamenu clearfix">
                                 <div class="container">
-                                    <div class="row">
-                                        <!-- Categories -->
-                                        <div class="col-12 col-md-3">
-                                            <h6 class="text-uppercase small text-muted">Categories</h6>
-                                            <ul id="coreList" class="list-unstyled"></ul>
+                                    <div class="megamenu-content">
+
+                                        <!-- Search + Pills -->
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control mega-search"
+                                                    placeholder="Search courses, topics...">
+                                            </div>
+                                            <div class="col-md-4 d-flex gap-2 justify-content-md-end mt-2 mt-md-0">
+                                                <span class="mega-pill">Career Path Quiz</span>
+                                                <span class="mega-pill">Bespoke Training</span>
+                                            </div>
                                         </div>
 
-                                        <!-- Topics -->
-                                        <div class="col-12 col-md-3">
-                                            <h6 class="text-uppercase small text-muted">Topics</h6>
-                                            <ul id="subList" class="list-unstyled"></ul>
+                                        <div class="row">
+                                            <!-- Categories -->
+                                            <div class="col-3 categories-list">
+                                                <h6 class="menu-title">Core Categories</h6>
+                                                <ul></ul>
+                                            </div>
+
+                                            <!-- Topics -->
+                                            <div class="col-3 topics-list">
+                                                <h6 class="menu-title">Sub-Categories</h6>
+                                                <ul></ul>
+                                            </div>
+
+                                            <!-- Courses -->
+                                            <div class="col-6 courses-list">
+                                                <h6 class="menu-title">Courses & Certifications</h6>
+                                                <div class="row courses-grid"></div>
+                                            </div>
                                         </div>
 
-                                        <!-- Courses -->
-                                        <div class="col-12 col-md-6">
-                                            <h6 class="text-uppercase small text-muted">Courses</h6>
-                                            <div id="coursesGrid" class="row g-3"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
+
 
 
                         <li aria-haspopup="true"><a href="{{ route('about') }}">About Us </a></li>
@@ -147,81 +162,3 @@
         </div>
     </div><!--/Horizontal-main -->
 </div><!--/Horizontal-main -->
-
-@push('scripts')
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  const catalog = {
-    "Cybersecurity 🛡️": {
-      emoji:"🛡️", subs:{
-        "Ethical Hacking":["CEH","CompTIA PenTest+"],
-        "SOC Analyst":["CompTIA CySA+","Threat Hunting"],
-      }
-    },
-    "AI 🤖": {
-      emoji:"🤖", subs:{
-        "Machine Learning":["ML with Python","DL with TensorFlow"],
-        "Prompt Engineering":["Prompt Mastery","Applied ChatGPT"],
-      }
-    }
-  };
-
-  let currentCore=null, currentSub=null;
-  const coreList=document.getElementById("coreList");
-  const subList=document.getElementById("subList");
-  const coursesGrid=document.getElementById("coursesGrid");
-
-  function btn(label,emoji=""){
-    const b=document.createElement("button");
-    b.type="button"; b.textContent=(emoji?" "+emoji+" ":"")+label;
-    return b;
-  }
-
-  function renderCores(){
-    coreList.innerHTML="";
-    Object.keys(catalog).forEach(core=>{
-      const li=document.createElement("li");
-      const b=btn(core,catalog[core].emoji);
-      b.onclick=()=>selectCore(core);
-      li.appendChild(b); coreList.appendChild(li);
-    });
-  }
-
-  function renderSubs(core){
-    subList.innerHTML="";
-    Object.keys(catalog[core].subs).forEach(sub=>{
-      const li=document.createElement("li");
-      const b=btn(sub);
-      b.onclick=()=>selectSub(core,sub);
-      li.appendChild(b); subList.appendChild(li);
-    });
-  }
-
-  function renderCourses(core,sub){
-    coursesGrid.innerHTML="";
-    const list=catalog[core].subs[sub]||[];
-    list.forEach(c=>{
-      const col=document.createElement("div");
-      col.className="col-12 col-md-6";
-      col.innerHTML=`<div class="course-card"><strong>${c}</strong><br><small>${core} → ${sub}</small></div>`;
-      coursesGrid.appendChild(col);
-    });
-  }
-
-  function selectCore(core){
-    currentCore=core;
-    renderSubs(core);
-    const first=Object.keys(catalog[core].subs)[0];
-    if(first) selectSub(core,first);
-  }
-  function selectSub(core,sub){
-    currentSub=sub;
-    renderCourses(core,sub);
-  }
-
-  renderCores();
-  selectCore(Object.keys(catalog)[0]);
-});
-</script>
-
-@endpush

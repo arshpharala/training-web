@@ -1,0 +1,191 @@
+/* ============================================
+   Mega Menu Scoped Styling
+   ============================================ */
+.horizontal-megamenu {
+  --menu-bg: #ffffff;
+  --menu-surface: #f9fafb;          /* column bg */
+  --menu-border: #e5e7eb;
+  --menu-accent: #2563eb;           /* blue */
+  --menu-accent-light: #eff6ff;     /* blue light */
+  --menu-text: #1f2937;             /* gray-800 */
+  --menu-muted: #6b7280;            /* gray-500 */
+  --menu-radius: 12px;
+  --menu-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+.horizontal-megamenu {
+  /* background: var(--menu-bg); */
+  /* border: 1px solid var(--menu-border);
+  border-radius: var(--menu-radius); */
+  box-shadow: var(--menu-shadow);
+  display: none;
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  z-index: 1000;
+  /* padding: 24px 28px; */
+}
+.horizontal-megamenu.open {
+  display: block;
+}
+
+/* ============================================
+   Header Row (Search + Pills)
+   ============================================ */
+.horizontal-megamenu .mega-search {
+  border: 1px solid var(--menu-border);
+  border-radius: var(--menu-radius);
+  padding: 12px 16px;
+  font-size: 14px;
+  width: 100%;
+  /* margin-bottom: 20px; */
+}
+
+.horizontal-megamenu .mega-pill {
+  border: 1px solid var(--menu-border);
+  background: var(--menu-surface);
+  color: var(--menu-muted);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.horizontal-megamenu .mega-pill:hover {
+  border-color: var(--menu-accent);
+  background: var(--menu-accent-light);
+  color: var(--menu-accent);
+}
+
+/* ============================================
+   Column Base
+   ============================================ */
+.horizontal-megamenu .categories-list,
+.horizontal-megamenu .topics-list,
+.horizontal-megamenu .courses-list {
+  background: var(--menu-surface);
+  border-radius: var(--menu-radius);
+  padding: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.horizontal-megamenu .menu-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 12px;
+  color: var(--menu-muted);
+}
+
+/* ============================================
+   Categories + Topics (Aligned Cards)
+   ============================================ */
+.horizontal-megamenu .categories-list ul,
+.horizontal-megamenu .topics-list ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.horizontal-megamenu .item-box {
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: var(--menu-radius);
+  padding: 14px 16px;
+  font-size: 12px;
+  color: var(--menu-text);
+  cursor: pointer;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+.horizontal-megamenu .item-box:hover,
+.horizontal-megamenu .item-box.active {
+  border-color: var(--menu-accent);
+  background: var(--menu-accent-light);
+  color: var(--menu-accent);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(37,99,235,.12);
+}
+
+/* ============================================
+   Courses Grid (2 per row, tighter spacing)
+   ============================================ */
+.horizontal-megamenu .courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* always 2 per row */
+  gap: 10px; /* vertical / horizontal spacing */
+}
+
+.horizontal-megamenu .course-card {
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 14px;
+  padding: 10px;
+  transition: all .25s ease;
+  color: var(--menu-text);
+  min-height: 80px;    /* consistent min height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.horizontal-megamenu .course-card:hover {
+  border-color: var(--menu-accent);
+  box-shadow: 0 6px 16px rgba(37,99,235,.12);
+}
+.horizontal-megamenu .course-title {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: var(--menu-text);
+}
+.horizontal-megamenu .course-meta {
+  font-size: 12px;
+  color: var(--menu-muted);
+  line-height: 1.4;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+.horizontal-megamenu .fade-in {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeInUp .35s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 992px) {
+  .horizontal-megamenu {
+    position: static;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .horizontal-megamenu .categories-list,
+  .horizontal-megamenu .topics-list,
+  .horizontal-megamenu .courses-list {
+    margin-bottom: 16px;
+  }
+  .horizontal-megamenu .courses-grid {
+    grid-template-columns: 1fr; /* stack on small screens */
+  }
+}

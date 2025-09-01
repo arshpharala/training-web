@@ -37,7 +37,10 @@
     <link id="theme" rel="stylesheet" type="text/css" media="all"
         href="{{ asset('theme/xacademia/assets/color-skins/color.css') }}" />
 
+        <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+
     @stack('head')
+
 
 </head>
 
@@ -134,6 +137,8 @@
 
     <!-- Custom js-->
     <script src="{{ asset('theme/xacademia/assets/js/custom.js') }}"></script>
+
+    <script src="{{ asset('assets/js/menu.js') }}"></script>
 
 </body>
 
