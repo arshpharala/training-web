@@ -45,4 +45,21 @@ class PageController extends Controller
 
         return view('theme.xacademia.pages.contact', $data);
     }
+
+    function enquiry(Request $request)
+    {
+        // $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'email' => 'required|email|max:255',
+        //     'phone' => 'nullable|string|max:20',
+        //     'message' => 'nullable|string|max:1000',
+        //     'course' => 'nullable|string|max:255',
+        //     'course_id' => 'nullable|integer|exists:courses,id',
+        // ]);
+
+        // Process the enquiry (e.g., save to database, send email, etc.)
+        // For demonstration, we'll just return a success response.
+
+        return response()->json(['message' => 'Enquiry submitted successfully.']);
+    }
 }

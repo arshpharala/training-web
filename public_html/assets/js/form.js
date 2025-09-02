@@ -35,21 +35,27 @@ function handleFormSubmission(formSelector) {
             processData: false,
             contentType: false,
             success: function (response) {
-                Swal.fire({
-                    icon: "success",
-                    title: "Success!",
-                    text: response.message || "Form submitted successfully.",
-                    timer: 2000,
-                    showConfirmButton: false,
-                }).then(() => {
-                    if (response.redirect) {
-                        window.location.href = response.redirect;
-                    }
-                });
+                // === Custom logic for enquiry form ===
+                if (form.attr("id") === "enquiryForm") {
+                    closeEnquiryModal();          // close the enquiry form popup
+                    setTimeout(showEnquirySuccess, 400); // show thank-you modal
+                } else {
+                    // Default SweetAlert flow for all other forms
+                    Swal.fire({
+                        icon: "success",
+                        title: "Success!",
+                        text: response.message || "Form submitted successfully.",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(() => {
+                        if (response.redirect) {
+                            window.location.href = response.redirect;
+                        }
+                    });
+                }
 
                 form[0].reset();
-                // Clear previews and reset imgArray for this upload box
-                $('.upload__img-wrap').empty();
+                $(".upload__img-wrap").empty();
                 window.imgArray = [];
             },
             error: function (xhr) {
@@ -189,4 +195,20 @@ function getAside() {
             $("#open-aside-button").click();
         },
     });
+}
+
+
+// Success modal functions
+function showEnquirySuccess() {
+    const modal = document.getElementById("enquirySuccessModal");
+    modal.classList.remove("enquiry-hidden");
+    void modal.offsetWidth;
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden";
+}
+function closeEnquirySuccess() {
+    const modal = document.getElementById("enquirySuccessModal");
+    modal.classList.remove("show");
+    setTimeout(() => modal.classList.add("enquiry-hidden"), 300);
+    document.body.style.overflow = "";
 }

@@ -1,0 +1,314 @@
+/* ===== Enquiry Modal Overlay ===== */
+.enquiry-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .6);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+
+.enquiry-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.enquiry-hidden {
+    display: none !important;
+}
+
+/* ===== Enquiry Box ===== */
+.enquiry-box {
+    background: #fff;
+    border-radius: 16px;
+    width: min(92vw, 960px);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: clamp(20px, 4vw, 40px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .18);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .35s ease;
+    position: relative;
+}
+
+.enquiry-modal.show .enquiry-box {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.enquiry-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: 0;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ===== Grid ===== */
+.enquiry-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.enquiry-cols-2 {
+    grid-template-columns: 1fr;
+}
+
+.enquiry-cols-3 {
+    grid-template-columns: 1fr;
+}
+
+@media(min-width:700px) {
+    .enquiry-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .enquiry-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.enquiry-col-span-2 {
+    grid-column: span 2;
+}
+
+/* ===== Form Fields ===== */
+.enquiry-box label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.enquiry-box input,
+.enquiry-box select,
+.enquiry-box textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #fff;
+    transition: border .2s, box-shadow .2s;
+}
+
+.enquiry-box input:focus,
+.enquiry-box select:focus,
+.enquiry-box textarea:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, .4);
+    outline: none;
+}
+
+.enquiry-box textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.enquiry-box .hint {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+/* Context info panel (under radios) */
+.enquiry-context {
+    border: 1px dashed #e5e7eb;
+    background: #fafafa;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ===== Radios ===== */
+.enquiry-radios {
+    display: grid;
+    gap: 12px;
+}
+
+@media(min-width:700px) {
+    .enquiry-radios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.enquiry-radio-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    background: #fff;
+    transition: border-color .2s, background .2s, box-shadow .2s;
+    height: 44px;
+}
+
+.enquiry-radio-card:hover {
+    border-color: #6c5ce7;
+    background: #f9f8ff;
+}
+
+.enquiry-radio-card input {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color .2s, background .2s;
+}
+
+.enquiry-radio-card input:checked {
+    border-color: #6c5ce7;
+    background: #6c5ce7;
+}
+
+.enquiry-radio-card input:checked::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.enquiry-radio-card:has(input:checked) {
+    border-color: #6c5ce7;
+    background: #f9f8ff;
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, .1);
+}
+
+/* ===== Checkboxes ===== */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.enquiry-box input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 2px solid #cbd5e1;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: border-color .2s, background .2s;
+}
+
+.enquiry-box input[type="checkbox"]:checked {
+    background: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+.enquiry-box input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ===== Accordion (Bootstrap-like) ===== */
+.enquiry-disclosure {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.enquiry-disclosure summary {
+    padding: 12px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background .2s;
+}
+
+.enquiry-disclosure summary:hover {
+    background: #f1f3f5;
+}
+
+.enquiry-disclosure[open] summary {
+    background: #f9f8ff;
+    color: #6c5ce7;
+}
+
+.enquiry-disclosure>div {
+    padding: 0px 16px;
+    background: #fff;
+}
+
+/* ===== Buttons ===== */
+.enquiry-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.enquiry-note {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.enquiry-btn {
+    background: #6c5ce7;
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.enquiry-btn:hover {
+    background: #5947e6;
+}
+
+
+.success-modal .enquiry-box {
+    text-align: center;
+    width: min(40vw, 600px);
+}

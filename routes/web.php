@@ -22,6 +22,8 @@ Route::get('courses/{category}/{course}', [CategoryController::class, 'show'])->
 
 Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.show');
 
+Route::post('enquiry', [PageController::class, 'enquiry'])->name('enquiry');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

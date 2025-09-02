@@ -37,7 +37,8 @@
     <link id="theme" rel="stylesheet" type="text/css" media="all"
         href="{{ asset('theme/xacademia/assets/color-skins/color.css') }}" />
 
-        <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/enquiry-popup.css') }}">
 
     @stack('head')
 
@@ -72,6 +73,7 @@
 
     @include('theme.xacademia.layouts.footer')
 
+    @include('theme.xacademia.components._enquiry-popup')
 
 
     <!-- JQuery js-->
@@ -139,6 +141,9 @@
     <script src="{{ asset('theme/xacademia/assets/js/custom.js') }}"></script>
 
     <script src="{{ asset('assets/js/menu.js') }}"></script>
+    <script src="{{ asset('assets/js/enquiry-popup.js') }}"></script>
+    <script src="{{ asset('assets/js/form.js') }}"></script>
+
 
 </body>
 
