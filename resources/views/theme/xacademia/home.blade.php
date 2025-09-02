@@ -103,7 +103,9 @@
                     <div class="video-img">
                         <img src="{!! page_content('Online Video', 'image') !!}" alt="img" class="cover-image br-7">
                         <a class="mt-6 d-block video-btn mx-auto" href="javascript:void(0)" data-bs-toggle="modal"
-                            data-bs-target="#homeVideo"><i class="fa fa-play text-white"></i></a>
+                            data-bs-target="#homeVideo">
+                            {{-- <i class="fa fa-play text-white"></i> --}}
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">
