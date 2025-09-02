@@ -167,7 +167,7 @@
                                 <img src="{!! page_content('why-us-4', 'image') !!}" alt="img">
                             </div>
                             <div class="servic-data mt-3">
-                                <h4 class="font-weight-semibold mb-2">{!! page_content('why-us-3', 'heading', 'Quality') !!}</h4>
+                                <h4 class="font-weight-semibold mb-2">{!! page_content('why-us-4', 'heading', 'Quality') !!}</h4>
                                 <p class=" mb-0">{!! page_content('why-us-4', 'content', 'Guarantee') !!}
                                 </p>
                             </div>
