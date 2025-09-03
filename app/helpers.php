@@ -3,6 +3,7 @@
 use App\Models\CMS\Page;
 use App\Models\CMS\Locale;
 use App\Models\Catalog\Category;
+use Illuminate\Support\Facades\Cache;
 
 if (!function_exists('setting')) {
     function setting($key, $default = null)
@@ -101,5 +102,27 @@ if (!function_exists("menu_cataloge")) {
             ->with('translation', 'courses.translation')
             ->orderBy('position')
             ->get();
+    }
+}
+
+if (!function_exists('courses')) {
+    function courses()
+    {
+        $locale = app()->getLocale();
+        return Cache::remember('courses_all_'.$locale, 3600, function () use ($locale) {
+            return \App\Models\Catalog\Course::query()
+            ->leftJoin('course_translations', function ($join) use ($locale) {
+                    $join->on('course_translations.course_id', 'courses.id')->where('course_translations.locale', $locale);
+                })
+                ->leftJoin('categories', 'categories.id', 'courses.category_id')
+                ->leftJoin('category_translations', function ($join) use ($locale) {
+                    $join->on('category_translations.category_id', 'categories.id')->where('category_translations.locale', $locale);
+                })
+                ->select('courses.id', 'courses.duration', 'courses.is_featured', 'courses.slug', 'courses.created_at', 'course_translations.name', 'category_translations.name as category_name')
+                ->where('courses.is_active', true)
+                ->orderBy('created_at', 'desc')
+                ->groupBy('courses.id')
+                ->get();
+        });
     }
 }

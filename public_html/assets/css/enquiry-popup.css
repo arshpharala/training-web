@@ -293,7 +293,7 @@
 }
 
 .enquiry-btn {
-    background: #6c5ce7;
+    background: #0869b6;
     color: #fff;
     border: 0;
     border-radius: 999px;
@@ -304,11 +304,25 @@
 }
 
 .enquiry-btn:hover {
-    background: #5947e6;
+    background: #00badf;
 }
 
 
 .success-modal .enquiry-box {
     text-align: center;
     width: min(40vw, 600px);
+}
+
+
+/* Child selector - only affects this input */
+.enquiry-form input[list="courseList"] {
+    text-align: left;     /* left align text */
+    padding-left: 10px;   /* some breathing space */
+    width: 100%;          /* take full parent width */
+    box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge */
+.enquiry-form input[list="courseList"]::-webkit-calendar-picker-indicator {
+    display: none; /* hide default dropdown arrow if you don’t want it */
 }

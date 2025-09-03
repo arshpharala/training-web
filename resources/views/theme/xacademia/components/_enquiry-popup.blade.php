@@ -97,43 +97,9 @@
                         <input id="course" name="course" type="text" list="courseList"
                             placeholder="Start typing a course" required />
                         <datalist id="courseList">
-                            <option value="CompTIA ITF+"></option>
-                            <option value="CompTIA A+"></option>
-                            <option value="CompTIA Network+"></option>
-                            <option value="CompTIA Security+"></option>
-                            <option value="CompTIA CySA+"></option>
-                            <option value="CompTIA PenTest+"></option>
-                            <option value="CompTIA CASP+"></option>
-                            <option value="CompTIA Cloud+"></option>
-                            <option value="CompTIA Server+"></option>
-                            <option value="CompTIA Linux+"></option>
-                            <option value="CompTIA Data+"></option>
-                            <option value="CompTIA Project+"></option>
-                            <option value="ISACA CISA"></option>
-                            <option value="ISACA CISM"></option>
-                            <option value="ISACA CRISC"></option>
-                            <option value="ISACA CGEIT"></option>
-                            <option value="ISACA CDPSE"></option>
-                            <option value="EC-Council CEH"></option>
-                            <option value="EC-Council CHFI"></option>
-                            <option value="EC-Council CPENT"></option>
-                            <option value="EC-Council ECSA"></option>
-                            <option value="EC-Council CCISO"></option>
-                            <option value="EC-Council CND"></option>
-                            <option value="EC-Council CSA"></option>
-                            <option value="CISO Foundations"></option>
-                            <option value="CISO Program - Roadmap"></option>
-                            <option value="Chief Information Security Officer (CISO) Coaching"></option>
-                            <option value="ISO 27001 Lead Implementer"></option>
-                            <option value="ISO 27001 Lead Auditor"></option>
-                            <option value="NIST CSF Practitioner"></option>
-                            <option value="SOC Analyst (Blue Team)"></option>
-                            <option value="Cloud Security on AWS"></option>
-                            <option value="Microsoft 365 Security Administrator"></option>
-                            <option value="ITIL 4 Foundation"></option>
-                            <option value="Project Management Professional (PMP)"></option>
-                            <option value="Soft Skills and Personal Growth"></option>
-                            <option value="AI for Cybersecurity Practitioners"></option>
+                            @foreach (courses() as $course)
+                            <option value="{!! $course->name !!}"></option>
+                            @endforeach
                         </datalist>
                         <p class="hint">
                             You can type your own course name. If you are not sure where to start, write
@@ -277,7 +243,7 @@
     <div class="enquiry-box text-center">
         <button class="enquiry-close" onclick="closeEnquirySuccess()" aria-label="Close">×</button>
         <div class="enquiry-success">
-            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#16a34a"
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#0869b6"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                 <polyline points="22 4 12 14.01 9 11.01" />
