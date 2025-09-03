@@ -74,8 +74,8 @@
                             </label>
                         </div>
                         <p class="enquiry-context" id="fundingHelp">
-                            We work with HR/L&amp;D teams globally. Need a <strong>formal quote</strong>,
-                            <strong>PO/invoice</strong>, or <strong>multi-seat discount</strong>? We will sort it.
+                            We work with HR/L&amp;D teams globally. Need a formal quote,
+                            PO/invoice, or multi-seat discount? We will sort it.
                         </p>
                     </div>
 
