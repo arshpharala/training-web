@@ -285,7 +285,7 @@
             <h2>Thank you!</h2>
             <p class="muted">
                 One of our representatives or learning professionals will reach out soon.<br>
-                Get ready for a <strong>personalized learning journey</strong> crafted just for you 🚀
+                Get ready for a personalized learning journey crafted just for you.
             </p>
             <div style="margin-top:20px">
                 <button class="enquiry-btn" onclick="closeEnquirySuccess()">OK</button>
