@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
 class StoreNewsRequest extends FormRequest
 {
     /**
@@ -23,7 +22,7 @@ class StoreNewsRequest extends FormRequest
     {
         $locales = active_locals();
         $rules = [
-            'slug'          => ['required', 'string', 'max:255', 'unique:news,slug'],
+            'slug'          => ['required', 'max:255', 'unique:news,slug'],
             'position'      => ['nullable', 'integer'],
             'is_guide'      => ['nullable'],
             'is_active'     => ['nullable'],
