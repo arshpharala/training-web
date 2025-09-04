@@ -40,27 +40,27 @@ $(document).ready(function () {
         });
     }
 
-    // Render courses (desktop only)
+    // Desktop courses
     function renderCourses(core, sub) {
         $coursesGrid.empty();
         const list = catalog[core].subs[sub].courses || [];
         $.each(list, function (i, c) {
             $coursesGrid.append(
-                `<div class="course-card fade-in">
-                    <div class="course-title">${c.name}</div>
-                    <div class="course-meta">${core} • ${sub}</div>
-                 </div>`
+                `<a href="/courses/${c.slug}" class="course-card fade-in">
+                <div class="course-title">${c.name}</div>
+                <div class="course-meta">${core} • ${sub}</div>
+             </a>`
             );
         });
     }
 
-    // Render courses (mobile only)
+    // Mobile courses
     function renderCoursesMobile(core, sub, $targetUl) {
         $targetUl.empty();
         const list = catalog[core].subs[sub].courses || [];
         $.each(list, function (i, c) {
             $targetUl.append(
-                `<li><div class="item-box">${c.name}</div></li>`
+                `<li><a href="/courses/${c.slug}" class="item-box">${c.name}</a></li>`
             );
         });
     }
@@ -161,7 +161,7 @@ $(document).ready(function () {
     });
 
     // Load JSON
-    $.getJSON("assets/json/menu.json", function (data) {
+    $.getJSON("/ajax/catalog", function (data) {
         catalog = data;
         renderCores();
         $("[data-core]").first().click();

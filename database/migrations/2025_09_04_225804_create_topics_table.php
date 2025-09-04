@@ -11,34 +11,31 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('topics', function (Blueprint $table) {
             $table->id();
-            $table->integer('topic_id');
-            $table->integer('accreditation_id')->nullable();
+            $table->integer('category_id');
+            $table->integer('accreditation_body_id')->nullable();
             $table->string('slug'); // Unique by validation
             $table->integer('position')->default(0);
             $table->boolean('is_active')->default(true);
             $table->boolean('is_featured')->default(false);
-            $table->boolean('exam_included')->default(false);
             $table->string('icon')->nullable();
             $table->string('logo')->nullable();
             $table->string('banner')->nullable();
             $table->string('color', 7)->nullable(); // HEX Color, e.g. #ff0000
-            $table->integer('duration')->default(1);
-            $table->float('default_price')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
 
-        Schema::create('course_translations', function (Blueprint $table) {
+        Schema::create('topic_translations', function (Blueprint $table) {
             $table->id();
-            $table->integer('course_id');
+            $table->integer('topic_id');
             $table->string('locale', 5)->index();
             $table->string('name');
             $table->text('short_description')->nullable();
             $table->longText('content')->nullable();
             $table->timestamps();
-            $table->unique(['course_id', 'locale']);
+            $table->unique(['topic_id', 'locale']);
         });
     }
 
@@ -47,7 +44,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('courses');
-        Schema::dropIfExists('course_translations');
+        Schema::dropIfExists('topic_translations');
+        Schema::dropIfExists('topics');
     }
 };

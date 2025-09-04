@@ -33,6 +33,7 @@ Route::group(['prefix' => '/catalog', 'as' => 'catalog.'], function () {
     Route::post('categories/bulk-delete',           [CategoryController::class, 'bulkDelete'])->name('categories.bulk-delete');
     Route::post('categories/bulk-restore',          [CategoryController::class, 'bulkRestore'])->name('categories.bulk-restore');
 
+    // Route::resource('topics',               TopicController::class);
 
     Route::resource('courses',                  CourseController::class);
 

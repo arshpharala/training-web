@@ -87,17 +87,13 @@
                             <h6 class="font-weight-normal text-white">Courses</h6>
                             <ul class="list-unstyled mb-5 mb-lg-0">
                                 @foreach (menu_cataloge() as $category)
-                                    @foreach ($category->courses as $course)
-                                        <li>
-                                            <a
-                                                href="{{ route('courses.show', ['category' => $category->slug, 'course' => $course->slug]) }}">
-                                                <i class="fe fe-chevron-right"></i>
-                                                {{ $course->translation->name }}
-                                            </a>
-                                        </li>
-                                    @endforeach
+                                    <li>
+                                        <a href="{{ route('categories.show', ['category' => $category->slug]) }}">
+                                            <i class="fe fe-chevron-right"></i>
+                                            {{ $category->translation->name }}
+                                        </a>
+                                    </li>
                                 @endforeach
-
                             </ul>
                         </div>
                         <div class="col-lg-4 col-md-12">
@@ -139,8 +135,8 @@
                                     class="fa fa-cc-mastercard" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" class="payments-icon text-white-50"><i
-                                    class="fa fa-cc-paypal" aria-hidden="true"></i></a>
+                            <a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-cc-paypal"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="javascript:void(0)" class="payments-icon text-white-50"><i

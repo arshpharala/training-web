@@ -46,4 +46,39 @@ class HomeController extends Controller
 
         return view('theme.xacademia.home', $data);
     }
+
+
+    public function catalog(Request $request)
+    {
+        $categories = Category::with([
+            'translations',
+            'topics.translations',
+            'topics.courses.translations'
+        ])->get();
+
+        $catalog = [];
+
+        foreach ($categories as $category) {
+            $coreName = $category->translation->name ?? $category->slug;
+            $catalog[$coreName] = [
+                'subs' => []
+            ];
+
+            foreach ($category->topics as $topic) {
+                $subName = $topic->translation->name ?? $topic->slug;
+                $catalog[$coreName]['subs'][$subName] = [
+                    'courses' => []
+                ];
+
+                foreach ($topic->courses as $course) {
+                    $catalog[$coreName]['subs'][$subName]['courses'][] = [
+                        'name' => $course->translation->name ?? $course->slug,
+                        'slug' => $course->slug
+                    ];
+                }
+            }
+        }
+
+        return response()->json($catalog);
+    }
 }

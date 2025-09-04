@@ -3,20 +3,140 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
-use App\Models\Country;
 use App\Models\State;
+use App\Models\Country;
 use Illuminate\Http\Request;
+use App\Models\Catalog\Topic;
+use App\Models\Catalog\Course;
+use App\Models\Catalog\Category;
+use Illuminate\Support\Facades\DB;
 
 class TestController extends Controller
 {
-    public function index() {
+    public function index()
+    {
 
-        $this->addCountryStateCity();
+        // $this->addCountryStateCity();
 
     }
 
+    function test()
+    {
 
-    public function addCountryStateCity() {
+        DB::transaction(function () {
+            // Delete all courses
+            Course::with(['translations', 'deliveryMethods', 'metas'])->chunkById(100, function ($courses) {
+                foreach ($courses as $course) {
+                    $course->translations()->delete();
+                    $course->deliveryMethods()->detach();
+                    if (method_exists($course, 'metas')) {
+                        $course->metas()->delete();
+                    }
+                    $course->delete();
+                }
+            });
+
+            // Delete all topics
+            Topic::with(['translations', 'metas'])->chunkById(100, function ($topics) {
+                foreach ($topics as $topic) {
+                    $topic->translations()->delete();
+                    if (method_exists($topic, 'metas')) {
+                        $topic->metas()->delete();
+                    }
+                    $topic->delete();
+                }
+            });
+
+            // Delete all categories
+            Category::with(['translations', 'metas'])->chunkById(100, function ($categories) {
+                foreach ($categories as $category) {
+                    $category->translations()->delete();
+                    if (method_exists($category, 'metas')) {
+                        $category->metas()->delete();
+                    }
+                    $category->delete();
+                }
+            });
+        });
+
+        return $this->importCourses();
+    }
+
+    public function importCourses()
+    {
+        $path = public_path('assets/json/courses.json'); // adjust path if needed
+        $jsonData = file_get_contents($path);
+        $courses = json_decode($jsonData, true);
+
+        DB::beginTransaction();
+        try {
+            foreach ($courses as $row) {
+                // 1. Category
+                $category = Category::firstOrCreate(
+                    ['slug' => $row['Category_Slug']],
+                    [
+                        'position' => (int)($row['Core_Position'] ?? 0),
+                        'is_active' => true,
+                        'is_featured' => false,
+                    ]
+                );
+
+                // Ensure category translation
+                $category->translations()->updateOrCreate(
+                    ['locale' => app()->getLocale()],
+                    ['name' => $row['Category']]
+                );
+
+                // 2. Topic (sub-category)
+                $topic = Topic::firstOrCreate(
+                    [
+                        'slug' => $row['Sub_Category_Slug'],
+                        'category_id' => $category->id
+                    ],
+                    [
+                        'position' => 0,
+                        'is_active' => true,
+                        'is_featured' => false,
+                    ]
+                );
+
+                $topic->translations()->updateOrCreate(
+                    ['locale' => app()->getLocale()],
+                    ['name' => $row['Sub_Category']]
+                );
+
+                // 3. Course
+                $course = Course::firstOrCreate(
+                    [
+                        'slug' => $row['Course_Slug'],
+                        'topic_id' => $topic->id
+                    ],
+                    [
+                        'position' => (int)($row['Course_Position'] ?? 0),
+                        'duration' => (int)($row['Course_Duration'] ?: 1),
+                        'default_price' => (float)($row['Price_GBP'] ?? 0),
+                        'is_active' => true,
+                        'is_featured' => false,
+                    ]
+                );
+
+                $course->translations()->updateOrCreate(
+                    ['locale' => app()->getLocale()],
+                    ['name' => $row['Course_Name']]
+                );
+            }
+
+            DB::commit();
+            return "Courses imported successfully.";
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            throw $e;
+        }
+    }
+
+
+    public function addCountryStateCity()
+    {
         // die;
         ini_set('memory_limit', '-1');
         ini_set('max_execution_time', "-1");

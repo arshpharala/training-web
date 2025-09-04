@@ -2,13 +2,13 @@
 
 namespace App\Models\Catalog;
 
-use App\Trait\HasMeta;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class Topic extends Model
 {
-    use HasMeta, SoftDeletes;
+    use SoftDeletes;
+
     protected $guarded = ['id'];
 
     protected static function booted()
@@ -25,17 +25,23 @@ class Category extends Model
     }
 
 
-    public function topics()
+    public function category()
     {
-        return $this->hasMany(Topic::class);
+        return $this->belongsTo(Category::class);
+    }
+
+    function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
+
+    public function translations()
+    {
+        return $this->hasMany(TopicTranslation::class);
     }
 
     public function translation()
     {
-        return $this->hasOne(CategoryTranslation::class)->where('category_translations.locale', app()->getLocale());
-    }
-    public function translations()
-    {
-        return $this->hasMany(CategoryTranslation::class);
+        return $this->hasOne(TopicTranslation::class)->where('locale', app()->getLocale());
     }
 }

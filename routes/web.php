@@ -24,6 +24,11 @@ Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.sho
 
 Route::post('enquiry', [PageController::class, 'enquiry'])->name('enquiry');
 
+Route::group(['prefix' => 'ajax', 'as' => 'ajax.'], function () {
+    Route::get('catalog', [HomeController::class, 'catalog'])->name('catalog');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -33,5 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/test', [TestController::class, 'test']);
 
 require __DIR__ . '/auth.php';

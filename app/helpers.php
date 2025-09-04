@@ -2,6 +2,7 @@
 
 use App\Models\CMS\Page;
 use App\Models\CMS\Locale;
+use App\Models\Catalog\Course;
 use App\Models\Catalog\Category;
 use Illuminate\Support\Facades\Cache;
 
@@ -34,7 +35,7 @@ if (!function_exists('page_content')) {
         $section = $page->sections->firstWhere('type', $sectionType);
         if (!$section) return $default;
 
-        if ($key == 'image') return  asset('storage/'. $section->image);
+        if ($key == 'image') return  asset('storage/' . $section->image);
 
 
         $translation = $section->translations->firstWhere('locale', $locale);
@@ -98,8 +99,12 @@ if (!function_exists("menu_cataloge")) {
     function menu_cataloge()
     {
         return Category::query()
-            ->has('courses')
-            ->with('translation', 'courses.translation')
+            ->whereHas('topics.courses') // only categories that have courses via topics
+            ->with([
+                'translation',
+                'topics.translation',
+                'topics.courses.translation'
+            ])
             ->orderBy('position')
             ->get();
     }
@@ -109,20 +114,46 @@ if (!function_exists('courses')) {
     function courses()
     {
         $locale = app()->getLocale();
-        return Cache::remember('courses_all_'.$locale, 3600, function () use ($locale) {
-            return \App\Models\Catalog\Course::query()
-            ->leftJoin('course_translations', function ($join) use ($locale) {
-                    $join->on('course_translations.course_id', 'courses.id')->where('course_translations.locale', $locale);
+
+        return Cache::remember('courses_all_' . $locale, 3600, function () use ($locale) {
+            return Course::query()
+                ->leftJoin('course_translations', function ($join) use ($locale) {
+                    $join->on('course_translations.course_id', '=', 'courses.id')
+                         ->where('course_translations.locale', $locale);
                 })
-                ->leftJoin('categories', 'categories.id', 'courses.category_id')
+                ->leftJoin('topics', 'topics.id', '=', 'courses.topic_id')
+                ->leftJoin('topic_translations', function ($join) use ($locale) {
+                    $join->on('topic_translations.topic_id', '=', 'topics.id')
+                         ->where('topic_translations.locale', $locale);
+                })
+                ->leftJoin('categories', 'categories.id', '=', 'topics.category_id')
                 ->leftJoin('category_translations', function ($join) use ($locale) {
-                    $join->on('category_translations.category_id', 'categories.id')->where('category_translations.locale', $locale);
+                    $join->on('category_translations.category_id', '=', 'categories.id')
+                         ->where('category_translations.locale', $locale);
                 })
-                ->select('courses.id', 'courses.duration', 'courses.is_featured', 'courses.slug', 'courses.created_at', 'course_translations.name', 'category_translations.name as category_name')
+                ->select(
+                    'courses.id',
+                    'courses.duration',
+                    'courses.is_featured',
+                    'courses.slug',
+                    'courses.created_at',
+                    'course_translations.name as course_name',
+                    'topic_translations.name as topic_name',
+                    'category_translations.name as category_name'
+                )
                 ->where('courses.is_active', true)
-                ->orderBy('created_at', 'desc')
+                ->orderBy('courses.created_at', 'desc')
                 ->groupBy('courses.id')
                 ->get();
         });
+    }
+}
+
+if (!function_exists('clear_course_cache')) {
+    function clear_course_cache()
+    {
+        foreach (active_locals() as $locale) {
+            Cache::forget('courses_all_' . $locale);
+        }
     }
 }
