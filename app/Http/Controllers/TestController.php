@@ -22,7 +22,7 @@ class TestController extends Controller
 
     function test()
     {
-
+        return 'hi';
         DB::transaction(function () {
             // Delete all courses
             Course::with(['translations', 'deliveryMethods', 'metas'])->chunkById(100, function ($courses) {
