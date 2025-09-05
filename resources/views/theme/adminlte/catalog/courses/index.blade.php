@@ -21,6 +21,7 @@
                                 <tr>
                                     <th>Course</th>
                                     <th>Category</th>
+                                    <th>Topic</th>
                                     <th>Duration</th>
                                     <th>Slug</th>
                                     <th>Created At</th>
@@ -42,18 +43,17 @@
                 processing: true,
                 serverSide: true,
                 ajax: '{{ route('admin.catalog.courses.index') }}',
-                columns: [
-                    //   {
-                    //     data: 'id',
-                    //     name: 'id'
-                    //   },
-                    {
-                        data: 'name',
-                        name: 'course_translations.name',
+                columns: [{
+                        data: 'course_name',
+                        name: 'course_translations.name'
                     },
                     {
                         data: 'category_name',
                         name: 'category_translations.name'
+                    },
+                    {
+                        data: 'topic_name',
+                        name: 'topic_translations.name'
                     },
                     {
                         data: 'duration',

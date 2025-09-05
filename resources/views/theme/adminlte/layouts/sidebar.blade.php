@@ -103,15 +103,21 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="{{ route('admin.catalog.courses.index') }}" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>Courses</p>
-                              </a>
-                          </li>
-                          <li class="nav-item">
                               <a href="{{ route('admin.catalog.categories.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Categories</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('admin.catalog.topics.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Topics</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('admin.catalog.courses.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Courses</p>
                               </a>
                           </li>
                           <li class="nav-item">

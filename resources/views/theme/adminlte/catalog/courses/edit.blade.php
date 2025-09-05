@@ -53,16 +53,21 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="slug">Category</label>
-                                    <select name="category_id" id="" class="form-control" required>
-                                        <option value="">Select Category</option>
+                                    <label for="topic_id">Topic</label>
+                                    <select name="topic_id" class="form-control" required>
+                                        <option value="">Select Topic</option>
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}" @selected($category->id == $course->category_id)>
-                                                {{ $category->translation->name }}
-                                            </option>
+                                            <optgroup label="{{ $category->translation->name }}">
+                                                @foreach ($category->topics as $topic)
+                                                    <option value="{{ $topic->id }}" @selected($topic->id == $course->topic_id)>
+                                                        {{ $topic->translation->name }}
+                                                    </option>
+                                                @endforeach
+                                            </optgroup>
                                         @endforeach
                                     </select>
                                 </div>
+
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -166,7 +171,7 @@
 
                 @include('theme.adminlte.components._delivery-methods', [
                     'model' => $course,
-                    'deliveryMethods' => $deliveryMethods
+                    'deliveryMethods' => $deliveryMethods,
                 ])
                 @include('theme.adminlte.components._metas', [
                     'model' => $course,

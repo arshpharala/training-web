@@ -24,7 +24,7 @@ class UpdateCourseRequest extends FormRequest
         $id = $this->route('course');
         $locales = active_locals();
         $rules = [
-            'category_id' => ['required'],
+            'topic_id' => ['required', 'exists:topics,id'],
             'slug' => ['required', 'string', 'max:255', "unique:courses,slug,$id"],
             'position' => ['nullable', 'integer'],
             'is_active' => ['nullable'],

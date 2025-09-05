@@ -23,7 +23,7 @@ class StoreCourseRequest extends FormRequest
     {
         $locales = active_locals();
         $rules = [
-            'category_id' => 'required',
+            'topic_id' => 'required|exists:topics,id',
             'slug' => ['required', 'string', 'max:255', 'unique:courses,slug'],
             'position' => ['nullable', 'integer'],
             'is_active' => ['nullable'],

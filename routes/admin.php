@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\Catalog\AttributeController;
 use App\Http\Controllers\Admin\Catalog\DeliveryMethodController;
 use App\Http\Controllers\Admin\CMS\PartnerController;
 use App\Http\Controllers\Admin\Catalog\ProductVariantController;
+use App\Http\Controllers\Admin\Catalog\TopicController;
 
 Route::get('dashboard',                             [DashboardController::class, 'dashboard'])->name('dashboard');
 
@@ -35,6 +36,8 @@ Route::group(['prefix' => '/catalog', 'as' => 'catalog.'], function () {
 
     // Route::resource('topics',               TopicController::class);
 
+    Route::resource('topics',                  TopicController::class);
+    Route::post('topics/{id}/restore', [TopicController::class, 'restore'])->name('topics.restore');
     Route::resource('courses',                  CourseController::class);
 
     Route::resource('delivery-methods',                  DeliveryMethodController::class);
