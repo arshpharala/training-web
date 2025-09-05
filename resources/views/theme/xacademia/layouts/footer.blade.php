@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <!-- Logo + Contact -->
-                <div class="col-lg-2 col-md-12 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-md-12 mb-5 mb-lg-0">
                     <img src="{{ asset('theme/xacademia/assets/images/brand/logo-white.png') }}" class="w-auto border-0" alt="logo">
                     <ul class="list-unstyled mb-0 mt-4 text-white">
                         <li><i class="fe fe-map-pin"></i> {{ setting('address') }}</li>
@@ -40,7 +40,7 @@
                 </div>
 
                 <!-- Categories -->
-                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                     <h6 class="font-weight-normal text-white mb-3">Categories</h6>
                     <ul class="list-unstyled">
                         @foreach (menu_cataloge() as $category)
