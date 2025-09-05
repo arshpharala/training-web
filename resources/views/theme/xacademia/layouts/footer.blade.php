@@ -18,11 +18,12 @@
                 <!-- Logo + Contact -->
                 <div class="col-lg-3 col-md-12 mb-5 mb-lg-0">
                     <img src="{{ asset('theme/xacademia/assets/images/brand/logo-white.png') }}" class="w-auto border-0" alt="logo">
-                    <ul class="list-unstyled mb-0 mt-4 text-white">
-                        <li><i class="fe fe-map-pin"></i> {{ setting('address') }}</li>
-                        <li><i class="fe fe-mail"></i> {{ setting('contact_email') }}</li>
-                        <li><i class="fe fe-phone"></i> {{ setting('contact_phone') }}</li>
+                    <ul class="list-unstyled">
+                        <li><a href="javascript:void()"><i class="fe fe-map-pin"></i> {{ setting('address') }}</a></li>
+                        <li><a href="mailto:{{ setting('contact_email') }}"><i class="fe fe-mail"></i> {{ setting('contact_email') }}</a></li>
+                        <li><a href="tel:{{ setting('contact_phone') }}"><i class="fe fe-phone"></i> {{ setting('contact_phone') }}</a></li>
                     </ul>
+
                     <ul class="list-inline mt-4">
                         @if (setting('facebook'))
                             <li class="list-inline-item"><a href="{{ setting('facebook') }}" class="social-icons"><i class="fa fa-facebook"></i></a></li>
