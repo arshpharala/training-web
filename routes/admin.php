@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\Catalog\DeliveryMethodController;
 use App\Http\Controllers\Admin\CMS\PartnerController;
 use App\Http\Controllers\Admin\Catalog\ProductVariantController;
 use App\Http\Controllers\Admin\Catalog\TopicController;
+use App\Http\Controllers\Controller;
 
 Route::get('dashboard',                             [DashboardController::class, 'dashboard'])->name('dashboard');
 
@@ -70,6 +71,15 @@ Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
     Route::delete('partners/{partner}/restore',               [PartnerController::class, 'restore'])->name('partners.restore');
 
     Route::resource('statistics',                       StatisticController::class);
+
+    Route::get('cache-clear', function () {
+        \Artisan::call('cache:clear');
+        \Artisan::call('config:clear');
+        \Artisan::call('config:cache');
+        \Artisan::call('view:clear');
+        return 'Cache is cleared';
+    })->name('cache-clear');
+
 
     Route::post('upload/tinymce',                   [TinyMCEController::class, 'upload'])->name('upload.tinymce');
 });
