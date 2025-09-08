@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Answer</label>
-                                <textarea name="faqs[{{ $index }}][answer]" class="form-control tinymc-editor" rows="3">
+                                <textarea name="faqs[{{ $index }}][answer]" class="form-control tinymce-editor" rows="3">
                                     {{ old("faqs.$index.answer", $faq->answer ?? '') }}
                                 </textarea>
                             </div>
