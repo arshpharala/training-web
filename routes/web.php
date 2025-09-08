@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Sale\EnquiryController;
 use App\Http\Controllers\Web\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -22,7 +23,7 @@ Route::get('courses/{topic}/{course}', [CourseController::class, 'show'])->name(
 
 Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.show');
 
-Route::post('enquiry', [PageController::class, 'enquiry'])->name('enquiry');
+Route::post('enquiry', [EnquiryController::class, 'store'])->name('enquiry');
 
 Route::group(['prefix' => 'ajax', 'as' => 'ajax.'], function () {
     Route::get('catalog', [HomeController::class, 'catalog'])->name('catalog');

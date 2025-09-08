@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\Catalog\DeliveryMethodController;
 use App\Http\Controllers\Admin\CMS\PartnerController;
 use App\Http\Controllers\Admin\Catalog\ProductVariantController;
 use App\Http\Controllers\Admin\Catalog\TopicController;
+use App\Http\Controllers\Admin\Sale\EnquiryController;
 use App\Http\Controllers\Controller;
 
 Route::get('dashboard',                             [DashboardController::class, 'dashboard'])->name('dashboard');
@@ -44,6 +45,9 @@ Route::group(['prefix' => '/catalog', 'as' => 'catalog.'], function () {
     Route::resource('delivery-methods',                  DeliveryMethodController::class);
 });
 
+Route::group(['prefix' => '/sale', 'as' => 'sale.'], function () {
+    Route::resource('enquiries', EnquiryController::class)->only(['index', 'show', 'destroy']);
+});
 
 Route::group(['prefix' => '/cms', 'as' => 'cms.'], function () {
     Route::resource('attachments',              AttachmentController::class);
