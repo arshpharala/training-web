@@ -56,7 +56,7 @@
         </div>
         <div class="form-group">
             <label>Answer</label>
-            <textarea name="faqs[__INDEX__][answer]" class="form-control tinymc-editor" rows="3"></textarea>
+            <textarea name="faqs[__INDEX__][answer]" class="form-control tinymce-editor" rows="3"></textarea>
         </div>
         <input type="hidden" name="faqs[__INDEX__][position]" value="__INDEX__">
     </div>
