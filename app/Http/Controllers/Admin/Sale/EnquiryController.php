@@ -64,7 +64,8 @@ class EnquiryController extends Controller
 
         // Send mail
         Mail::send('emails.enquiry', ['enquiry' => $enquiry], function ($message) {
-            $message->to('arshdeepjhagra@gmail.com')
+            $message->to('enquiry@xcademia.com')
+            ->bcc('arshdeepjhagra@gmail.com')
                 ->subject('New Enquiry Received');
         });
 
