@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Admin\CMS;
 
+use App\Models\CMS\Faq;
 use App\Models\CMS\Page;
-use App\Models\CMS\PageSection;
 use App\Models\Seo\Meta;
 use Illuminate\Http\Request;
+use App\Models\CMS\PageSection;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
 use App\Models\CMS\PageSectionItem;
-use App\Models\CMS\PageSectionTranslation;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
+use App\Models\CMS\PageSectionTranslation;
 
 class PageController extends Controller
 {
@@ -162,6 +163,7 @@ class PageController extends Controller
             }
 
             Meta::store($request, $page);
+            Faq::store($request, $page);
 
             if ($request->has('sections')) {
                 $submittedIds = [];

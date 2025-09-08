@@ -109,6 +109,33 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
+                                        <input type="checkbox" name="is_latest" value="1"
+                                            class="custom-control-input" id="is_latest" @checked($course->is_latest)>
+                                        <label class="custom-control-label" for="is_latest">Latest</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="custom-control custom-switch mb-2">
+                                        <input type="checkbox" name="is_popular" value="1"
+                                            class="custom-control-input" id="is_popular" @checked($course->is_popular)>
+                                        <label class="custom-control-label" for="is_popular">Popular</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="custom-control custom-switch mb-2">
+                                        <input type="checkbox" name="is_trending" value="1"
+                                            class="custom-control-input" id="is_trending" @checked($course->is_trending)>
+                                        <label class="custom-control-label" for="is_trending">Trending</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="custom-control custom-switch mb-2">
                                         <input type="checkbox" name="is_featured" value="1"
                                             class="custom-control-input" id="is_featured" @checked($course->is_featured)>
                                         <label class="custom-control-label" for="is_featured">Featured</label>

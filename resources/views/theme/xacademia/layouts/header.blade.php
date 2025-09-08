@@ -94,12 +94,12 @@
                         </li>
                     </ul>
 
-                    <ul class="mb-0">
+                    {{-- <ul class="mb-0">
                         <li aria-haspopup="true" class="d-none d-lg-block mt-2 top-postbtn">
                             <span><a class="btn btn-secondary" href="javascript:void(0)"
                                      onclick="openEnquiryModal(this)" data-heading="Enquire Now">Enquire Now</a></span>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </nav>
             </div>
         </div>

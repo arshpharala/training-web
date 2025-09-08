@@ -355,7 +355,7 @@
             <div class="section-title d-md-flex mb-5">
                 <div>
                     <h2>{!! page_content('delivery-method', 'heading', 'Delivery that fits your world') !!}</h2>
-                    <p class="fs-18 lead">{!! page_content('delivery-method', 'content', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua') !!}</p>
+                    <p class="fs-18 lead">{!! page_content('delivery-method', 'content', 'Tailored delivery experiences designed to match your unique schedule, location, and expectations.') !!}</p>
                 </div>
             </div>
             <div class="row">

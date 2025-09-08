@@ -58,8 +58,7 @@
                         </div>
                         <div class="form-group">
                             <label for="position">Position</label>
-                            <input type="number" name="position" class="form-control"
-                                value="{{$page->position }}">
+                            <input type="number" name="position" class="form-control" value="{{ $page->position }}">
                         </div>
                         <div class="form-group">
                             <div class="custom-control custom-switch mb-2">
@@ -79,6 +78,12 @@
                 </div>
 
                 @include('theme.adminlte.components._metas', ['model' => $page, 'grid' => 'col-md-12'])
+
+                @include('theme.adminlte.components._faqs', [
+                    'model' => $page,
+                    'grid' => 'col-12',
+                ])
+
             </div>
 
             <div class="col-md-12 mb-4">

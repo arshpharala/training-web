@@ -17,25 +17,32 @@
             <div class="row">
                 <!-- Logo + Contact -->
                 <div class="col-lg-3 col-md-12 mb-5 mb-lg-0">
-                    <img src="{{ asset('theme/xacademia/assets/images/brand/logo-white.png') }}" class="w-auto border-0" alt="logo">
+                    <img src="{{ asset('theme/xacademia/assets/images/brand/logo-white.png') }}" class="w-auto border-0"
+                        alt="logo">
                     <ul class="list-unstyled">
                         <li><a href="javascript:void()"><i class="fe fe-map-pin"></i> {{ setting('address') }}</a></li>
-                        <li><a href="mailto:{{ setting('contact_email') }}"><i class="fe fe-mail"></i> {{ setting('contact_email') }}</a></li>
-                        <li><a href="tel:{{ setting('contact_phone') }}"><i class="fe fe-phone"></i> {{ setting('contact_phone') }}</a></li>
+                        <li><a href="mailto:{{ setting('contact_email') }}"><i class="fe fe-mail"></i>
+                                {{ setting('contact_email') }}</a></li>
+                        <li><a href="tel:{{ setting('contact_phone') }}"><i class="fe fe-phone"></i>
+                                {{ setting('contact_phone') }}</a></li>
                     </ul>
 
                     <ul class="list-inline mt-4">
                         @if (setting('facebook'))
-                            <li class="list-inline-item"><a href="{{ setting('facebook') }}" class="social-icons"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="{{ setting('facebook') }}" class="social-icons"><i
+                                        class="fa fa-facebook"></i></a></li>
                         @endif
                         @if (setting('instagram'))
-                            <li class="list-inline-item"><a href="{{ setting('instagram') }}" class="social-icons"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="{{ setting('instagram') }}" class="social-icons"><i
+                                        class="fa fa-instagram"></i></a></li>
                         @endif
                         @if (setting('linkedin'))
-                            <li class="list-inline-item"><a href="{{ setting('linkedin') }}" class="social-icons"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="{{ setting('linkedin') }}" class="social-icons"><i
+                                        class="fa fa-linkedin"></i></a></li>
                         @endif
                         @if (setting('twitter'))
-                            <li class="list-inline-item"><a href="{{ setting('twitter') }}" class="social-icons"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="{{ setting('twitter') }}" class="social-icons"><i
+                                        class="fa fa-twitter"></i></a></li>
                         @endif
                     </ul>
                 </div>
@@ -44,7 +51,7 @@
                 <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                     <h6 class="font-weight-normal text-white mb-3">Categories</h6>
                     <ul class="list-unstyled">
-                        @foreach (menu_cataloge() as $category)
+                        @foreach (menu_cataloge()->take(5) as $category)
                             <li>
                                 <a href="{{ route('categories.show', ['category' => $category->slug]) }}">
                                     <i class="fe fe-chevron-right"></i>
@@ -61,9 +68,10 @@
                     <ul class="list-unstyled">
                         @foreach (courses()->where('is_featured', true)->take(5) as $course)
                             <li>
-                                <a href="{{ route('courses.show', $course->slug) }}">
+                                <a
+                                    href="{{ route('courses.show', ['topic' => $course->topic_slug, 'course' => $course->course_slug]) }}">
                                     <i class="fe fe-star text-warning"></i>
-                                    {{ $course->name }}
+                                    {{ $course->course_name }}
                                 </a>
                             </li>
                         @endforeach
@@ -97,7 +105,8 @@
                 @if (!empty(setting('copyright')))
                     {!! setting('copyright') !!}
                 @else
-                    © {{ now()->year }} <a href="javascript:void(0)" class="text-primary">{{ env('APP_NAME') }}</a>. All rights reserved.
+                    © {{ now()->year }} <a href="javascript:void(0)" class="text-primary">{{ env('APP_NAME') }}</a>.
+                    All rights reserved.
                 @endif
             </div>
         </div>

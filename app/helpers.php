@@ -117,30 +117,8 @@ if (!function_exists('courses')) {
 
         return Cache::remember('courses_all_' . $locale, 3600, function () use ($locale) {
             return Course::query()
-                ->leftJoin('course_translations', function ($join) use ($locale) {
-                    $join->on('course_translations.course_id', '=', 'courses.id')
-                         ->where('course_translations.locale', $locale);
-                })
-                ->leftJoin('topics', 'topics.id', '=', 'courses.topic_id')
-                ->leftJoin('topic_translations', function ($join) use ($locale) {
-                    $join->on('topic_translations.topic_id', '=', 'topics.id')
-                         ->where('topic_translations.locale', $locale);
-                })
-                ->leftJoin('categories', 'categories.id', '=', 'topics.category_id')
-                ->leftJoin('category_translations', function ($join) use ($locale) {
-                    $join->on('category_translations.category_id', '=', 'categories.id')
-                         ->where('category_translations.locale', $locale);
-                })
-                ->select(
-                    'courses.id',
-                    'courses.duration',
-                    'courses.is_featured',
-                    'courses.slug',
-                    'courses.created_at',
-                    'course_translations.name as course_name',
-                    'topic_translations.name as topic_name',
-                    'category_translations.name as category_name'
-                )
+                ->withJoins()
+                ->withSelection()
                 ->where('courses.is_active', true)
                 ->orderBy('courses.created_at', 'desc')
                 ->groupBy('courses.id')

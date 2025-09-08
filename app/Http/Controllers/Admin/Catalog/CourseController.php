@@ -177,6 +177,9 @@ class CourseController extends Controller
 
             $data['is_active']      = $request->boolean('is_active');
             $data['is_featured']    = $request->boolean('is_featured');
+            $data['is_latest']    = $request->boolean('is_latest');
+            $data['is_trending']    = $request->boolean('is_trending');
+            $data['is_popular']    = $request->boolean('is_popular');
             $data['exam_included']  = $request->boolean('exam_included');
 
             $course->update($data);

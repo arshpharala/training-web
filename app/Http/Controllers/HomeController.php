@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Catalog\Category;
-use App\Models\Catalog\Course;
 use App\Models\CMS\News;
 use App\Models\CMS\Page;
 use App\Models\CMS\Partner;
-use App\Models\CMS\Statistic;
-use App\Models\CMS\Testimonial;
 use Illuminate\Http\Request;
+use App\Models\CMS\Statistic;
+use App\Models\Catalog\Course;
+use App\Models\CMS\Testimonial;
+use App\Models\Catalog\Category;
+use App\Models\Catalog\DeliveryMethod;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,13 @@ class HomeController extends Controller
 
         $categories = Category::with('translation')->orderBy('categories.position')->get();
 
-        $latestCourses = Course::where('is_featured', 1)->get();
+        $latestCourses = Course::query()
+            ->withJoins()
+            ->withSelection()
+            ->where('courses.is_latest', 1)
+            ->limit(12)
+            ->get();
+
 
         $page = Page::with('metas', 'translation')
             ->active()
@@ -28,6 +35,7 @@ class HomeController extends Controller
         $latestNews = News::active()->limit(6)->with('translation')->get();
         $testimonials = Testimonial::active()->orderBy('position')->with('translation')->get();
         $partners = Partner::active()->orderBy('position')->get();
+        $deliveryMethods = DeliveryMethod::active()->orderBy('position')->get();
 
 
         $statistics = Statistic::where('is_active', 1)->get();
@@ -40,6 +48,7 @@ class HomeController extends Controller
         $data['latestNews'] = $latestNews;
         $data['statistics'] = $statistics;
         $data['latestCourses'] = $latestCourses;
+        $data['deliveryMethods'] = $deliveryMethods;
 
         $data['categories'] = $categories;
         $data['blogs']      =   News::with('translation')->get();

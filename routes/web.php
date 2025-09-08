@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\CategoryController;
 use App\Http\Controllers\TestController;
-
+use App\Http\Controllers\Web\CourseController;
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -18,7 +18,7 @@ Route::get('contact',       [PageController::class, 'contact'])->name('contact')
 
 Route::get('courses', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('courses/{category}', [CategoryController::class, 'show'])->name('categories.show');
-Route::get('courses/{category}/{course}', [CategoryController::class, 'show'])->name('courses.show');
+Route::get('courses/{topic}/{course}', [CourseController::class, 'show'])->name('courses.show');
 
 Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.show');
 

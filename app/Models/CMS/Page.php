@@ -4,6 +4,7 @@ namespace App\Models\CMS;
 
 use App\Models\CMS\PageTranslation;
 use App\Trait\HasMeta;
+use App\Trait\HasFaqs;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -11,7 +12,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Page extends Model
 {
-    use HasFactory, HasUuids, SoftDeletes, HasMeta;
+    use HasFactory, HasUuids, SoftDeletes, HasMeta, HasFaqs;
 
     public $incrementing = false;
     protected $keyType = 'string';
