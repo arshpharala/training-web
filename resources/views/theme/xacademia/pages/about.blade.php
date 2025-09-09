@@ -22,14 +22,17 @@
                     <div class="row">
                         <div class="col-xl-8 col-lg-7 col-md-12">
                             <div class="mt-7">
-                                <h1 class="text-white display-5 font-weight-semibold">Training that lifts teams and lives
+                                <h1 class="text-white display-5 font-weight-semibold">
+                                    {{ page_content('banner', 'heading', 'Training that transforms teams and leaders') }}
                                 </h1>
-                                <p class="text-white lead">At <b>Xcademia</b>, we blend expert mentors with an AI-powered
-                                    learning engine to build practical skills you can use at work and in everyday life.
-                                    Focus areas include Cybersecurity, GRC, Cloud, Software, Leadership, and personal
-                                    effectiveness.</p>
-                                <a href="javascript:void(0)" class="btn btn-lg btn-white">Explore Programs</a><a
-                                    href="javascript:void(0)" class="btn btn-lg btn-outline-light ms-4 text-white">Talk to
+                                <p class="text-white lead">{!! page_content(
+                                    'banner',
+                                    'content',
+                                    'Xcademia blends expert mentors with an AI powered learning engine to build skills that change how people work. We specialise in Cybersecurity, GRC, Cloud, Software, Leadership, and professional effectiveness.',
+                                ) !!}</p>
+                                <a href="{{ route('categories.index') }}" class="btn btn-lg btn-white">Explore Programs</a><a
+                                    href="javascript:void(0)" class="btn btn-lg btn-outline-light ms-4 text-white"
+                                    onclick="openEnquiryModal(this)" data-heading="Talk to Expert">Talk to
                                     Expert</a>
                             </div>
                         </div>
@@ -85,6 +88,55 @@
             <div class="row ">
                 <div class="col-md-12 col-lg-7 col-sm-12">
                     {!! page_content('who-we-are', 'content') !!}
+
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
+                            <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
+                                <div class="servic-data mt-3">
+                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-1', 'heading', 'Innovation first') }}</h4>
+                                    <p class="mb-0">{!! page_content('who-we-are-1', 'content', 'Adaptive AI, smart feedback, and labs that evolve with your progress.') !!}</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
+                            <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
+                                <div class="servic-data mt-3">
+                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-2', 'heading', 'Hands on practice') }}</h4>
+                                    <p class="mb-0">{!! page_content('who-we-are-2', 'content', 'Scenarios and capstones that mirror live environments and real incidents.') !!}</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
+                            <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
+                                <div class="servic-data mt-3">
+                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-3', 'heading', 'Expert mentors') }}</h4>
+                                    <p class="mb-0">{!! page_content('who-we-are-3', 'content', 'Practitioners who ship products, run programmes, and solve problems in the field.') !!}</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
+                            <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
+                                <div class="servic-data mt-3">
+                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-4', 'heading', 'Measured outcomes') }}</h4>
+                                    <p class="mb-0">{!! page_content('who-we-are-4', 'content', 'Capability, completion, and ROI tracked on simple dashboards.') !!}</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
+                            <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
+                                <div class="servic-data mt-3">
+                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-5', 'heading', 'Skills over theory') }}</h4>
+                                    <p class="mb-0">{!! page_content('who-we-are-5', 'content', 'We share knowledge and coach skills so learners can apply the lesson the same week at work.') !!}</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="feature-1 text-center ms-5">
@@ -189,7 +241,7 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    content of a page when looking at its layout.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
                             <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
@@ -225,7 +277,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -243,7 +295,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -261,7 +313,7 @@
                                             'why-choose-us-3',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -278,7 +330,7 @@
                                             'why-choose-us-4',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -326,7 +378,7 @@
     </section>
     <!--/Section-->
 
-        <!--Section-->
+    <!--Section-->
     <section class="sptb">
         <div class="container">
             <div class="row">
@@ -355,24 +407,28 @@
             <div class="section-title d-md-flex mb-5">
                 <div>
                     <h2>{!! page_content('delivery-method', 'heading', 'Delivery that fits your world') !!}</h2>
-                    <p class="fs-18 lead">{!! page_content('delivery-method', 'content', 'Tailored delivery experiences designed to match your unique schedule, location, and expectations.') !!}</p>
+                    <p class="fs-18 lead">{!! page_content(
+                        'delivery-method',
+                        'content',
+                        'Tailored delivery experiences designed to match your unique schedule, location, and expectations.',
+                    ) !!}</p>
                 </div>
             </div>
             <div class="row">
                 @foreach ($deliveryMethods as $deliveryMethod)
-                <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
-                    <div class="mb-lg-0 mb-4 box-shadow about-2 p-5 flex-fill">
-                        <div class=" text-center">
-                            <div class="icon-bg icon-service about">
-                                <img src="{!! asset('storage/'. $deliveryMethod->icon ) !!}" alt="{{ $deliveryMethod->name }}">
-                            </div>
-                            <div class="servic-data mt-3">
-                                <h4 class="font-weight-semibold mb-2">{!! $deliveryMethod->name !!}</h4>
-                                <p class="mb-0">{!! $deliveryMethod->shot_description !!}</p>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                        <div class="mb-lg-0 mb-4 box-shadow about-2 p-5 flex-fill">
+                            <div class=" text-center">
+                                <div class="icon-bg icon-service about">
+                                    <img src="{!! asset('storage/' . $deliveryMethod->icon) !!}" alt="{{ $deliveryMethod->name }}">
+                                </div>
+                                <div class="servic-data mt-3">
+                                    <h4 class="font-weight-semibold mb-2">{!! $deliveryMethod->name !!}</h4>
+                                    <p class="mb-0">{!! $deliveryMethod->shot_description !!}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -397,7 +453,7 @@
                                 'build-for-1',
                                 'content',
                                 'Upsill staff with job ready capability. Map courses to KPIs, audits, and
-                                                                                                                                                projects. Measure ROI with simple dashboards.',
+                                                                                                                                                                            projects. Measure ROI with simple dashboards.',
                             ) !!}</p>
                         </div>
                     </div>
@@ -410,7 +466,7 @@
                                 'build-for-2',
                                 'content',
                                 'Level up for promotions and role changes with practical labs, real scenarios,
-                                                                                                                                                and mentor feedback.',
+                                                                                                                                                                            and mentor feedback.',
                             ) !!}</p>
                         </div>
                     </div>
@@ -423,7 +479,7 @@
                                 'build-for-3',
                                 'content',
                                 'Foundation to advanced paths, portfolio projects, and confidence building
-                                                                                                                                                life skills.',
+                                                                                                                                                                            life skills.',
                             ) !!}</p>
                         </div>
                     </div>
