@@ -82,7 +82,7 @@
             <div class="section-title d-md-flex">
                 <div>
                     <h2>{!! page_content('who-we-are', 'heading', 'Defining the Future of Learning') !!}</h2>
-                    <p class="fs-18 lead">{!! page_content('why-we-arw', 'content', 'We are a global training partner focused on outcomes. Certificates matter, results matter more. Our learners gain confidence, improve performance at work, and develop life skills such as clear communication, problem solving, time management, and digital resilience.') !!}</p>
+                    <p class="fs-18 lead">{!! page_content('who-we-are', 'content', 'We are a global training partner focused on outcomes. Certificates matter, results matter more. Our learners gain confidence, improve performance at work, and develop life skills such as clear communication, problem solving, time management, and digital resilience.') !!}</p>
                 </div>
             </div>
             <div class="row ">
