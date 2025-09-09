@@ -81,13 +81,13 @@
         <div class="container">
             <div class="section-title d-md-flex">
                 <div>
-                    <h2>{!! page_content('who-we-are', 'heading', 'Who we are?') !!}</h2>
-                    <p class="fs-18 lead">{!! page_content('why-choose-us', 'content', 'Majority have suffered alteration in some form, by injected humo') !!}</p>
+                    <h2>{!! page_content('who-we-are', 'heading', 'Defining the Future of Learning') !!}</h2>
+                    <p class="fs-18 lead">{!! page_content('why-we-arw', 'content', 'We are a global training partner focused on outcomes. Certificates matter, results matter more. Our learners gain confidence, improve performance at work, and develop life skills such as clear communication, problem solving, time management, and digital resilience.') !!}</p>
                 </div>
             </div>
             <div class="row ">
                 <div class="col-md-12 col-lg-7 col-sm-12">
-                    {!! page_content('who-we-are', 'content') !!}
+                    {{-- {!! page_content('who-we-are', 'content') !!} --}}
 
 
                     <div class="row">
