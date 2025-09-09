@@ -244,7 +244,7 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
-                            <a href="{{ route('categories.index') }}" class="btn btn-lg btn-secondary">Register Now!</a>
+                            <a href="javasc" class="btn btn-lg btn-secondary">Register Now!</a>
                         </div>
                     </div>
                 </div>
@@ -502,9 +502,9 @@
                     </div>
                     <div class="text-wrap">
                         <div class="btn-list">
-                            <a href="javascript:void(0)" class="btn btn-primary btn-lg mb-5 mb-lg-0">Book a discovery
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg mb-5 mb-lg-0" onclick="openEnquiryModal(this)" data-heading="Book a Discovery Call">Book a discovery
                                 call</a>
-                            <a href="javascript:void(0)" class="btn btn-secondary btn-lg mb-5 mb-lg-0">Browse
+                            <a href="{{ route('categories.index') }}" class="btn btn-secondary btn-lg mb-5 mb-lg-0">Browse
                                 programmes</a>
                         </div>
                     </div>
