@@ -244,7 +244,7 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
-                            <a href="javasc" class="btn btn-lg btn-secondary">Register Now!</a>
+                            <a href="javascript:viod(0)" class="btn btn-lg btn-secondary" onclick="openEnquiryModal(this)" data-heading="Register Now">Register Now!</a>
                         </div>
                     </div>
                 </div>
