@@ -236,7 +236,7 @@
                                         {{-- <i class="typcn typcn-group-outline"></i> --}}
                                     </div>
                                     <h5>{{ $statistic->translation->name }}</h5>
-                                    <h2 class="counter mb-0">{{ $statistic->number }}</h2>
+                                    <h2 class="mb-0"><span class="counter">{{ $statistic->number }}</span>+</h2>
                                 </div>
                             </div>
                         @endforeach
@@ -432,7 +432,7 @@
                     </div>
                 </div>
                 @endforeach
-              
+
             </div>
         </div>
     </section><!--/Faq section-->
