@@ -14,7 +14,7 @@ if (!function_exists('setting')) {
 }
 
 if (!function_exists('page_content')) {
-    function page_content(string $sectionType, string $key, $default = null)
+    function page_content(string $sectionType, string $key, $default = null, $removePTags = false)
     {
         $slug = request()->segment(1) ?: 'home';
         $locale = app()->getLocale();
@@ -39,6 +39,11 @@ if (!function_exists('page_content')) {
 
 
         $translation = $section->translations->firstWhere('locale', $locale);
+
+        // remove start and end <p> tags from the content and keep the inner content only
+        if ($removePTags) {
+            return $translation->{$key} ? preg_replace('/^<p>(.*)<\/p>$/s', '$1', $translation->{$key}) : $default;
+        }
         return $translation->{$key} ?? $default;
     }
 }

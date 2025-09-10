@@ -144,6 +144,8 @@
     <script src="{{ asset('assets/js/enquiry-popup.js') }}"></script>
     <script src="{{ asset('assets/js/form.js') }}"></script>
 
+    @stack('scripts')
+
 
 </body>
 

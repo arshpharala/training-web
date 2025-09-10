@@ -1,66 +1,158 @@
 @extends('theme.xacademia.layouts.app')
 @push('head')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+@endpush
+@push('head')
+    <!-- Animate.css -->
+
     <style>
-        .bg-background-1:before,
-        .banner1:before {
-            background: none !important;
+        .bg-background-1,
+        .banner1 {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #4f46e5, #7c3aed, #d946ef) !important;
         }
 
-        #myCarousel1 .card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        .bg-background-1:before,
+        .banner1:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+            background-size: 22px 22px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        /* Smaller placeholder font */
+        #heroSearch::placeholder {
+            font-size: 0.9rem;
         }
     </style>
 @endpush
 
+@push('scripts')
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('heroLottie'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets9.lottiefiles.com/packages/lf20_tno6cg2w.json' // animation JSON
+        });
+    </script>
+@endpush
 @section('banner')
     @php
         $sections = $page->sections ?? null;
     @endphp
 
-    <!--Section-->
-    <section class="sptb-2 sptb-tab">
+    <!-- HERO Section -->
+    <section class="sptb-tab py-10">
         <div class="header-text mb-0">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-10 col-lg-12 col-md-12">
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 col-md-12">
                         <div class="text-white mb-7">
-                            <a href="" class="typewrite" data-period="2000"
-                                data-type='[ "{{ page_content('Hero', 'heading', 'Find The Best Trainers and Build Your Future') }}" ]'>
-                                <span class="wrap"></span>
-                            </a>
-                            <p class="fs-18">{!! page_content(
-                                'Hero',
-                                'content',
-                                'many variations of passages of Lorem Ipsum available, but the majority have
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                suffered alteration <br> in some form, by injected humour, or randomised words',
-                            ) !!}</p>
+                            <p class="text-uppercase small text-white-50 mb-3 animate__animated animate__fadeInDown">
+                                Industry-led learning
+                            </p>
+                            <h1 class="hero-title animate__animated animate__fadeInLeft">
+                                Learn Smarter. <span class="text-warning">Upskill Faster.</span>
+                            </h1>
+                            <p class="mt-3 lead text-white-75 animate__animated animate__fadeInLeft animate__delay-1s">
+                                {!! page_content(
+                                    'Hero',
+                                    'content',
+                                    'Future-ready training by certified experts. Hands-on labs, real projects, and globally recognised certificates',
+                                    true,
+                                ) !!}
+                            </p>
                         </div>
-                        <div class="search-background bg-transparent typewrite-text">
-                            <div class="row">
-                                <div class="col-xl-10 col-lg-12 col-md-12">
-                                    <div class="form row g-0 ">
-                                        <div class="form-group  col-xl-6 col-lg-6 col-md-12 mb-0 bg-white br-lg-7">
-                                            <input type="text" class="form-control input-xl br-0"
-                                                placeholder="Search Courses...." data-min-length="1" list="courses"
-                                                name="courses">
-                                        </div>
-                                        <div class="col-xl-2 col-lg-3 col-md-12 mb-0">
-                                            <a href="javascript:void(0)"
-                                                class="btn btn-xl btn-block btn-secondary br-ts-md-0 br-bs-md-0"><i
-                                                    class="fe fe-search"></i> Search</a>
-                                        </div>
-                                    </div>
-                                </div>
+
+                        <!-- Search Form -->
+                        <form id="heroSearchForm" action="#courses" class="mt-4 mx-auto" style="max-width: 600px;">
+                            <div class="dropdown w-100 position-relative">
+                                <!-- Input -->
+                                <input id="heroSearch" type="text" autocomplete="off"
+                                    placeholder="Search courses (e.g., CISO, CISM, CompTIA A+)"
+                                    class="form-control form-control-lg rounded-pill fw-semibold pe-5"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+
+                                <!-- Button -->
+                                <button type="submit"
+                                    class="btn fw-semibold position-absolute top-0 end-0 me-1 rounded-pill px-4 py-2">
+                                    Search
+                                </button>
+
+                                <!-- Suggestions -->
+                                <ul id="searchSuggestions" class="dropdown-menu w-100 mt-1 shadow"
+                                    aria-labelledby="heroSearch">
+                                    @foreach (courses() as $course)
+                                        <li><a class="dropdown-item" href="#">{{ $course->course_name }}</a></li>
+                                    @endforeach
+                                </ul>
                             </div>
-                        </div>
+                        </form>
+                    </div>
+
+                    <!-- Right Lottie Animation -->
+                    <div class="col-lg-6 d-none d-md-block position-relative text-center">
+
+                        <div id="heroLottie" style="width:100%; max-width:500px; min-height:350px; margin:auto;"></div>
                     </div>
                 </div>
             </div>
-        </div><!-- /header-text -->
-    </section><!--/Section-->
+        </div>
+    </section>
+
+    @push('scripts')
+        <script>
+            const searchInput = document.getElementById("heroSearch");
+            const suggestions = document.getElementById("searchSuggestions");
+            const suggestionItems = suggestions.querySelectorAll("li");
+
+            searchInput.addEventListener("input", function() {
+                const query = this.value.trim();
+                let hasMatch = false;
+
+                if (query.length > 1) {
+                    const regex = new RegExp(query, "i"); // case-insensitive regex
+
+                    suggestionItems.forEach(item => {
+                        const text = item.textContent.trim();
+                        if (regex.test(text)) {
+                            item.style.display = "block";
+                            hasMatch = true;
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+
+                    if (hasMatch) {
+                        suggestions.classList.add("show");
+                    } else {
+                        suggestions.classList.remove("show");
+                    }
+                } else {
+                    // Reset when query is empty
+                    suggestionItems.forEach(item => item.style.display = "block");
+                    suggestions.classList.remove("show");
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener("click", function(e) {
+                if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+                    suggestions.classList.remove("show");
+                }
+            });
+        </script>
+    @endpush
 @endsection
+
 @section('content')
 
 
@@ -418,19 +510,21 @@
             </div>
             <div class="panel-group1" id="accordion2">
                 @foreach ($page->faqs as $faq)
-                <div class="panel panel-default mb-4 border p-0">
-                    <div class="panel-heading1">
-                        <h4 class="panel-title1">
-                            <a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-parent="#accordion2"
-                                href="#collapse-{{ $faq->id }}" aria-expanded="false">{!! $faq->question !!}</a>
-                        </h4>
-                    </div>
-                    <div id="collapse-{{ $faq->id }}" class="panel-collapse collapse active" role="tabpanel" aria-expanded="false">
-                        <div class="panel-body bg-white">
-                            {!! $faq->answer !!}
+                    <div class="panel panel-default mb-4 border p-0">
+                        <div class="panel-heading1">
+                            <h4 class="panel-title1">
+                                <a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-parent="#accordion2"
+                                    href="#collapse-{{ $faq->id }}"
+                                    aria-expanded="false">{!! $faq->question !!}</a>
+                            </h4>
+                        </div>
+                        <div id="collapse-{{ $faq->id }}" class="panel-collapse collapse active" role="tabpanel"
+                            aria-expanded="false">
+                            <div class="panel-body bg-white">
+                                {!! $faq->answer !!}
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
 
             </div>
