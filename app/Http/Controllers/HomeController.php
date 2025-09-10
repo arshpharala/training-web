@@ -17,7 +17,7 @@ class HomeController extends Controller
     function home()
     {
 
-        $categories = Category::with('translation')->orderBy('categories.position')->get();
+        $categories = Category::catalog()->with('translation')->orderBy('categories.position')->get();
 
         $latestCourses = Course::query()
             ->withJoins()
@@ -59,7 +59,7 @@ class HomeController extends Controller
 
     public function catalog(Request $request)
     {
-        $categories = Category::with([
+        $categories = Category::catalog()->with([
             'translations',
             'topics.translations',
             'topics.courses.translations'
