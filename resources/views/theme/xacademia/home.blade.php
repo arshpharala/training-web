@@ -241,9 +241,9 @@
                 </div>
             </div>
             <div class="item-all-cat education-categories">
-                <div class="row">
+                <div class="row d-flex">
                     @foreach ($categories as $category)
-                        <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 flex-fill">
                             <div class="item-all-card text-dark item-hover-card p-6">
                                 <a href="{{ route('categories.show', ['category' => $category->slug]) }}"
                                     class="absolute-link"></a>
