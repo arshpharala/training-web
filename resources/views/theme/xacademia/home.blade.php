@@ -78,16 +78,15 @@
                                 <!-- Input -->
                                 <input id="heroSearch" type="text" autocomplete="off"
                                     placeholder="Search courses (e.g., CISO, CISM, CompTIA A+)"
-                                    class="form-control form-control-lg"
-                                    >
+                                    class="form-control form-control-lg">
 
-                                    <div class="d-flex flex-column justify-content-center align-items-center">
-                                        <button type="submit"
-                                            class="btn fw-semibold position-absolute top-0 end-0 me-1 px-4 py-2">
-                                            Search
-                                        </button>
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <button type="submit"
+                                        class="btn fw-semibold position-absolute top-0 end-0 me-1 px-4 py-2">
+                                        Search
+                                    </button>
 
-                                    </div>
+                                </div>
                                 <!-- Button -->
 
                                 <!-- Suggestions -->
@@ -241,31 +240,35 @@
                 </div>
             </div>
             <div class="item-all-cat education-categories">
-                <div class="row d-flex">
+                <div class="row">
                     @foreach ($categories as $category)
-                        <div class="col-lg-3 col-md-4 col-sm-6 flex-fill">
-                            <div class="item-all-card text-dark item-hover-card p-6">
+                        <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                            <div class="item-all-card text-dark item-hover-card p-6 d-flex flex-column flex-fill">
                                 <a href="{{ route('categories.show', ['category' => $category->slug]) }}"
                                     class="absolute-link"></a>
                                 <div class="iteam-all-icon d-flex justify-content-center">
                                     <i class="fe fe-book-open"></i>
                                 </div>
-                                <div class="item-all-text mt-3 d-flex flex-column justify-content-center">
-                                    <h5 class="mb-0 text-center">{{ $category->translation->name ?? '' }}</h5>
-                                    <p class="mt-3 text-center">
-                                        {{ Str::limit($category->translation->short_description ?? 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 80) }}
-                                    </p>
-
-                                    <a class="btn-link text-center"
-                                        href="{{ route('categories.show', ['category' => $category->slug]) }}"><i
-                                            class="fe fe-chevron-right"></i> View
-                                        More</a>
+                                <div class="item-all-text mt-3 d-flex flex-column justify-content-between flex-grow-1">
+                                    <div>
+                                        <h5 class="mb-0 text-center">{{ $category->translation->name ?? '' }}</h5>
+                                        <p class="mt-3 text-center">
+                                            {{ Str::limit($category->translation->short_description ?? 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 80) }}
+                                        </p>
+                                    </div>
+                                    <div class="mt-auto text-center">
+                                        <a class="btn-link"
+                                            href="{{ route('categories.show', ['category' => $category->slug]) }}">
+                                            <i class="fe fe-chevron-right"></i> View More
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
+
         </div>
     </section>
     <!--/Section-->
