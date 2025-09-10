@@ -16,48 +16,55 @@ class TestController extends Controller
     public function index()
     {
 
-        // $this->addCountryStateCity();
+        // return $this->test();
 
     }
 
     function test()
     {
-        return 'hi';
-        DB::transaction(function () {
-            // Delete all courses
-            Course::with(['translations', 'deliveryMethods', 'metas'])->chunkById(100, function ($courses) {
-                foreach ($courses as $course) {
-                    $course->translations()->delete();
-                    $course->deliveryMethods()->detach();
-                    if (method_exists($course, 'metas')) {
-                        $course->metas()->delete();
-                    }
-                    $course->delete();
-                }
-            });
+        // DB::beginTransaction();
 
-            // Delete all topics
-            Topic::with(['translations', 'metas'])->chunkById(100, function ($topics) {
-                foreach ($topics as $topic) {
-                    $topic->translations()->delete();
-                    if (method_exists($topic, 'metas')) {
-                        $topic->metas()->delete();
-                    }
-                    $topic->delete();
-                }
-            });
+        // try {
 
-            // Delete all categories
-            Category::with(['translations', 'metas'])->chunkById(100, function ($categories) {
-                foreach ($categories as $category) {
-                    $category->translations()->delete();
-                    if (method_exists($category, 'metas')) {
-                        $category->metas()->delete();
-                    }
-                    $category->delete();
-                }
-            });
-        });
+        //     // Delete all courses
+        //     Course::withTrashed()->with(['translations', 'deliveryMethods', 'metas'])->chunkById(100, function ($courses) {
+        //         foreach ($courses as $course) {
+        //             $course->translations()->delete();
+        //             $course->deliveryMethods()->detach();
+        //             if (method_exists($course, 'metas')) {
+        //                 $course->metas()->delete();
+        //             }
+
+        //             $course->forceDelete();
+
+        //         }
+        //     });
+
+        //     // Delete all topics
+        //     Topic::withTrashed()->with(['translations', 'metas'])->chunkById(100, function ($topics) {
+        //         foreach ($topics as $topic) {
+        //             $topic->translations()->delete();
+        //             if (method_exists($topic, 'metas')) {
+        //                 $topic->metas()->delete();
+        //             }
+        //             $topic->forceDelete();
+        //         }
+        //     });
+
+        //     // Delete all categories
+        //     Category::withTrashed()->with(['translations', 'metas'])->chunkById(100, function ($categories) {
+        //         foreach ($categories as $category) {
+        //             $category->translations()->delete();
+        //             if (method_exists($category, 'metas')) {
+        //                 $category->metas()->delete();
+        //             }
+        //             $category->forceDelete();
+        //         }
+        //     });
+        // } catch (\Throwable $th) {
+        //     throw $th;
+        // }
+
 
         return $this->importCourses();
     }
@@ -68,8 +75,8 @@ class TestController extends Controller
         $jsonData = file_get_contents($path);
         $courses = json_decode($jsonData, true);
 
-        DB::beginTransaction();
-        try {
+        // DB::beginTransaction();
+        // try {
             foreach ($courses as $row) {
                 // 1. Category
                 $category = Category::firstOrCreate(
@@ -84,7 +91,10 @@ class TestController extends Controller
                 // Ensure category translation
                 $category->translations()->updateOrCreate(
                     ['locale' => app()->getLocale()],
-                    ['name' => $row['Category']]
+                    [
+                        'name' => $row['Category'],
+                        'short_description' => $row['Category_Description'] ?? null
+                    ]
                 );
 
                 // 2. Topic (sub-category)
@@ -126,12 +136,12 @@ class TestController extends Controller
                 );
             }
 
-            DB::commit();
+            // DB::commit();
             return "Courses imported successfully.";
-        } catch (\Throwable $e) {
-            DB::rollBack();
-            throw $e;
-        }
+        // } catch (\Throwable $e) {
+        //     DB::rollBack();
+        //     throw $e;
+        // }
     }
 
 

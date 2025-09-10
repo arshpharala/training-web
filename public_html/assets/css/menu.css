@@ -24,7 +24,7 @@
 .horizontal-megamenu .mega-search {
     border: 1px solid var(--menu-border);
     border-radius: var(--menu-radius);
-    padding: 12px 16px;
+    padding: 10px 14px;
     font-size: 14px;
     width: 100%;
 }
@@ -33,7 +33,7 @@
     border: 1px solid var(--menu-border);
     background: var(--menu-surface);
     color: var(--menu-muted);
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: 999px;
     font-size: 12px;
     font-weight: 500;
@@ -69,7 +69,7 @@
 .horizontal-megamenu .topics-list ul {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -79,7 +79,7 @@
     background: var(--menu-bg);
     border: 1px solid var(--menu-border);
     border-radius: var(--menu-radius);
-    padding: 14px 16px;
+    padding: 12px 14px;
     font-size: 12px;
     color: var(--menu-text);
     cursor: pointer;
@@ -88,7 +88,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 40px;
+    height: 30px;
     box-sizing: border-box;
 }
 .horizontal-megamenu .item-box:hover,

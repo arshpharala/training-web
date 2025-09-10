@@ -2,12 +2,13 @@
 
 namespace App\Models\Catalog;
 
+use App\Trait\HasMeta;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Topic extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, HasMeta;
 
     protected $guarded = ['id'];
 

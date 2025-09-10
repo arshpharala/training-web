@@ -11,6 +11,12 @@ class Category extends Model
     use HasMeta, SoftDeletes;
     protected $guarded = ['id'];
 
+    public $casts = [
+        'is_featured' => 'boolean',
+        'blog_only' => 'boolean',
+    ];
+
+
     protected static function booted()
     {
         static::saved(function () {
@@ -24,6 +30,11 @@ class Category extends Model
         });
     }
 
+
+    function scopeCatalog($query)
+    {
+        return $query->where('blog_only', false);
+    }
 
     public function topics()
     {

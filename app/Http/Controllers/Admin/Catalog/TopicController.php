@@ -65,7 +65,7 @@ class TopicController extends Controller
     public function create()
     {
         $topic      = new Topic();
-        $categories = Category::with('translation')->get();
+        $categories = Category::catalog()->with('translation')->get();
 
         return view('theme.adminlte.catalog.topics.create', compact('topic', 'categories'));
     }
@@ -119,7 +119,7 @@ class TopicController extends Controller
     public function edit(string $id)
     {
         $topic      = Topic::withTrashed()->with('translations')->findOrFail($id);
-        $categories = Category::with('translation')->get();
+        $categories = Category::catalog()->with('translation')->get();
 
         return view('theme.adminlte.catalog.topics.edit', compact('topic', 'categories'));
     }

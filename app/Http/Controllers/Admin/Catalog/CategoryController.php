@@ -77,6 +77,7 @@ class CategoryController extends Controller
             $data['banner'] = $request->hasFile('banner') ? $request->file('banner')->store('categories', 'public') : null;
             $data['is_active'] = $request->boolean('is_active');
             $data['is_featured'] = $request->boolean('is_featured');
+            $data['blog_only'] = $request->boolean('blog_only');
 
             $category = Category::create($data);
 
@@ -154,6 +155,7 @@ class CategoryController extends Controller
             }
             $data['is_active'] = $request->boolean('is_active');
             $data['is_featured'] = $request->boolean('is_featured');
+            $data['blog_only'] = $request->boolean('blog_only');
 
             $category->update($data);
 

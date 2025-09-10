@@ -28,6 +28,7 @@ class UpdateCategoryRequest extends FormRequest
             'position' => ['nullable', 'integer'],
             'is_active' => ['nullable'],
             'is_featured' => ['nullable'],
+            'blog_only' => ['nullable'],
             'icon' => ['nullable', 'image', 'max:1024'],
             'logo' => ['nullable', 'image', 'max:2048'],
             'banner' => ['nullable', 'image', 'max:4096'],

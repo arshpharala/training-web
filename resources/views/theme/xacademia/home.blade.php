@@ -27,7 +27,7 @@
 
         /* Smaller placeholder font */
         #heroSearch::placeholder {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
         }
     </style>
 @endpush
@@ -78,14 +78,17 @@
                                 <!-- Input -->
                                 <input id="heroSearch" type="text" autocomplete="off"
                                     placeholder="Search courses (e.g., CISO, CISM, CompTIA A+)"
-                                    class="form-control form-control-lg rounded-pill fw-semibold pe-5"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    class="form-control form-control-lg"
+                                    >
 
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <button type="submit"
+                                            class="btn fw-semibold position-absolute top-0 end-0 me-1 px-4 py-2">
+                                            Search
+                                        </button>
+
+                                    </div>
                                 <!-- Button -->
-                                <button type="submit"
-                                    class="btn fw-semibold position-absolute top-0 end-0 me-1 rounded-pill px-4 py-2">
-                                    Search
-                                </button>
 
                                 <!-- Suggestions -->
                                 <ul id="searchSuggestions" class="dropdown-menu w-100 mt-1 shadow"
@@ -110,44 +113,47 @@
 
     @push('scripts')
         <script>
-            const searchInput = document.getElementById("heroSearch");
-            const suggestions = document.getElementById("searchSuggestions");
-            const suggestionItems = suggestions.querySelectorAll("li");
+            $(document).ready(function() {
+                const $searchInput = $("#heroSearch");
+                const $suggestions = $("#searchSuggestions");
+                const $suggestionItems = $suggestions.find("li");
 
-            searchInput.addEventListener("input", function() {
-                const query = this.value.trim();
-                let hasMatch = false;
+                $searchInput.on("input", function() {
+                    const query = $(this).val().trim();
+                    let hasMatch = false;
 
-                if (query.length > 1) {
-                    const regex = new RegExp(query, "i"); // case-insensitive regex
+                    if (query.length > 1) {
+                        const regex = new RegExp(query, "i"); // case-insensitive regex
 
-                    suggestionItems.forEach(item => {
-                        const text = item.textContent.trim();
-                        if (regex.test(text)) {
-                            item.style.display = "block";
-                            hasMatch = true;
+                        $suggestionItems.each(function() {
+                            const text = $(this).text().trim();
+                            if (regex.test(text)) {
+                                $(this).show();
+                                hasMatch = true;
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+
+                        if (hasMatch) {
+                            $suggestions.addClass("show");
                         } else {
-                            item.style.display = "none";
+                            $suggestions.removeClass("show");
                         }
-                    });
-
-                    if (hasMatch) {
-                        suggestions.classList.add("show");
                     } else {
-                        suggestions.classList.remove("show");
+                        // Reset when query is empty
+                        $suggestionItems.show();
+                        $suggestions.removeClass("show");
                     }
-                } else {
-                    // Reset when query is empty
-                    suggestionItems.forEach(item => item.style.display = "block");
-                    suggestions.classList.remove("show");
-                }
-            });
+                });
 
-            // Close dropdown when clicking outside
-            document.addEventListener("click", function(e) {
-                if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
-                    suggestions.classList.remove("show");
-                }
+                // Close dropdown when clicking outside
+                $(document).on("click", function(e) {
+                    if (!$searchInput.is(e.target) && !$suggestions.is(e.target) && $suggestions.has(e.target)
+                        .length === 0) {
+                        $suggestions.removeClass("show");
+                    }
+                });
             });
         </script>
     @endpush

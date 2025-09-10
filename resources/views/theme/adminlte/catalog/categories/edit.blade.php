@@ -87,6 +87,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="custom-control custom-switch mb-2">
+                                        <input type="checkbox" name="blog_only" value="1"
+                                            class="custom-control-input" id="blog_only"
+                                            {{ old('blog_only', $category->blog_only) ? 'checked' : '' }}>
+                                        <label class="custom-control-label" for="blog_only">Blog Only</label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Logo</label>

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('logo')->nullable();
             $table->string('banner')->nullable();
             $table->string('color', 7)->nullable(); // HEX Color, e.g. #ff0000
+            $table->boolean('blog_only')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

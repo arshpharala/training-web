@@ -104,6 +104,7 @@ if (!function_exists("menu_cataloge")) {
     function menu_cataloge()
     {
         return Category::query()
+            ->catalog()
             ->whereHas('topics.courses') // only categories that have courses via topics
             ->with([
                 'translation',
