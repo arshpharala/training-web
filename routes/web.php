@@ -21,7 +21,7 @@ Route::get('courses', [CategoryController::class, 'index'])->name('categories.in
 Route::get('courses/{category}', [CategoryController::class, 'show'])->name('categories.show');
 Route::get('courses/{topic}/{course}', [CourseController::class, 'show'])->name('courses.show');
 
-Route::get('blog/{blog}', [HomeController::class, 'newsCetail'])->name('blog.show');
+Route::get('blog/{blog}', [HomeController::class, 'newsDetail'])->name('blog.show');
 
 Route::post('enquiry', [EnquiryController::class, 'store'])->name('enquiry');
 

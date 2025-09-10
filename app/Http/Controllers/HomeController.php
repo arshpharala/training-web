@@ -90,4 +90,10 @@ class HomeController extends Controller
 
         return response()->json($catalog);
     }
+
+    function newsDetail(News $blog)
+    {
+        $data['blog'] = $blog;
+        return view('theme.xacademia.blog-detail', $data);
+    }
 }
