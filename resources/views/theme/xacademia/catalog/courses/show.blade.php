@@ -61,7 +61,7 @@
                         <!-- Suggestions -->
                         <ul id="searchSuggestions" class="dropdown-menu w-100 mt-1 shadow" aria-labelledby="heroSearch">
                             @foreach (courses() as $c)
-                                <li><a class="dropdown-item" href="#">{{ $c->course_name }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('courses.show', ['topic' => $c->topic_slug, 'course' => $c->course_slug]) }}">{{ $c->course_name }}</a></li>
                             @endforeach
                         </ul>
                     </div>
