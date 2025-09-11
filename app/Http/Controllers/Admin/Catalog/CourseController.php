@@ -11,6 +11,7 @@ use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Catalog\DeliveryMethod;
+use App\Models\CMS\Faq;
 use App\Models\Seo\Meta;
 
 class CourseController extends Controller
@@ -197,6 +198,7 @@ class CourseController extends Controller
 
             DeliveryMethod::sync($request, $course);
             Meta::store($request, $course);
+            Faq::store($request, $course);
 
             DB::commit();
         } catch (\Throwable $th) {

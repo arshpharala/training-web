@@ -43,6 +43,11 @@
                     </div>
                 </div>
 
+                @include('theme.adminlte.components._faqs', [
+                    'model' => $course,
+                    'grid' => 'col-12',
+                ])
+
             </div>
             <div class="col-md-4">
                 <div class="card card-secondary">
@@ -109,8 +114,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" name="is_latest" value="1"
-                                            class="custom-control-input" id="is_latest" @checked($course->is_latest)>
+                                        <input type="checkbox" name="is_latest" value="1" class="custom-control-input"
+                                            id="is_latest" @checked($course->is_latest)>
                                         <label class="custom-control-label" for="is_latest">Latest</label>
                                     </div>
                                 </div>
@@ -118,8 +123,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" name="is_popular" value="1"
-                                            class="custom-control-input" id="is_popular" @checked($course->is_popular)>
+                                        <input type="checkbox" name="is_popular" value="1" class="custom-control-input"
+                                            id="is_popular" @checked($course->is_popular)>
                                         <label class="custom-control-label" for="is_popular">Popular</label>
                                     </div>
                                 </div>
@@ -204,6 +209,9 @@
                     'model' => $course,
                     'grid' => 'col-12',
                 ])
+
+
+
             </div>
         </div>
     </form>

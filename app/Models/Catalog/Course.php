@@ -2,13 +2,14 @@
 
 namespace App\Models\Catalog;
 
+use App\Trait\HasFaqs;
 use App\Trait\HasMeta;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Course extends Model
 {
-    use HasMeta, SoftDeletes;
+    use HasMeta, SoftDeletes, HasFaqs;
     protected $guarded = ['id'];
 
     protected static function booted()

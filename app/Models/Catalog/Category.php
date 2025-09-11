@@ -49,4 +49,16 @@ class Category extends Model
     {
         return $this->hasMany(CategoryTranslation::class);
     }
+
+    function scopeWithJoins($query)
+    {
+        return $query->leftJoin('category_translations', function ($join) {
+            $join->on('categories.id', '=', 'category_translations.category_id')->where('category_translations.locale', app()->getLocale());
+        });
+    }
+
+    function scopeWithSelection($query)
+    {
+        return $query->addSelect('categories.*', 'category_translations.name', 'category_translations.short_description', 'category_translations.locale');
+    }
 }

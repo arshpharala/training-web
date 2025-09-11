@@ -82,7 +82,7 @@ class HomeController extends Controller
                 foreach ($topic->courses as $course) {
                     $catalog[$coreName]['subs'][$subName]['courses'][] = [
                         'name' => $course->translation->name ?? $course->slug,
-                        'slug' => $course->slug
+                        'slug' => $topic->slug . '/' . $course->slug
                     ];
                 }
             }

@@ -4,6 +4,7 @@ use App\Models\CMS\Page;
 use App\Models\CMS\Locale;
 use App\Models\Catalog\Course;
 use App\Models\Catalog\Category;
+use App\Models\CMS\Currency;
 use Illuminate\Support\Facades\Cache;
 
 if (!function_exists('setting')) {
@@ -141,3 +142,61 @@ if (!function_exists('clear_course_cache')) {
         }
     }
 }
+
+
+if (!function_exists('active_currency')) {
+    /**
+     * When $obj = true, returns the Currency row (cached).
+     * Otherwise returns the code string (e.g. 'AED').
+     */
+    function active_currency(bool $obj = false)
+    {
+        static $active = null;
+
+        if ($active === null) {
+            // TODO: swap this for your real “current site / session” currency
+            $active = Currency::default()->first();
+
+            if ($active->code === 'AED') {
+                $active->symbol = '<span class="dirham-symbol">&#xea;</span>';
+            }
+        }
+
+        return $obj ? $active : ($active?->code ?? 'GBP');
+    }
+}
+
+
+if (!function_exists('price_format')) {
+    /**
+     * Format price according to currency settings.
+     *
+     * @param string $ccy  Currency code (e.g., AED, USD, EUR)
+     * @param float  $amt  Amount to format
+     * @return string
+     */
+    function price_format(string $ccy, float $amt, $decimal = null): string
+    {
+        $currency = Currency::where('code', $ccy)->first();
+
+        if (!$currency) {
+            return number_format($amt, 2); // fallback
+        }
+
+        if ($currency->code === 'AED') {
+            $currency->symbol = '<span class="dirham-symbol">&#xea;</span>';
+        }
+
+        $formattedAmount = number_format(
+            $amt,
+            $decimal ?? $currency->decimal ?? 2,
+            $currency->decimal_separator ?? '.',
+            $currency->group_separator ?? ','
+        );
+
+        return $currency->currency_position === 'Left'
+            ? $currency->symbol . ' ' .  $formattedAmount
+            : $formattedAmount . $currency->symbol;
+    }
+}
+

@@ -26,13 +26,6 @@ return new class extends Migration
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
         });
-
-        // Schema::create('currencies', function (Blueprint $table) {
-        //     $table->string('code', 3)->primary(); // ISO-3
-        //     $table->string('name');
-        //     $table->decimal('exchange_rate', 12, 6)->default(1.0);
-        //     $table->timestamps();
-        // });
     }
 
     /**
@@ -41,6 +34,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('countries');
-        Schema::dropIfExists('currencies');
     }
 };

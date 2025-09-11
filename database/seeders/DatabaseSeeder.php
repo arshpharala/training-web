@@ -16,9 +16,10 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
-            AdminSeeder::class,
-            LocaleSeeder::class,
-            DeliveryMethodSeeder::class
+            CurrencySeeder::class,
+            // AdminSeeder::class,
+            // LocaleSeeder::class,
+            // DeliveryMethodSeeder::class
         ]);
     }
 }
