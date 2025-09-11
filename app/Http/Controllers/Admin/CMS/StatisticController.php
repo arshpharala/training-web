@@ -158,6 +158,15 @@ class StatisticController extends Controller
         $data['is_active'] = $request->boolean('is_active');
         $statistic->update($data);
 
+        foreach ($data['name'] as $locale => $name) {
+            StatisticTranslation::updateOrCreate([
+                'statistic_id'      => $statistic->id,
+                'locale'            => $locale],[
+                'name'              => $name
+            ]);
+        }
+
+
         return response()->json([
             'message'   => __('crud.updated', ['name' => 'Statistic']),
             'redirect'  => route('admin.cms.statistics.index')
