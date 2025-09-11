@@ -28,7 +28,7 @@
                                 <p class="text-white lead">{!! page_content(
                                     'banner',
                                     'content',
-                                    'Xcademia blends expert mentors with an AI powered learning engine to build skills that change how people work. We specialise in Cybersecurity, GRC, Cloud, Software, Leadership, and professional effectiveness.',
+                                    'Xcademia blends expert mentors with an AI powered learning engine to build skills that change how people work. We specialise in Cybersecurity, GRC, Cloud, Software, Leadership, and professional effectiveness.',true
                                 ) !!}</p>
                                 <a href="{{ route('categories.index') }}" class="btn btn-lg btn-white">Explore Programs</a><a
                                     href="javascript:void(0)" class="btn btn-lg btn-outline-light ms-4 text-white"
@@ -42,9 +42,8 @@
                                     <div class="product-slider">
                                         <ul class="list-unstyled video-list-thumbs">
                                             <li class="mb-0">
-                                                <a data-bs-toggle="modal" data-bs-target="#homeVideo"
-                                                    class="class-video p-0">
-                                                    <img src="{{ asset('theme/xacademia/assets/images/media/0-13.jpg') }}"
+                                                <a class="class-video p-0">
+                                                    <img src="{!! page_content('banner', 'image', 'theme/xacademia/assets/images/media/0-13.jpg') !!}"
                                                         alt="img" class="img-responsive  border br-7">
                                                     {{-- <span class="video-icon" href="javascript:void(0)">
                                                         <i class="fe fe-play"></i>
