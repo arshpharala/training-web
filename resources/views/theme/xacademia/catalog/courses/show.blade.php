@@ -14,7 +14,7 @@
     </style>
 @endpush
 
-@section('bannerImage', asset('storage/' . ($course->banner ?? ($page->banner ?? null))))
+@section('bannerImage', asset('storage/' . ($course->banner ?? $page->banner ?? null)))
 
 @section('banner')
     <!-- HERO Banner -->
