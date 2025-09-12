@@ -7,10 +7,21 @@
                 <div class="container">
                     <a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
                     <span class="smllogo">
-                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" width="120" alt="img" />
+                        @if (setting('site_white_logo'))
+                            <img src="{{ asset('storage/' . setting('site_white_logo')) }}" width="120" alt="img" />
+                        @else
+                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" width="120"
+                                alt="img" />
+                        @endif
                     </span>
                     <span class="smllogo-white">
-                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" width="120" alt="img" />
+                        @if (setting('site_logo'))
+                            <img src="{{ asset('storage/' . setting('site_logo')) }}" width="120"
+                                alt="img" />
+                        @else
+                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" width="120"
+                                alt="img" />
+                        @endif
                     </span>
                     <a href="tel:{{ setting('contact_phone') }}" class="callusbtn">
                         <i class="icon icon-phone" aria-hidden="true"></i>
@@ -25,13 +36,30 @@
             <div class="horizontal-mainwrapper container clearfix">
                 <div class="desktoplogo">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" alt="img">
+                        @if (setting('site_white_logo'))
+                            <img src="{{ asset('storage/' . setting('site_white_logo')) }}" alt="logo">
+                        @else
+                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" alt="logo">
+                        @endif
                     </a>
                 </div>
                 <div class="desktoplogo-1">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" class="header-dark" alt="img">
-                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" class="header-brand-img header-white" alt="logo">
+                        @if (setting('site_logo'))
+                            <img src="{{ asset('storage/' . setting('site_logo')) }}" class="header-dark"
+                                alt="img">
+                        @else
+                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" class="header-dark"
+                                alt="img">
+                        @endif
+
+                        @if (setting('site_white_logo'))
+                            <img src="{{ asset('storage/' . setting('site_white_logo')) }}"
+                                class="header-brand-img header-white" alt="logo">
+                        @else
+                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}"
+                                class="header-brand-img header-white" alt="logo">
+                        @endif
                     </a>
                 </div>
                 <nav class="horizontalMenu clearfix d-md-flex">
@@ -49,7 +77,7 @@
                                         <div class="row align-items-center d-none d-lg-flex">
                                             <div class="col-md-8">
                                                 <input type="text" class="form-control mega-search"
-                                                       placeholder="Search courses, topics...">
+                                                    placeholder="Search courses, topics...">
                                             </div>
                                             <div class="col-md-4 d-flex gap-2 justify-content-md-end mt-2 mt-md-0">
                                                 <span class="mega-pill">Career Path Quiz</span>
@@ -83,7 +111,8 @@
                         </li>
 
                         <li aria-haspopup="true"><a href="{{ route('about') }}">About Us</a></li>
-                        <li aria-haspopup="true"><a href="javascript:void(0)">Resource <span class="fe fe-chevron-down m-0"></span></a>
+                        <li aria-haspopup="true"><a href="javascript:void(0)">Resource <span
+                                    class="fe fe-chevron-down m-0"></span></a>
                             <ul class="sub-menu">
                                 <li aria-haspopup="true"><a href="javascript:void(0)">Blog</a></li>
                                 <li aria-haspopup="true"><a href="javascript:void(0)">News</a></li>
