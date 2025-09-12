@@ -174,7 +174,7 @@
                                         class="fe fe-clock me-1"></i>Duration: {{ $course->duration }} days</p>
                             </div>
                             <div class="">
-                                <a href="javascript:void(0)" class="btn btn-block btn-secondary mb-3 mb-xl-0"><span>Enquire
+                                <a href="javascript:void(0)" class="btn btn-block btn-secondary mb-3 mb-xl-0" onclick="openEnquiryModal(this)" data-heading="Enquire Now" data-course="{{ $course->translation->name }}" data-courseId="{{ $course->id }}"><span>Enquire
                                         Now</span><i class="fe fe-message mt-1 ms-2 fs-14"></i></a>
                                 {{-- <a href="javascript:void(0)" class="btn btn-block btn-secondary mb-3 mb-xl-0"><span>Enroll
                                         Now</span> <i class="fe fe-arrow-right mt-1 ms-2 fs-14"></i></a> --}}
