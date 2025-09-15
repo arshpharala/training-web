@@ -33,8 +33,16 @@
                                 <textarea name="short_description[{{ $locale }}]" rows="6" class="form-control">{{ $course->translations->where('locale', $locale)->first()->short_description ?? null }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>Content ({{ strtoupper($locale) }})</label>
-                                <textarea name="content[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->content ?? null }}</textarea>
+                                <label>Overview ({{ strtoupper($locale) }})</label>
+                                <textarea name="overview[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->overview ?? null }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Who Should Attend ({{ strtoupper($locale) }})</label>
+                                <textarea name="who_should_attend[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->who_should_attend ?? null }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Prerequisites ({{ strtoupper($locale) }})</label>
+                                <textarea name="who_should_attend[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->who_should_attend ?? null }}</textarea>
                             </div>
                         @endforeach
                     </div>
@@ -79,6 +87,18 @@
                                     <label for="slug">Slug</label>
                                     <input type="text" name="slug" id="slug" value="{{ $course->slug }}"
                                         class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="level">Level</label>
+                                    {!! Form::select('level', [1 => 'Beginer', 2 => 'Advanced', 3 => 'Professional'], $course->level, ['class' => 'form-control','placeholder' => 'Select an option']) !!}
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="level">Code</label>
+                                    {!! Form::text('code', $course->code, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-md-6">

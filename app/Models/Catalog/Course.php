@@ -40,6 +40,16 @@ class Course extends Model
         return $this->hasMany(CourseTranslation::class);
     }
 
+    function outcomes()
+    {
+        return $this->hasMany(CourseOutcome::class);
+    }
+
+    function syllabus()
+    {
+        return $this->hasMany(CourseSyllabus::class);
+    }
+
     function deliveryMethods()
     {
         return $this->belongsToMany(DeliveryMethod::class, 'course_delivery_methods');
@@ -59,7 +69,7 @@ class Course extends Model
             ->join('categories', 'topics.category_id', 'categories.id')
             ->join('category_translations', function ($join) {
                 $join->on('categories.id', 'category_translations.category_id')
-                ->where('category_translations.locale', app()->getLocale());
+                    ->where('category_translations.locale', app()->getLocale());
             });
     }
 
@@ -85,6 +95,5 @@ class Course extends Model
             'categories.slug as category_slug',
             'category_translations.name as category_name',
         );
-
     }
 }

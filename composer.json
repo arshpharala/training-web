@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "kalnoy/nestedset": "^6.0",
+        "kris/laravel-form-builder": "^1.54",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "yajra/laravel-datatables-oracle": "*"
