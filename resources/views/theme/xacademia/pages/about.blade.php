@@ -28,12 +28,18 @@
                                 <p class="text-white lead">{!! page_content(
                                     'banner',
                                     'content',
-                                    'Xcademia blends expert mentors with an AI powered learning engine to build skills that change how people work. We specialise in Cybersecurity, GRC, Cloud, Software, Leadership, and professional effectiveness.',true
+                                    'Xcademia blends expert mentors with an AI powered learning engine to build skills that change how people work. We specialise in Cybersecurity, GRC, Cloud, Software, Leadership, and professional effectiveness.',
+                                    true,
                                 ) !!}</p>
-                                <a href="{{ route('categories.index') }}" class="btn btn-lg btn-white">Explore Programs</a><a
-                                    href="javascript:void(0)" class="btn btn-lg btn-outline-light ms-4 text-white"
-                                    onclick="openEnquiryModal(this)" data-heading="Talk to Expert">Talk to
-                                    Expert</a>
+                                <div class="d-flex flex-row justify-content-center justify-content-lg-start gap-2">
+                                    <a href="{{ route('categories.index') }}" class="btn btn-lg btn-white">
+                                        Explore Programs
+                                    </a>
+                                    <a href="javascript:void(0)" class="btn btn-lg btn-outline-light text-white"
+                                        onclick="openEnquiryModal(this)" data-heading="Talk to Expert">
+                                        Talk to Expert
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-12">
@@ -43,8 +49,8 @@
                                         <ul class="list-unstyled video-list-thumbs">
                                             <li class="mb-0">
                                                 <a class="class-video p-0">
-                                                    <img src="{!! page_content('banner', 'image', 'theme/xacademia/assets/images/media/0-13.jpg') !!}"
-                                                        alt="img" class="img-responsive  border br-7">
+                                                    <img src="{!! page_content('banner', 'image', 'theme/xacademia/assets/images/media/0-13.jpg') !!}" alt="img"
+                                                        class="img-responsive  border br-7">
                                                     {{-- <span class="video-icon" href="javascript:void(0)">
                                                         <i class="fe fe-play"></i>
                                                     </span> --}}
@@ -81,7 +87,11 @@
             <div class="section-title d-md-flex">
                 <div>
                     <h2>{!! page_content('who-we-are', 'heading', 'Defining the Future of Learning') !!}</h2>
-                    <p class="fs-18 lead">{!! page_content('who-we-are', 'content', 'We are a global training partner focused on outcomes. Certificates matter, results matter more. Our learners gain confidence, improve performance at work, and develop life skills such as clear communication, problem solving, time management, and digital resilience.') !!}</p>
+                    <p class="fs-18 lead">{!! page_content(
+                        'who-we-are',
+                        'content',
+                        'We are a global training partner focused on outcomes. Certificates matter, results matter more. Our learners gain confidence, improve performance at work, and develop life skills such as clear communication, problem solving, time management, and digital resilience.',
+                    ) !!}</p>
                 </div>
             </div>
             <div class="row ">
@@ -93,8 +103,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
                             <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                                 <div class="servic-data mt-3">
-                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-1', 'heading', 'Innovation first') }}</h4>
-                                    <p class="mb-0">{!! page_content('who-we-are-1', 'content', 'Adaptive AI, smart feedback, and labs that evolve with your progress.') !!}</p>
+                                    <h4 class="font-weight-semibold mb-2">
+                                        {{ page_content('who-we-are-1', 'heading', 'Innovation first') }}</h4>
+                                    <p class="mb-0">{!! page_content(
+                                        'who-we-are-1',
+                                        'content',
+                                        'Adaptive AI, smart feedback, and labs that evolve with your progress.',
+                                    ) !!}</p>
                                     <p></p>
                                 </div>
                             </div>
@@ -102,8 +117,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
                             <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                                 <div class="servic-data mt-3">
-                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-2', 'heading', 'Hands on practice') }}</h4>
-                                    <p class="mb-0">{!! page_content('who-we-are-2', 'content', 'Scenarios and capstones that mirror live environments and real incidents.') !!}</p>
+                                    <h4 class="font-weight-semibold mb-2">
+                                        {{ page_content('who-we-are-2', 'heading', 'Hands on practice') }}</h4>
+                                    <p class="mb-0">{!! page_content(
+                                        'who-we-are-2',
+                                        'content',
+                                        'Scenarios and capstones that mirror live environments and real incidents.',
+                                    ) !!}</p>
                                     <p></p>
                                 </div>
                             </div>
@@ -111,8 +131,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
                             <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                                 <div class="servic-data mt-3">
-                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-3', 'heading', 'Expert mentors') }}</h4>
-                                    <p class="mb-0">{!! page_content('who-we-are-3', 'content', 'Practitioners who ship products, run programmes, and solve problems in the field.') !!}</p>
+                                    <h4 class="font-weight-semibold mb-2">
+                                        {{ page_content('who-we-are-3', 'heading', 'Expert mentors') }}</h4>
+                                    <p class="mb-0">{!! page_content(
+                                        'who-we-are-3',
+                                        'content',
+                                        'Practitioners who ship products, run programmes, and solve problems in the field.',
+                                    ) !!}</p>
                                     <p></p>
                                 </div>
                             </div>
@@ -120,7 +145,8 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
                             <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                                 <div class="servic-data mt-3">
-                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-4', 'heading', 'Measured outcomes') }}</h4>
+                                    <h4 class="font-weight-semibold mb-2">
+                                        {{ page_content('who-we-are-4', 'heading', 'Measured outcomes') }}</h4>
                                     <p class="mb-0">{!! page_content('who-we-are-4', 'content', 'Capability, completion, and ROI tracked on simple dashboards.') !!}</p>
                                     <p></p>
                                 </div>
@@ -129,8 +155,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 d-flex mb-5">
                             <div class="card bg-white br-7 p-5 mb-lg-0 flex-fill">
                                 <div class="servic-data mt-3">
-                                    <h4 class="font-weight-semibold mb-2">{{ page_content('who-we-are-5', 'heading', 'Skills over theory') }}</h4>
-                                    <p class="mb-0">{!! page_content('who-we-are-5', 'content', 'We share knowledge and coach skills so learners can apply the lesson the same week at work.') !!}</p>
+                                    <h4 class="font-weight-semibold mb-2">
+                                        {{ page_content('who-we-are-5', 'heading', 'Skills over theory') }}</h4>
+                                    <p class="mb-0">{!! page_content(
+                                        'who-we-are-5',
+                                        'content',
+                                        'We share knowledge and coach skills so learners can apply the lesson the same week at work.',
+                                    ) !!}</p>
                                     <p></p>
                                 </div>
                             </div>
@@ -240,10 +271,11 @@
                             'join-us',
                             'content',
                             'It is a long established fact that a reader will be distracted by the readable
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            content of a page when looking at its layout.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    content of a page when looking at its layout.',
                         ) !!}</p>
                         <div class="mt-5">
-                            <a href="javascript:viod(0)" class="btn btn-lg btn-secondary" onclick="openEnquiryModal(this)" data-heading="Register Now">Register Now!</a>
+                            <a href="javascript:viod(0)" class="btn btn-lg btn-secondary"
+                                onclick="openEnquiryModal(this)" data-heading="Register Now">Register Now!</a>
                         </div>
                     </div>
                 </div>
@@ -276,7 +308,7 @@
                                                 'why-choose-us-1',
                                                 'content',
                                                 'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                             ) !!}</p>
                                         </div>
 
@@ -294,7 +326,7 @@
                                             'why-choose-us-2',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -312,7 +344,7 @@
                                             'why-choose-us-3',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -329,7 +361,7 @@
                                             'why-choose-us-4',
                                             'content',
                                             'our being able to do what we like best, every pleasure is to be welcomed and
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                every pain.',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        every pain.',
                                         ) !!}</p>
                                     </div>
                                 </div>
@@ -452,7 +484,7 @@
                                 'build-for-1',
                                 'content',
                                 'Upsill staff with job ready capability. Map courses to KPIs, audits, and
-                                                                                                                                                                            projects. Measure ROI with simple dashboards.',
+                                                                                                                                                                                                                                                                projects. Measure ROI with simple dashboards.',
                             ) !!}</p>
                         </div>
                     </div>
@@ -465,7 +497,7 @@
                                 'build-for-2',
                                 'content',
                                 'Level up for promotions and role changes with practical labs, real scenarios,
-                                                                                                                                                                            and mentor feedback.',
+                                                                                                                                                                                                                                                                and mentor feedback.',
                             ) !!}</p>
                         </div>
                     </div>
@@ -478,7 +510,7 @@
                                 'build-for-3',
                                 'content',
                                 'Foundation to advanced paths, portfolio projects, and confidence building
-                                                                                                                                                                            life skills.',
+                                                                                                                                                                                                                                                                life skills.',
                             ) !!}</p>
                         </div>
                     </div>
@@ -501,9 +533,11 @@
                     </div>
                     <div class="text-wrap">
                         <div class="btn-list">
-                            <a href="javascript:void(0)" class="btn btn-primary btn-lg mb-5 mb-lg-0" onclick="openEnquiryModal(this)" data-heading="Book a Discovery Call">Book a discovery
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg mb-5 mb-lg-0"
+                                onclick="openEnquiryModal(this)" data-heading="Book a Discovery Call">Book a discovery
                                 call</a>
-                            <a href="{{ route('categories.index') }}" class="btn btn-secondary btn-lg mb-5 mb-lg-0">Browse
+                            <a href="{{ route('categories.index') }}"
+                                class="btn btn-secondary btn-lg mb-5 mb-lg-0">Browse
                                 programmes</a>
                         </div>
                     </div>
@@ -520,7 +554,7 @@
                         class="fa fa-times"></i></button>
                 <div class="embed-responsive embed-responsive-16by9"> <video id="gossVideo" class="embed-responsive-item"
                         controls="controls">
-                        <source src="{{ asset('theme/xacademia/assets/video/14429931.mp4') }}" type="video/mp4">
+                        {{-- <source src="{{ asset('theme/xacademia/assets/video/14429931.mp4') }}" type="video/mp4"> --}}
                     </video> </div>
             </div>
         </div>

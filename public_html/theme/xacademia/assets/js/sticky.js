@@ -26,7 +26,7 @@ $(document).ready(function(){
   function jumpsPrevent() {
     stickyHeight = stickyElement.innerHeight();
     stickyElement.css({"margin-bottom":"-" + stickyHeight + "px"});
-    stickyElement.next().css({"padding-top": + stickyHeight + "px"}); 
+    stickyElement.next().css({"padding-top": + stickyHeight + "px"});
   };
   jumpsPrevent(); //Run.
 

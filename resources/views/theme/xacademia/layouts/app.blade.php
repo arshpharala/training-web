@@ -37,8 +37,7 @@
     <link id="theme" rel="stylesheet" type="text/css" media="all"
         href="{{ asset('theme/xacademia/assets/color-skins/color.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/enquiry-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
     @stack('head')
 

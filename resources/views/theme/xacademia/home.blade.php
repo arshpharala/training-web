@@ -49,7 +49,7 @@
     @endphp
 
     <!-- HERO Section -->
-    <section class="sptb-tab py-10">
+    <section class="sptb-tab py-10" id="heroBiz">
         <div class="header-text mb-0">
             <div class="container">
                 <div class="row align-items-center">
@@ -109,7 +109,9 @@
                     </div>
                 </div>
             </div>
+
         </div>
+        <canvas id="spark" class="position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
     </section>
 
     @push('scripts')
@@ -156,6 +158,46 @@
                     }
                 });
             });
+
+            // Sparkles sized to hero (consistency with other cores)
+            (function() {
+                const c = document.getElementById('spark');
+                const hero = document.getElementById('heroBiz');
+                if (!c || !hero) return;
+                const ctx = c.getContext('2d');
+                let w, h, parts = [];
+
+                function size() {
+                    const r = hero.getBoundingClientRect();
+                    w = c.width = r.width;
+                    h = c.height = r.height;
+                    parts = Array.from({
+                        length: 80
+                    }, () => ({
+                        x: Math.random() * w,
+                        y: Math.random() * h,
+                        r: Math.random() * 1.8 + 0.2,
+                        s: Math.random() * 0.6 + 0.2
+                    }));
+                }
+                size();
+                addEventListener('resize', size);
+                (function draw() {
+                    ctx.clearRect(0, 0, w, h);
+                    parts.forEach(p => {
+                        ctx.fillStyle = 'rgba(255,255,255,0.35)';
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.fill();
+                        p.y -= p.s;
+                        if (p.y < -2) {
+                            p.y = h + 2;
+                            p.x = Math.random() * w;
+                        }
+                    });
+                    requestAnimationFrame(draw);
+                })();
+            })();
         </script>
     @endpush
 @endsection

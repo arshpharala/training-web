@@ -66,7 +66,7 @@ $(document).ready(function () {
     }
 
     // Event: select category
-    $(document).on("click", "[data-core]", function () {
+    $(document).on("click mouseover", "[data-core]", function () {
         $("[data-core]").removeClass("active open");
         $(this).addClass("active");
         currentCore = $(this).data("core");
