@@ -94,7 +94,7 @@
 
                                             <!-- Topics (desktop only) -->
                                             <div class="col-3 topics-list d-none d-lg-block">
-                                                <h6 class="menu-title">Sub-Categories</h6>
+                                                <h6 class="menu-title">Learning Track</h6>
                                                 <ul></ul>
                                             </div>
 
