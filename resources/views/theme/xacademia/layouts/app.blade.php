@@ -37,6 +37,10 @@
     <link id="theme" rel="stylesheet" type="text/css" media="all"
         href="{{ asset('theme/xacademia/assets/color-skins/color.css') }}" />
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
     @stack('head')
@@ -144,6 +148,101 @@
     <script src="{{ asset('assets/js/form.js') }}"></script>
 
     @stack('scripts')
+
+
+    <script>
+        $(document).ready(function() {
+            const $searchInput = $("#heroSearch");
+            const $suggestions = $("#searchSuggestions");
+            const $suggestionItems = $suggestions.find("li");
+
+            $searchInput.on("input", function() {
+                const query = $(this).val().trim();
+                let hasMatch = false;
+
+                if (query.length > 1) {
+                    const regex = new RegExp(query, "i"); // case-insensitive regex
+
+                    $suggestionItems.each(function() {
+                        const text = $(this).text().trim();
+                        if (regex.test(text)) {
+                            $(this).show();
+                            hasMatch = true;
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+
+                    if (hasMatch) {
+                        $suggestions.addClass("show");
+                    } else {
+                        $suggestions.removeClass("show");
+                    }
+                } else {
+                    // Reset when query is empty
+                    $suggestionItems.show();
+                    $suggestions.removeClass("show");
+                }
+            });
+
+            // Close dropdown when clicking outside
+            $(document).on("click", function(e) {
+                if (!$searchInput.is(e.target) && !$suggestions.is(e.target) && $suggestions.has(e.target)
+                    .length === 0) {
+                    $suggestions.removeClass("show");
+                }
+            });
+        });
+
+        // Sparkles sized to hero (consistency with other cores)
+        (function() {
+            const c = document.getElementById('spark');
+            const hero = document.getElementById('heroBiz');
+            if (!c || !hero) return;
+            const ctx = c.getContext('2d');
+            let w, h, parts = [];
+
+            function size() {
+                const r = hero.getBoundingClientRect();
+                w = c.width = r.width;
+                h = c.height = r.height;
+                parts = Array.from({
+                    length: 80
+                }, () => ({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    r: Math.random() * 1.8 + 0.2,
+                    s: Math.random() * 0.6 + 0.2
+                }));
+            }
+            size();
+            addEventListener('resize', size);
+            (function draw() {
+                ctx.clearRect(0, 0, w, h);
+                parts.forEach(p => {
+                    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fill();
+                    p.y -= p.s;
+                    if (p.y < -2) {
+                        p.y = h + 2;
+                        p.x = Math.random() * w;
+                    }
+                });
+                requestAnimationFrame(draw);
+            })();
+        })();
+
+
+        lottie.loadAnimation({
+            container: document.getElementById('heroLottie'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets9.lottiefiles.com/packages/lf20_tno6cg2w.json' // animation JSON
+        });
+    </script>
 
 
 </body>

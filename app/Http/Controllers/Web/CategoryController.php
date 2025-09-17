@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Catalog\Category;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
@@ -14,7 +15,12 @@ class CategoryController extends Controller
     }
     function show($slug){
 
-        return $slug;
+        $category = Category::with('translation','topics.translation', 'topics.courses.translation')->where('slug', $slug)->first();
+
+        $data['category'] = $category;
+
+        // return $category;
+        return view('theme.xacademia.catalog.categories.show', $data);
 
     }
 }
