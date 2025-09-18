@@ -185,7 +185,7 @@
 
 @section('banner')
     <!-- HERO Section -->
-    <section class="sptb-tab py-10" id="heroBiz"
+    <section class="sptb-tab py-10 spark-container"
         style="background: linear-gradient(to bottom right, #4f46e5, #7c3aed, #d946ef);">
         <div class="header-text mb-0">
             <div class="container">
@@ -270,7 +270,8 @@
                 </div>
             </div>
         </div>
-        <canvas id="spark" class="position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
+
+        <canvas class="spark position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
     </section>
 @endsection
 

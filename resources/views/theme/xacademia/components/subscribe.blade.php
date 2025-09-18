@@ -1,6 +1,6 @@
 
 	<!--Section-->
-	<section class="cover-image sptb bg-background-1" data-bs-image-src="{{ asset('theme/xacademia/assets/images/banners/banner5.jpg') }}">
+	<section class="cover-image sptb bg-background-1 spark-container" data-bs-image-src="{{ asset('theme/xacademia/assets/images/banners/banner5.jpg') }}">
 		<div class="content-text mb-0">
 			<div class="container">
 				<div class="text-white">
@@ -27,5 +27,6 @@
 				</div>
 			</div>
 		</div>
+        <canvas class="spark position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
 	</section>
 	<!--/Section-->

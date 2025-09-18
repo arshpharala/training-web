@@ -32,7 +32,7 @@
     @endphp
 
     <!-- HERO Section -->
-    <section class="sptb-tab py-10" id="heroBiz">
+    <section class="sptb-tab py-10 spark-container">
         <div class="header-text mb-0">
             <div class="container">
                 <div class="row align-items-center">
@@ -94,7 +94,8 @@
             </div>
 
         </div>
-        <canvas id="spark" class="position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
+
+        <canvas class="spark position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
     </section>
 
 @endsection
