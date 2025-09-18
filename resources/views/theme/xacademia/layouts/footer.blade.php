@@ -17,14 +17,18 @@
             <div class="row">
                 <!-- Logo + Contact -->
                 <div class="col-lg-3 col-md-12 mb-5 mb-lg-0">
-                    <img src="{{ asset('theme/xacademia/assets/images/brand/logo-white.png') }}" class="w-auto border-0"
-                        alt="logo">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('theme/xacademia/assets/images/brand/logo-white.png') }}"
+                            class="w-auto border-0" alt="logo">
+                    </a>
                     <ul class="list-unstyled">
                         <li><a href="javascript:void()"><i class="fe fe-map-pin"></i> {{ setting('address') }}</a></li>
                         <li><a href="mailto:{{ setting('contact_email') }}"><i class="fe fe-mail"></i>
                                 {{ setting('contact_email') }}</a></li>
-                        <li><a href="tel:{{ setting('contact_phone') }}"><i class="fe fe-phone"></i>
-                                {{ setting('contact_phone') }}</a></li>
+                        @if (setting('contact_phone'))
+                            <li><a href="tel:{{ setting('contact_phone') }}"><i class="fe fe-phone"></i>
+                                    {{ setting('contact_phone') }}</a></li>
+                        @endif
                     </ul>
 
                     <ul class="list-inline mt-4">

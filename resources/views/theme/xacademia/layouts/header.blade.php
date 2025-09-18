@@ -6,23 +6,26 @@
             <div class="horizontal-header clearfix ">
                 <div class="container">
                     <a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
-                    <span class="smllogo">
-                        @if (setting('site_white_logo'))
-                            <img src="{{ asset('storage/' . setting('site_white_logo')) }}" width="120" alt="img" />
-                        @else
-                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" width="120"
-                                alt="img" />
-                        @endif
-                    </span>
-                    <span class="smllogo-white">
-                        @if (setting('site_logo'))
-                            <img src="{{ asset('storage/' . setting('site_logo')) }}" width="120"
-                                alt="img" />
-                        @else
-                            <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" width="120"
-                                alt="img" />
-                        @endif
-                    </span>
+                    <a href="{{ route('home') }}">
+                        <span class="smllogo">
+                            @if (setting('site_white_logo'))
+                                <img src="{{ asset('storage/' . setting('site_white_logo')) }}" width="120"
+                                    alt="img" />
+                            @else
+                                <img src="{{ asset('theme/xacademia/assets/images/brand/logo12.png') }}" width="120"
+                                    alt="img" />
+                            @endif
+                        </span>
+                        <span class="smllogo-white">
+                            @if (setting('site_logo'))
+                                <img src="{{ asset('storage/' . setting('site_logo')) }}" width="120"
+                                    alt="img" />
+                            @else
+                                <img src="{{ asset('theme/xacademia/assets/images/brand/logo.png') }}" width="120"
+                                    alt="img" />
+                            @endif
+                        </span>
+                    </a>
                     <a href="tel:{{ setting('contact_phone') }}" class="callusbtn">
                         <i class="icon icon-phone" aria-hidden="true"></i>
                     </a>
