@@ -665,4 +665,47 @@
   font-size: 13px;
 }
 
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+/* Shared button base */
+.btn-custom {
+  border-radius: 0.5rem;
+  /* rounded corners */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Primary (yellow) */
+.btn-custom-primary {
+  background-color: #facc15;
+  border: 1px solid #facc15;
+  color: #000;
+}
+
+.btn-custom-primary:hover {
+  background-color: #eab308;
+  border-color: #eab308;
+  color: #000;
+}
+
+/* Secondary (outline white) */
+.btn-custom-outline {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.btn-custom-outline:hover {
+  background-color: #facc15;
+  border-color: #facc15;
+  color: #000;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -39,12 +39,15 @@ class UpdateCourseRequest extends FormRequest
             'logo' => ['nullable', 'image', 'max:2048'],
             'banner' => ['nullable', 'image', 'max:4096'],
             'color' => ['nullable', 'string', 'max:7'],
+            'level' => ['nullable', 'integer'],
             'name' => ['required', 'array'],
         ];
         foreach ($locales as $locale) {
             $rules["name.$locale"] = ['required', 'string', "max:255"];
             $rules["short_description.$locale"] = ['nullable', 'string'];
-            $rules["content.$locale"] = ['nullable', 'string'];
+            $rules["overview.$locale"] = ['nullable', 'string'];
+            $rules["who_should_attend.$locale"] = ['nullable', 'string'];
+            $rules["prerequisites.$locale"] = ['nullable', 'string'];
         }
         return $rules;
     }

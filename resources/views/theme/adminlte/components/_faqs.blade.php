@@ -17,19 +17,21 @@
                             <button type="button" class="btn btn-sm btn-danger remove-faq float-end">
                                 <i class="fas fa-times"></i>
                             </button>
+                            <input type="hidden" name="faqs[{{ $index }}][id]" value="{{ $faq->id ?? '' }}">
 
                             <div class="form-group">
                                 <label>Question</label>
                                 <input type="text" name="faqs[{{ $index }}][question]" class="form-control"
-                                       value="{{ old("faqs.$index.question", $faq->question ?? '') }}">
+                                    value="{{ $faq->question }}">
                             </div>
                             <div class="form-group">
                                 <label>Answer</label>
                                 <textarea name="faqs[{{ $index }}][answer]" class="form-control tinymce-editor" rows="3">
-                                    {{ old("faqs.$index.answer", $faq->answer ?? '') }}
+                                    {{ $faq->answer }}
                                 </textarea>
                             </div>
-                            <input type="hidden" name="faqs[{{ $index }}][position]" value="{{ $index }}">
+                            <input type="hidden" name="faqs[{{ $index }}][position]"
+                                value="{{ $index }}">
                         </div>
                     @endforeach
                 </div>
@@ -63,49 +65,49 @@
 </template>
 
 @push('scripts')
-<script>
-    let faqIndex = $(".faq-items .faq-item").length;
+    <script>
+        let faqIndex = $(".faq-items .faq-item").length;
 
-    function initTinyMCE(selector) {
-        if (typeof tinymce !== "undefined") {
-            tinymce.init({
-                selector: selector,
-                height: 200,
-                menubar: false,
-                plugins: 'link lists code',
-                toolbar: 'undo redo | bold italic | bullist numlist | link | code',
-            });
-        }
-    }
-
-    $(document).ready(function () {
-        // Add new FAQ
-        $(document).on("click", ".add-faq", function () {
-            let template = $("#faq-template").html();
-            template = template.replace(/__INDEX__/g, faqIndex);
-
-            let $newItem = $(template);
-            $(".faq-items").append($newItem);
-
-            // init TinyMCE for new textarea only
-            let newSelector = `textarea[name="faqs[${faqIndex}][answer]"]`;
-            initTinyMCE(newSelector);
-
-            faqIndex++;
-        });
-
-        // Remove FAQ
-        $(document).on("click", ".remove-faq", function () {
-            let $faq = $(this).closest(".faq-item");
-
-            // Destroy TinyMCE before removing
-            let textarea = $faq.find("textarea.tinymc-editor");
-            if (textarea.length && tinymce.get(textarea.attr('id'))) {
-                tinymce.get(textarea.attr('id')).remove();
+        function initTinyMCE(selector) {
+            if (typeof tinymce !== "undefined") {
+                tinymce.init({
+                    selector: selector,
+                    height: 200,
+                    menubar: false,
+                    plugins: 'link lists code',
+                    toolbar: 'undo redo | bold italic | bullist numlist | link | code',
+                });
             }
+        }
 
-            $faq.remove();
+        $(document).ready(function() {
+            // Add new FAQ
+            $(document).on("click", ".add-faq", function() {
+                let template = $("#faq-template").html();
+                template = template.replace(/__INDEX__/g, faqIndex);
+
+                let $newItem = $(template);
+                $(".faq-items").append($newItem);
+
+                // init TinyMCE for new textarea only
+                let newSelector = `textarea[name="faqs[${faqIndex}][answer]"]`;
+                initTinyMCE(newSelector);
+
+                faqIndex++;
+            });
+
+            // Remove FAQ
+            $(document).on("click", ".remove-faq", function() {
+                let $faq = $(this).closest(".faq-item");
+
+                // Destroy TinyMCE before removing
+                let textarea = $faq.find("textarea.tinymc-editor");
+                if (textarea.length && tinymce.get(textarea.attr('id'))) {
+                    tinymce.get(textarea.attr('id')).remove();
+                }
+
+                $faq.remove();
+            });
         });
-    });
-</script>
+    </script>
 @endpush

@@ -32,17 +32,56 @@
                                 <label>Short Description ({{ strtoupper($locale) }})</label>
                                 <textarea name="short_description[{{ $locale }}]" rows="6" class="form-control">{{ $course->translations->where('locale', $locale)->first()->short_description ?? null }}</textarea>
                             </div>
+                            @if ($loop->first)
+                                <div class="form-group">
+                                    <label>Overview Image</label>
+                                    <input type="file" name="overview_image" class="form-control" accept="image/*">
+                                    @if ($course->overview_image)
+                                        <div class="mt-1">
+                                            <img src="{{ asset('storage/' . $course->overview_image) }}"
+                                                style="width:50px; height:50px; object-fit:cover;">
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <label>Overview ({{ strtoupper($locale) }})</label>
                                 <textarea name="overview[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->overview ?? null }}</textarea>
                             </div>
+                            @if ($loop->first)
+                                <div class="form-group">
+                                    <label>Who Should Attend Image</label>
+                                    <input type="file" name="who_should_attend_image" class="form-control"
+                                        accept="image/*">
+                                    @if ($course->who_should_attend_image)
+                                        <div class="mt-1">
+                                            <img src="{{ asset('storage/' . $course->who_should_attend_image) }}"
+                                                style="width:50px; height:50px; object-fit:cover;">
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <label>Who Should Attend ({{ strtoupper($locale) }})</label>
                                 <textarea name="who_should_attend[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->who_should_attend ?? null }}</textarea>
                             </div>
+
+                            @if ($loop->first)
+                                <div class="form-group">
+                                    <label>Prerequisites Image</label>
+                                    <input type="file" name="prerequisites_image" class="form-control" accept="image/*">
+                                    @if ($course->prerequisites_image)
+                                        <div class="mt-1">
+                                            <img src="{{ asset('storage/' . $course->prerequisites_image) }}"
+                                                style="width:50px; height:50px; object-fit:cover;">
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
+
                             <div class="form-group">
                                 <label>Prerequisites ({{ strtoupper($locale) }})</label>
-                                <textarea name="who_should_attend[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->who_should_attend ?? null }}</textarea>
+                                <textarea name="prerequisites[{{ $locale }}]" class="form-control tinymce-editor" rows="4">{{ $course->translations->where('locale', $locale)->first()->prerequisites ?? null }}</textarea>
                             </div>
                         @endforeach
                     </div>
@@ -52,6 +91,12 @@
                 </div>
 
                 @include('theme.adminlte.components._faqs', [
+                    'model' => $course,
+                    'grid' => 'col-12',
+                ])
+
+
+                @include('theme.adminlte.components._syllabus', [
                     'model' => $course,
                     'grid' => 'col-12',
                 ])
@@ -92,7 +137,10 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="level">Level</label>
-                                    {!! Form::select('level', [1 => 'Beginer', 2 => 'Advanced', 3 => 'Professional'], $course->level, ['class' => 'form-control','placeholder' => 'Select an option']) !!}
+                                    {!! Form::select('level', [1 => 'Beginer', 2 => 'Advanced', 3 => 'Professional'], $course->level, [
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Select an option',
+                                    ]) !!}
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -125,8 +173,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" name="is_active" value="1" class="custom-control-input"
-                                            id="is_active" @checked($course->is_active)>
+                                        <input type="checkbox" name="is_active" value="1"
+                                            class="custom-control-input" id="is_active" @checked($course->is_active)>
                                         <label class="custom-control-label" for="is_active">Active</label>
                                     </div>
                                 </div>
@@ -134,8 +182,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" name="is_latest" value="1" class="custom-control-input"
-                                            id="is_latest" @checked($course->is_latest)>
+                                        <input type="checkbox" name="is_latest" value="1"
+                                            class="custom-control-input" id="is_latest" @checked($course->is_latest)>
                                         <label class="custom-control-label" for="is_latest">Latest</label>
                                     </div>
                                 </div>
@@ -143,8 +191,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" name="is_popular" value="1" class="custom-control-input"
-                                            id="is_popular" @checked($course->is_popular)>
+                                        <input type="checkbox" name="is_popular" value="1"
+                                            class="custom-control-input" id="is_popular" @checked($course->is_popular)>
                                         <label class="custom-control-label" for="is_popular">Popular</label>
                                     </div>
                                 </div>
@@ -221,6 +269,13 @@
                     </div>
                 </div>
 
+
+
+                @include('theme.adminlte.components._outcomes', [
+                    'model' => $course,
+                    'grid' => 'col-12',
+                ])
+
                 @include('theme.adminlte.components._delivery-methods', [
                     'model' => $course,
                     'deliveryMethods' => $deliveryMethods,
@@ -236,3 +291,26 @@
         </div>
     </form>
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#add-outcome-btn').click(function() {
+                var outcomeInput = `
+                <div class="input-group mb-2">
+                    <input type="text" name="outcomes[]" class="form-control" required>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger btn-remove-outcome">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>`;
+                $('#outcomes-container').append(outcomeInput);
+            });
+
+            $(document).on('click', '.btn-remove-outcome', function() {
+                $(this).closest('.input-group').remove();
+            });
+        });
+    </script>
+@endpush

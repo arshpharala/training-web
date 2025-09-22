@@ -19,15 +19,33 @@ class Faq extends Model
 
     public static function store($request, $model)
     {
-        $model->faqs()->delete(); // reset old FAQs to simplify sync
+        $inputFaqs = $request->input('faqs', []);
 
-        foreach ($request->input('faqs', []) as $index => $faqData) {
+        // Collect IDs coming from the request
+        $incomingIds = collect($inputFaqs)->pluck('id')->filter()->toArray();
+
+        // Delete FAQs not present in request
+        $model->faqs()->whereNotIn('id', $incomingIds)->delete();
+
+        foreach ($inputFaqs as $index => $faqData) {
             if (!empty($faqData['question'])) {
-                $model->faqs()->create([
-                    'question' => $faqData['question'],
-                    'answer'   => $faqData['answer'] ?? null,
-                    'position' => $faqData['position'] ?? $index,
-                ]);
+                if (!empty($faqData['id'])) {
+                    // Update existing FAQ
+                    $model->faqs()
+                        ->where('id', $faqData['id'])
+                        ->update([
+                            'question' => $faqData['question'],
+                            'answer'   => $faqData['answer'] ?? null,
+                            'position' => $faqData['position'] ?? $index,
+                        ]);
+                } else {
+                    // Create new FAQ
+                    $model->faqs()->create([
+                        'question' => $faqData['question'],
+                        'answer'   => $faqData['answer'] ?? null,
+                        'position' => $faqData['position'] ?? $index,
+                    ]);
+                }
             }
         }
     }

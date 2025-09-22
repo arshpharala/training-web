@@ -16,7 +16,7 @@
 								<div class="input-group sub-input mt-1">
 									<input type="text" class="form-control input-lg  br-ts-7  br-bs-7" placeholder="Enter your Email">
 									<div class="input-group-text ">
-										<button type="button" class="btn btn-secondary btn-lg br-te-7  br-be-7">
+										<button type="button" class="btn btn-primary btn-lg br-te-7  br-be-7">
 											Subscribe
 										</button>
 									</div>

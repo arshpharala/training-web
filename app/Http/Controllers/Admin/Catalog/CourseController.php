@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\UpdateCourseRequest;
+use App\Models\Catalog\CourseOutcome;
+use App\Models\Catalog\CourseSyllabus;
 use App\Models\Catalog\DeliveryMethod;
 use App\Models\CMS\Faq;
 use App\Models\Seo\Meta;
@@ -176,6 +178,38 @@ class CourseController extends Controller
                 unset($data['banner']);
             }
 
+            if ($request->hasFile('prerequisites_image')) {
+                $data['prerequisites_image'] = $request->file('prerequisites_image')->store('courses', 'public');
+            } else {
+                unset($data['prerequisites_image']);
+            }
+
+            if ($request->hasFile('overview_image')) {
+                $data['overview_image'] = $request->file('overview_image')->store('courses', 'public');
+            } else {
+                unset($data['overview_image']);
+            }
+
+            if ($request->hasFile('who_should_attend_image')) {
+                $data['who_should_attend_image'] = $request->file('who_should_attend_image')->store('courses', 'public');
+            } else {
+                unset($data['who_should_attend_image']);
+            }
+
+            if ($request->hasFile('outcomes_image')) {
+                $data['outcomes_image'] = $request->file('outcomes_image')->store('courses', 'public');
+            } else {
+                unset($data['outcomes_image']);
+            }
+
+            if ($request->hasFile('exam_image')) {
+                $data['exam_image'] = $request->file('exam_image')->store('courses', 'public');
+            } else {
+                unset($data['exam_image']);
+            }
+
+
+
             $data['is_active']      = $request->boolean('is_active');
             $data['is_featured']    = $request->boolean('is_featured');
             $data['is_latest']    = $request->boolean('is_latest');
@@ -191,7 +225,9 @@ class CourseController extends Controller
                     [
                         'name' => $request->input("name.$locale"),
                         'short_description' => $request->input("short_description.$locale"),
-                        'content' => $request->input("content.$locale"),
+                        'overview' => $request->input("overview.$locale"),
+                        'who_should_attend' => $request->input("who_should_attend.$locale"),
+                        'prerequisites' => $request->input("prerequisites.$locale"),
                     ]
                 );
             }
@@ -199,6 +235,8 @@ class CourseController extends Controller
             DeliveryMethod::sync($request, $course);
             Meta::store($request, $course);
             Faq::store($request, $course);
+            CourseOutcome::store($request, $course);
+            CourseSyllabus::store($request, $course);
 
             DB::commit();
         } catch (\Throwable $th) {

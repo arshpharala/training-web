@@ -50,6 +50,13 @@ if (!function_exists('page_content')) {
 }
 
 
+if (!function_exists('remove_p_tags')) {
+    function remove_p_tags($html_content)
+    {
+        return preg_replace('/^<p>(.*)<\/p>$/s', '$1', $html_content);
+    }
+}
+
 
 if (!function_exists('active_locals')) {
     function active_locals()
@@ -199,4 +206,3 @@ if (!function_exists('price_format')) {
             : $formattedAmount . $currency->symbol;
     }
 }
-

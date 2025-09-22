@@ -2,256 +2,330 @@
 
 @push('head')
     <style>
-        /* Smaller placeholder font */
-        #heroSearch {
-            height: 20px;
-            font-size: 1rem;
+        .bg-background-1,
+        .banner1 {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #4f46e5, #7c3aed, #d946ef) !important;
         }
 
-        #heroSearch::placeholder {
-            font-size: 0.8rem;
+        .bg-background-1:before,
+        .banner1:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+            background-size: 22px 22px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        ul {
+            list-style-type: inherit;
+            padding: unset;
+            margin: 0 0 0 1rem;
         }
     </style>
 @endpush
 
-@section('bannerImage', asset('storage/' . ($course->banner ?? $page->banner ?? null)))
-
 @section('banner')
-    <!-- HERO Banner -->
-    <div class="sptb-1 bg-background-1">
-        <div class="header-text1 mb-0">
+    @php
+        $sections = $page->sections ?? null;
+    @endphp
+
+    <!-- HERO Section -->
+    <section class="sptb-tab py-10 spark-container">
+        <div class="header-text mb-0">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-12 col-md-12 mx-auto text-center text-white">
-                        <h1>
-                            {{ $course->translation->name ?? 'Courses' }}
-                        </h1>
-                        <p class="text-muted">{{ $course->translation->short_description }}</p>
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="text-white mb-5">
+                            {{-- <p class="text-uppercase small text-white-50 mb-3 animate__animated animate__fadeInDown">
+                                Industry-led learning
+                            </p> --}}
+                            <ol class="breadcrumb1 animate__animated animate__fadeInDown">
+                                <li class="breadcrumb-item1">
+                                    <a href="{{ route('home') }}" class="text-white"><i class="fe fe-home me-2"></i>Home</a>
+                                </li>
+                                <li class="breadcrumb-item1">
+                                    <a href="{{ route('categories.show', $course->topic->category->slug) }}"
+                                        class="text-white">{{ $course->topic->category->translation->name }}</a>
+                                </li>
+                                <li class="breadcrumb-item1 active text-white">{{ $course->translation->name }}</li>
+                            </ol>
+                            <h1 class="hero-title animate__animated animate__fadeInLeft">
+                                {{ $course->translation->name }}</span>
+                            </h1>
+                            <p class="mt-3 lead text-white-75 animate__animated animate__fadeInLeft animate__delay-1s">
+                                {!! remove_p_tags($course->translation->short_description) !!}
+                            </p>
 
-                        <!-- Search -->
 
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 mb-5 animate__animated animate__fadeInLeft animate__delay-1s">
+                            @if ($course->level)
+                                <a href="javascript:void(0)"
+                                    class="btn btn-light btn-sm rounded-pill">{!! $course->level_name !!}
+                                </a>
+                            @endif
+                            @if ($course->duration)
+                                <a href="javascript:void(0)" class="btn btn-light btn-sm rounded-pill">Duration
+                                    {{ $course->duration }}
+                                    {{ Str::plural('Day', $course->duration) }}</a>
+                            @endif
+                            <a href="javascript:void(0)"
+                                class="btn btn-light btn-sm rounded-pill">{{ $course->topic->translation->name }}</a>
+                        </div>
+                        <div
+                            class="d-flex flex-row align-items-center gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+                            <button class="btn btn-custom btn-custom-primary">Enroll Now</button>
+                            <button class="btn btn-custom btn-custom-outline">Enquire Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Right Lottie Animation -->
+                    <div class="col-lg-6 d-none d-md-block position-relative text-center">
+
+                        <div style="width:100%; max-width:500px; min-height:350px; margin:auto;">
+                            @if ($course->banner)
+                                <img src="{{ asset('storage/' . $course->banner) }}"
+                                    class="img-fluid rounded7 rounded shadow" alt="">
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
+
+        <canvas class="spark position-absolute top-0 start-0 w-100 h-100 pe-none"></canvas>
+    </section>
 @endsection
 
-
 @section('content')
-    <!-- Breadcrumb -->
-    <div class="bg-white border-bottom">
-        <div class="container">
-            <div class="page-header h-100 d-flex flex-row-reverse">
-                <div class="card-title d-flex align-items-center justify-content-between flex-column h-4 w-30">
-                    <div class="dropdown w-100 position-relative">
-                        <!-- Input -->
-                        <input id="heroSearch" type="text" autocomplete="off" placeholder="Search courses"
-                            class="form-control form-control-lg">
-
-                        <div class="d-flex flex-column justify-content-center align-items-center">
-                            <button type="submit"
-                                class="btn fw-semibold position-absolute mt-1 top-0 end-0 me-1 px-4 py-1">
-                                Search
-                            </button>
-
-                        </div>
-                        <!-- Button -->
-
-                        <!-- Suggestions -->
-                        <ul id="searchSuggestions" class="dropdown-menu w-100 mt-1 shadow" aria-labelledby="heroSearch">
-                            @foreach (courses() as $c)
-                                <li><a class="dropdown-item" href="{{ route('courses.show', ['topic' => $c->topic_slug, 'course' => $c->course_slug]) }}">{{ $c->course_name }}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-
-                </div>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a
-                            href="{{ route('categories.show', $course->topic->category->slug) }}">{{ $course->topic->category->translation->name }}</a>
-                    </li>
-                    <li class="breadcrumb-item active">{{ $course->translation->name }}</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <!-- Course Detail -->
-    <section class="sptb">
+    <!-- Trust strip -->
+    <section class="pt-7">
         <div class="container">
             <div class="row">
-                <!-- Left -->
-                <div class="col-lg-8">
-                    <div class="card overflow-hidden">
-
-                        <div class="card-body">
-
-                            @if ($course->video_url)
-                                <div class="ratio ratio-16x9 mb-3">
-                                    <iframe src="{{ $course->video_url }}" allowfullscreen></iframe>
-                                </div>
-                            @elseif($course->logo)
-                                <img src="{{ asset('storage/' . $course->logo) }}" class="img-fluid rounded mb-3"
-                                    alt="">
-                            @endif
-
-                            {{-- <h4 class="mt-4">Description</h4> --}}
-                            <div>{!! $course->translation->content !!}</div>
-
-                            <h4 class="mt-4">Specifications</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fe fe-clock me-2"></i> Duration: {{ $course->duration }}
-                                    {{ Str::plural('Day', $course->duration) }}</li>
-                                @if ($course->default_price)
-                                    <li><i class="fe fe-dollar-sign me-2"></i> Price:
-                                        ${{ number_format($course->default_price, 2) }}</li>
-                                @endif
-                                <li><i class="fe fe-tag me-2"></i> Category:
-                                    {{ $course->topic->category->translation->name ?? '' }}</li>
-                                <li><i class="fe fe-book me-2"></i> Topic: {{ $course->topic->translation->name ?? '' }}
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-md-4">
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <p class="small text-muted mb-1">Trusted by</p>
+                        <p class="fw-bold">5,000+ learners</p>
                     </div>
-
-                    @if ($course->faqs->isNotEmpty())
-                        <div class="card faqs">
-                            <div class="card-header">
-                                <h5 class="card-title">Frequently Asked Questions</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="panel-group1" id="accordion2">
-                                    @foreach ($course->faqs as $faq)
-                                        <div class="panel panel-default mb-4 border p-0">
-                                            <div class="panel-heading1">
-                                                <h4 class="panel-title1">
-                                                    <a class="accordion-toggle collapsed" data-bs-toggle="collapse"
-                                                        data-parent="#accordion2" href="#collapse-{{ $faq->id }}"
-                                                        aria-expanded="false">{!! $faq->question !!}</a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse-{{ $faq->id }}" class="panel-collapse collapse active"
-                                                role="tabpanel" aria-expanded="false">
-                                                <div class="panel-body bg-white">
-                                                    {!! $faq->answer !!}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-
-                                </div>
-                            </div>
-                        </div>
-                    @endif
                 </div>
-
-                <!-- Right Sidebar -->
-                <div class="col-lg-4">
-                    <div class="card">
-                        @if ($course->is_popular)
-                            <div class="ribbon ribbon-top-right text-danger">
-                                <span class="bg-danger">Best Seller</span>
-                            </div>
-                        @elseif ($course->is_latest)
-                            <div class="ribbon ribbon-top-right text-danger">
-                                <span class="bg-danger">Latest</span>
-                            </div>
-                        @endif
-                        <div class="card-body">
-                            <img src="{{ asset('storage/' . $course->icon) }}" alt="img"
-                                class="img-responsive  border br-7">
-                            <div class="mt-4 mb-4 text-center">
-                                @if ($course->default_price)
-                                    <div class="mb-2">
-                                        <span class="font-weight-semibold h2 text-default-dark mb-0">{!! price_format(active_currency(), $course->default_price ?? 14) !!}
-                                            {{-- <span class="ms-1 font-weight-normal fs-16 strike-text text-default">$155</span> --}}
-                                        </span>
-                                    </div>
-                                @endif
-                                <p class="text-success font-weight-semibold mb-0 mt-1"><i
-                                        class="fe fe-clock me-1"></i>Duration: {{ $course->duration }} days</p>
-                            </div>
-                            <div class="">
-                                <a href="javascript:void(0)" class="btn btn-block btn-secondary mb-3 mb-xl-0" onclick="openEnquiryModal(this)" data-heading="Enquire Now" data-course="{{ $course->translation->name }}" data-courseId="{{ $course->id }}"><span>Enquire
-                                        Now</span><i class="fe fe-message mt-1 ms-2 fs-14"></i></a>
-                                {{-- <a href="javascript:void(0)" class="btn btn-block btn-secondary mb-3 mb-xl-0"><span>Enroll
-                                        Now</span> <i class="fe fe-arrow-right mt-1 ms-2 fs-14"></i></a> --}}
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <p class="small text-muted mb-1">Guarantee</p>
+                        <p class="fw-bold">Money-back promise</p>
                     </div>
-
-
-                    <!-- Related Latest Courses -->
-                    @if ($latestCourses->isNotEmpty())
-                        <div class="card mt-4">
-                            <div class="card-header">
-                                <h5 class="card-title">Latest Courses</h5>
-                            </div>
-                            <div class="card-body">
-                                @foreach ($latestCourses as $latest)
-                                    <div class="mb-3">
-                                        <a
-                                            href="{{ route('courses.show', ['topic' => $latest->topic_slug, 'course' => $latest->course_slug]) }}">
-                                            <h6 class="mb-1">{{ $latest->translation->name }}</h6>
-                                        </a>
-                                        <small class="text-muted">
-                                            <i class="fe fe-clock me-1"></i>Duration: {{ $course->duration }} {{ Str::plural('Day', $course->duration)  }}
-                                        </small>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    @endif
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <p class="small text-muted mb-1">Included</p>
+                        <p class="fw-bold">Live labs & resources</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Tabs -->
+
+    <section class="sptb">
+        <div class="container">
+
+            <ul class="nav nav-tabs border-bottom">
+                <li class="nav-item"><button class="nav-link active" data-tab="overview">Overview</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="syllabus">Syllabus</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="outcomes">Outcomes</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="audience">Who Should Attend</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="prereq">Prerequisites</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="delivery">Ways to learn</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="exam">Exam & certification</button></li>
+                <li class="nav-item"><button class="nav-link" data-tab="faqs">FAQs</button></li>
+            </ul>
+
+
+            <div class="row mt-2 g-4">
+                <!-- Left Content -->
+                <div class="col-lg-8">
+                    <div id="overview" class="tab-panel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>{!! $course->translation->overview !!}</div>
+                            </div>
+                            <div class="col-md-6">
+                                @if ($course->overview_image)
+                                    <img src="{{ asset('storage/' . $course->overview_image) }}"
+                                        class="img-fluid rounded shadow" alt="">
+                                @endif
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="syllabus" class="tab-panel d-none">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @foreach ($course->syllabi as $syllabus)
+                                    <div class="d-flex flex-column mb-2 bg-white rounded7 rounded shadow p-4">
+                                        <div class="border-bottom pb-2 mb-2 fw-semibold">
+                                            {{ $syllabus->title }}
+
+                                        </div>
+
+
+                                        <div>{!! $syllabus->description !!}</div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="outcomes" class="tab-panel d-none">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @foreach ($course->outcomes as $outcome)
+                                    <div class="d-flex mb-2 bg-white rounded7 rounded shadow p-4">{{ $outcome->title }}
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="col-md-6">
+                                @if ($course->outcomes_image)
+                                    <img src="{{ asset('storage/' . $course->outcomes_image) }}"
+                                        class="img-fluid rounded shadow" alt="">
+                                @endif
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="audience" class="tab-panel d-none">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>{!! $course->translation->who_should_attend !!}</div>
+                            </div>
+                            <div class="col-md-6">
+                                @if ($course->who_should_attend_image)
+                                    <img src="{{ asset('storage/' . $course->who_should_attend_image) }}"
+                                        class="img-fluid rounded shadow" alt="">
+                                @endif
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="prereq" class="tab-panel d-none">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>{!! $course->translation->prerequisites !!}</div>
+                            </div>
+                            <div class="col-md-6">
+                                @if ($course->prerequisites_image)
+                                    <img src="{{ asset('storage/' . $course->prerequisites_image) }}"
+                                        class="img-fluid rounded shadow" alt="">
+                                @endif
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="delivery" class="tab-panel d-none">
+                        <div class="row">
+                            @foreach ($course->deliveryMethods as $deliveryMethod)
+                                <div class="col col-sm-6 d-flex">
+                                    <div class="mb-lg-0 mb-4 box-shadow about-2 p-5 flex-fill">
+                                        <div class=" text-center">
+                                            <div class="icon-bg icon-service about">
+                                                <img src="{!! asset('storage/' . $deliveryMethod->icon) !!}" alt="{{ $deliveryMethod->name }}">
+                                            </div>
+                                            <div class="servic-data mt-3">
+                                                <h4 class="font-weight-semibold mb-2">{!! $deliveryMethod->name !!}</h4>
+                                                <p class="mb-0">{!! $deliveryMethod->shot_description !!}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div id="faqs" class="tab-panel row g-3 d-none">
+                        <div class="faqs">
+                            <div class="panel-group1" id="accordion2">
+                                @foreach ($course->faqs as $faq)
+                                    <div class="panel panel-default mb-4 border p-0">
+                                        <div class="panel-heading1">
+                                            <h4 class="panel-title1"> <a class="accordion-toggle collapsed"
+                                                    data-bs-toggle="collapse" data-parent="#accordion2"
+                                                    href="#faq-{{ $faq->id }}"
+                                                    aria-expanded="false">{!! $faq->question !!}</a> </h4>
+                                        </div>
+                                        <div id="faq-{{ $faq->id }}" class="panel-collapse active collapse"
+                                            role="tabpanel" aria-expanded="false" style="">
+                                            <div class="panel-body bg-white">
+                                                {!! $faq->answer !!}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="col-lg-4">
+                    <section id="enquire" class="bg-white rounded-3 p-4 shadow">
+                        <h3 class="h5 fw-semibold">Request Pricing & Availability</h3>
+                        <p class="small text-muted">We reply within one working day — real humans, clear prices, no
+                            pressure.
+                        </p>
+                        <form class="mt-3 vstack gap-2" id="enquireForm">
+                            <input type="text" class="form-control" name="name" placeholder="Your name *"
+                                required>
+                            <input type="email" class="form-control" name="email" placeholder="Work email *"
+                                required>
+                            <input type="tel" class="form-control" name="phone" placeholder="Phone">
+                            <textarea class="form-control" name="message" rows="3" placeholder="Tell us what you need"></textarea>
+                            <button type="submit" class="btn btn-primary fw-semibold">Get your tailored
+                                quote</button>
+                        </form>
+                    </section>
+                </aside>
+            </div>
+
+        </div>
+    </section>
 @endsection
+
+
 @push('scripts')
     <script>
-        $(document).ready(function() {
-            const $searchInput = $("#heroSearch");
-            const $suggestions = $("#searchSuggestions");
-            const $suggestionItems = $suggestions.find("li");
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll("[data-tab]");
+            const panels = document.querySelectorAll(".tab-panel");
 
-            $searchInput.on("input", function() {
-                const query = $(this).val().trim();
-                let hasMatch = false;
-
-                if (query.length > 1) {
-                    const regex = new RegExp(query, "i"); // case-insensitive regex
-
-                    $suggestionItems.each(function() {
-                        const text = $(this).text().trim();
-                        if (regex.test(text)) {
-                            $(this).show();
-                            hasMatch = true;
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-
-                    if (hasMatch) {
-                        $suggestions.addClass("show");
+            function setTab(key) {
+                tabs.forEach(btn => btn.classList.toggle("active", btn.dataset.tab === key));
+                panels.forEach(p => {
+                    if (p.id === key) {
+                        p.classList.remove("d-none");
+                        p.classList.add("active");
                     } else {
-                        $suggestions.removeClass("show");
+                        p.classList.add("d-none");
+                        p.classList.remove("active");
                     }
-                } else {
-                    // Reset when query is empty
-                    $suggestionItems.show();
-                    $suggestions.removeClass("show");
-                }
-            });
+                });
+            }
 
-            // Close dropdown when clicking outside
-            $(document).on("click", function(e) {
-                if (!$searchInput.is(e.target) && !$suggestions.is(e.target) && $suggestions.has(e.target)
-                    .length === 0) {
-                    $suggestions.removeClass("show");
-                }
-            });
+            tabs.forEach(tab => tab.addEventListener("click", () => setTab(tab.dataset.tab)));
+            const initial = location.hash.replace("#", "") || "overview";
+            if (document.getElementById(initial)) setTab(initial);
         });
     </script>
 @endpush

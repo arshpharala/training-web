@@ -25,6 +25,16 @@ class Course extends Model
         });
     }
 
+    function getLevelNameAttribute()
+    {
+        $levels = [
+            1 => __('Beginner'),
+            2 => __('Intermediate'),
+            3 => __('Advanced'),
+        ];
+        return $levels[$this->level] ?? null;
+    }
+
     public function topic()
     {
         return $this->belongsTo(Topic::class);
@@ -45,7 +55,7 @@ class Course extends Model
         return $this->hasMany(CourseOutcome::class);
     }
 
-    function syllabus()
+    function syllabi()
     {
         return $this->hasMany(CourseSyllabus::class);
     }
