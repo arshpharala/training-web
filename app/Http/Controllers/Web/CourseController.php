@@ -42,7 +42,7 @@ class CourseController extends Controller
         $data['categories'] = $categories;
 
         $data['latestCourses'] = $latestCourses;
-        $data['meta'] = $course->metaForLocale() ??  $page->metaForLocale() ?? null;
+        $data['meta'] = $course->metaForLocale() ??  null;
 
 
         $data['course'] = $course;

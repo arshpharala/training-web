@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Left Content -->
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-7 col-md-12">
                         <div class="text-white mb-5">
                             {{-- <p class="text-uppercase small text-white-50 mb-3 animate__animated animate__fadeInDown">
                                 Industry-led learning
@@ -85,7 +85,7 @@
                     </div>
 
                     <!-- Right Lottie Animation -->
-                    <div class="col-lg-6 d-none d-md-block position-relative text-center">
+                    <div class="col-lg-5 d-none d-md-block position-relative text-center">
 
                         <div style="width:100%; max-width:500px; min-height:350px; margin:auto;">
                             @if ($course->banner)
