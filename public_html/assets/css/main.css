@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .horizontal-megamenu {
   --menu-bg: #ffffff;
   --menu-surface: #f9fafb;
@@ -153,9 +154,11 @@
     overflow-y: auto;
     padding: 20px;
   }
+
   .horizontal-megamenu.open {
     display: block;
   }
+
   /* Hide desktop-only */
   .horizontal-megamenu .topics-list,
   .horizontal-megamenu .courses-list,
@@ -163,15 +166,18 @@
   .mega-pill {
     display: none !important;
   }
+
   /* Categories full width */
   .horizontal-megamenu .categories-list {
     width: 100%;
     background: none;
     padding: 0;
   }
+
   .horizontal-megamenu .categories-list ul {
     grid-template-columns: 1fr;
   }
+
   /* Sub-categories */
   .mobile-sub {
     margin-left: 10px;
@@ -179,6 +185,7 @@
     padding-left: 10px;
     border-left: 2px solid var(--menu-border);
   }
+
   /* Courses */
   .mobile-courses {
     margin-left: 20px;
@@ -186,6 +193,7 @@
     padding-left: 10px;
     border-left: 1px dashed var(--menu-border);
   }
+
   /* Arrow icons */
   .horizontal-megamenu .item-box {
     border-radius: 0px;
@@ -194,6 +202,7 @@
     min-height: 40px;
     height: auto;
   }
+
   .horizontal-megamenu .item-box::after {
     content: "›";
     position: absolute;
@@ -202,18 +211,22 @@
     color: var(--menu-muted);
     transition: transform 0.25s ease, color 0.25s ease;
   }
+
   .horizontal-megamenu .item-box.open::after {
     transform: rotate(90deg);
     /* › → ⌄ */
     color: var(--menu-accent);
   }
 }
+
 @media (min-width: 992px) {
+
   .sticky-wrapper.is-sticky .horizontal-main,
   .bg-background-1 .sticky-wrapper.is-sticky .header-style.horizontal-main {
     background: rgba(255, 255, 255, 0.9098039216);
   }
 }
+
 /* ===== Enquiry Modal Overlay ===== */
 .enquiry-modal {
   position: fixed;
@@ -289,10 +302,12 @@
   .enquiry-cols-2 {
     grid-template-columns: 1fr 1fr;
   }
+
   .enquiry-cols-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .enquiry-col-span-2 {
   grid-column: span 2;
 }
@@ -357,6 +372,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .enquiry-radio-card {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
@@ -486,7 +502,7 @@
   color: #6c5ce7;
 }
 
-.enquiry-disclosure > div {
+.enquiry-disclosure>div {
   padding: 0px 16px;
   background: #fff;
 }
@@ -527,15 +543,19 @@
 
 /* Child selector - only affects this input */
 .enquiry-form input[list=courseList] {
-  text-align: left; /* left align text */
-  padding-left: 10px; /* some breathing space */
-  width: 100%; /* take full parent width */
+  text-align: left;
+  /* left align text */
+  padding-left: 10px;
+  /* some breathing space */
+  width: 100%;
+  /* take full parent width */
   box-sizing: border-box;
 }
 
 /* Chrome, Safari, Edge */
 .enquiry-form input[list=courseList]::-webkit-calendar-picker-indicator {
-  display: none; /* hide default dropdown arrow if you don’t want it */
+  display: none;
+  /* hide default dropdown arrow if you don’t want it */
 }
 
 .upload__box {
@@ -668,6 +688,7 @@
 .tab-panel {
   display: none;
 }
+
 .tab-panel.active {
   display: block;
 }
@@ -706,6 +727,54 @@
   background-color: #facc15;
   border-color: #facc15;
   color: #000;
+}
+
+.nav-tabs .nav-link {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+  background: none !important;
+  border-bottom: 2px solid #6A4CFF;
+  color: #4B2EF5 !important;
+  font-weight: 600;
+}
+
+.pt-7 p.small {
+  font-size: .875rem;
+  color: #475569;
+}
+
+.pt-7 p.fw-bold {
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.rounded-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: #fff;
+  padding: .35rem .75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  font-size: .8rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+
+  .sptb .tab-panel p,
+  .sptb .tab-panel ul li,
+  .sptb .tab-panel div.mb-2 {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
