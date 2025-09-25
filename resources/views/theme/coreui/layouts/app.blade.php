@@ -20,7 +20,7 @@
 
     <style>
         .img-sm {
-            max-width: 150px;
+            max-width: 35px;
             /* Example: limit image width */
             height: auto;
             display: block;
