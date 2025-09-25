@@ -78,6 +78,7 @@
         <li class="nav-item"><a class="nav-link" href="{{ route('admin.catalog.topics.index') }}">Topics</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('admin.catalog.courses.index') }}">Courses</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('admin.catalog.delivery-methods.index') }}">Delivery Methods</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('admin.catalog.exams.index') }}">Exams</a></li>
       </ul>
     </li>
 
