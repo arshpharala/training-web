@@ -280,6 +280,11 @@
                     'model' => $course,
                     'deliveryMethods' => $deliveryMethods,
                 ])
+
+                @include('theme.adminlte.components._exams', [
+                    'model' => $course,
+                    'exams' => $exams,
+                ])
                 @include('theme.adminlte.components._metas', [
                     'model' => $course,
                     'grid' => 'col-12',

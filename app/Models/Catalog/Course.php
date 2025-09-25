@@ -65,6 +65,11 @@ class Course extends Model
         return $this->belongsToMany(DeliveryMethod::class, 'course_delivery_methods');
     }
 
+    function exams()
+    {
+        return $this->belongsToMany(Exam::class, 'course_exams', 'course_id', 'exam_id');
+    }
+
 
     function scopeWithJoins($query)
     {

@@ -708,4 +708,57 @@
   color: #000;
 }
 
+.nav-tabs .nav-link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.nav-tabs .nav-link:hover {
+  background: none !important;
+  border-bottom: 2px solid #6A4CFF;
+  color: #4B2EF5 !important;
+  font-weight: 600;
+}
+.nav-tabs .nav-link.active {
+  background: none !important;
+  border-bottom: 2px solid #6A4CFF;
+  color: #4B2EF5 !important;
+  font-weight: 600;
+}
+
+.pt-7 p.small {
+  font-size: 0.875rem;
+  color: #475569;
+}
+.pt-7 p.fw-bold {
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.rounded-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: #fff;
+  padding: 0.35rem 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1240px) {
+  .sptb .tab-panel p {
+    font-size: 16px;
+  }
+  .sptb .tab-panel ul li {
+    font-size: 16px;
+  }
+  .sptb .tab-panel div.mb-2 {
+    font-size: 16px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

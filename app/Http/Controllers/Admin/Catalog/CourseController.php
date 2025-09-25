@@ -13,6 +13,7 @@ use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Catalog\CourseOutcome;
 use App\Models\Catalog\CourseSyllabus;
 use App\Models\Catalog\DeliveryMethod;
+use App\Models\Catalog\Exam;
 use App\Models\CMS\Faq;
 use App\Models\Seo\Meta;
 
@@ -143,6 +144,7 @@ class CourseController extends Controller
         $categories     = Category::with('translation')->get();
 
         $data['deliveryMethods']    = DeliveryMethod::all();
+        $data['exams']              = Exam::all();
         $data['course']             = $course;
         $data['categories']         = $categories;
 
@@ -237,6 +239,7 @@ class CourseController extends Controller
             Faq::store($request, $course);
             CourseOutcome::store($request, $course);
             CourseSyllabus::store($request, $course);
+            Exam::sync($request, $course);
 
             DB::commit();
         } catch (\Throwable $th) {

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Catalog\ExamController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CMS\CityController;
 use App\Http\Controllers\Admin\CMS\NewsController;
@@ -30,6 +31,8 @@ use App\Http\Controllers\Controller;
 Route::get('dashboard',                             [DashboardController::class, 'dashboard'])->name('dashboard');
 
 Route::group(['prefix' => '/catalog', 'as' => 'catalog.'], function () {
+
+    Route::resource('exams',                ExamController::class);
 
     Route::resource('categories',               CategoryController::class);
     Route::delete('categories/{category}/restore',  [CategoryController::class, 'restore'])->name('categories.restore');
