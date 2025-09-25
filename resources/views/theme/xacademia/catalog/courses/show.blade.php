@@ -279,7 +279,7 @@
                 </div>
 
                 <!-- Sidebar -->
-                <aside class="col-lg-4">
+                {{-- <aside class="col-lg-4">
                     <section id="enquire" class="bg-white rounded-3 p-4 shadow">
                         <h3 class="h5 fw-semibold">Request Pricing & Availability</h3>
                         <p class="small text-muted">We reply within one working day — real humans, clear prices, no
@@ -296,7 +296,51 @@
                                 quote</button>
                         </form>
                     </section>
+                </aside> --}}
+
+                <aside class="col-lg-4">
+                    <section id="enquire" class="bg-white rounded-3 p-4 shadow">
+                        <h3 class="h5 fw-semibold">Request Pricing & Availability</h3>
+                        <p class="small text-muted">
+                            We reply within one working day — real humans, clear prices, no pressure.
+                        </p>
+
+                        <form class="mt-3 vstack gap-2 ajax-form" id="enquiryForm" action="{{ route('enquiry') }}"
+                            method="POST">
+                            @csrf
+
+                            <!-- Visible fields -->
+                            <input type="text" class="form-control" name="name" placeholder="Your name *"
+                                required>
+                            <input type="email" class="form-control" name="email" placeholder="Work email *"
+                                required>
+                            <input type="tel" class="form-control" name="phone" placeholder="Phone">
+                            <textarea class="form-control" name="message" rows="3" placeholder="Tell us what you need"></textarea>
+
+                            <!-- Hidden fields with course context -->
+                            <input type="hidden" name="course" value="{{ $course->translation->name }}">
+                            <input type="hidden" name="course_id" value="{{ $course->id }}">
+                            <input type="hidden" name="duration" value="{{ $course->duration }}">
+                            <input type="hidden" name="topic" value="{{ $course->topic->translation->name ?? '' }}">
+                            <input type="hidden" name="topic_id" value="{{ $course->topic->id ?? '' }}">
+                            <input type="hidden" name="category" value="{{ $course->category->translation->name ?? '' }}">
+                            <input type="hidden" name="category_id" value="{{ $course->category->id ?? '' }}">
+                            <input type="hidden" name="url" value="{{ url()->current() }}">
+                            <input type="hidden" name="delivery_method" value="{{ $course->delivery_method ?? '' }}">
+                            <input type="hidden" name="country" value="{{ active_country()->id }}">
+                            <input type="hidden" name="consent" value="1">
+
+                            <!-- Honeypot -->
+                            <input type="text" name="website" id="website" class="visually-hidden" tabindex="-1"
+                                autocomplete="off" aria-hidden="true" />
+
+                            <button type="submit" class="btn btn-primary fw-semibold">
+                                Get your tailored quote
+                            </button>
+                        </form>
+                    </section>
                 </aside>
+
             </div>
 
         </div>

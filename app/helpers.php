@@ -5,6 +5,7 @@ use App\Models\CMS\Locale;
 use App\Models\Catalog\Course;
 use App\Models\Catalog\Category;
 use App\Models\CMS\Currency;
+use App\Models\Country;
 use Illuminate\Support\Facades\Cache;
 
 if (!function_exists('setting')) {
@@ -62,6 +63,13 @@ if (!function_exists('active_locals')) {
     function active_locals()
     {
         return Locale::pluck('code')->toArray() ?? ['en'];
+    }
+}
+
+if (!function_exists('active_country')) {
+    function active_country()
+    {
+        return Country::where('iso2', 'GB')->first();
     }
 }
 
