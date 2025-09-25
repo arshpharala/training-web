@@ -48,11 +48,11 @@ class StatisticController extends Controller
                 ->editColumn('created_at', function ($row) {
                     return $row->created_at?->format('d-M-Y  h:m A');
                 })
-                ->addColumn('is_active', fn($row) => !$row->is_active ? '<span class="badge badge-danger">Inactive</span>' : '<span class="badge badge-success">Active</span>')
+                ->addColumn('is_active', fn($row) => !$row->is_active ? '<span class="badge rounded-pill text-bg-danger text-white">Inactive</span>' : '<span class="badge rounded-pill text-bg-success text-white">Active</span>')
                 ->rawColumns(['icon', 'action', 'is_active'])
                 ->make(true);
         }
-        return view('theme.adminlte.cms.statistics.index');
+        return view('theme.coreui.cms.statistics.index');
     }
 
     /**
@@ -60,7 +60,7 @@ class StatisticController extends Controller
      */
     public function create()
     {
-        $response['view'] =  view('theme.adminlte.cms.statistics.create')->render();
+        $response['view'] =  view('theme.coreui.cms.statistics.create')->render();
 
         return response()->json([
             'success' => true,
@@ -128,7 +128,7 @@ class StatisticController extends Controller
 
         $data['statistic'] = $statistic;
 
-        $response['view'] =  view('theme.adminlte.cms.statistics.edit', $data)->render();
+        $response['view'] =  view('theme.coreui.cms.statistics.edit', $data)->render();
 
         return response()->json([
             'success' => true,
@@ -161,7 +161,8 @@ class StatisticController extends Controller
         foreach ($data['name'] as $locale => $name) {
             StatisticTranslation::updateOrCreate([
                 'statistic_id'      => $statistic->id,
-                'locale'            => $locale],[
+                'locale'            => $locale
+            ], [
                 'name'              => $name
             ]);
         }

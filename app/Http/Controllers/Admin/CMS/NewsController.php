@@ -60,7 +60,7 @@ class NewsController extends Controller
                 ->make(true);
         }
 
-        return view('theme.adminlte.cms.news.index');
+        return view('theme.coreui.cms.news.index');
     }
 
     /**
@@ -74,7 +74,7 @@ class NewsController extends Controller
         $data['news'] = $news;
         $data['categories'] = $categories;
 
-        return view('theme.adminlte.cms.news.create', $data);
+        return view('theme.coreui.cms.news.create', $data);
     }
 
     /**

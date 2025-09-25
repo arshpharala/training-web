@@ -45,6 +45,7 @@ class TestimonialController extends Controller
                         ? '<img src="' . asset('storage/' . $row->image) . '" class="img-sm">'
                         : '';
                 })
+
                 ->editColumn('is_active', fn($row) => $row->is_active ? '<span class="badge border border-success text-success">Visible</span>' : '<span class="badge border border-warning text-warning">Hidden</span>')
                 ->addColumn('action', function ($row) {
                     $editUrl = route('admin.cms.testimonials.edit', $row->id);
@@ -59,7 +60,7 @@ class TestimonialController extends Controller
                 ->make(true);
         }
 
-        return view('theme.adminlte.cms.testimonials.index');
+        return view('theme.coreui.cms.testimonials.index');
     }
 
     /**
@@ -67,7 +68,7 @@ class TestimonialController extends Controller
      */
     public function create()
     {
-        return view('theme.adminlte.cms.testimonials.create');
+        return view('theme.coreui.cms.testimonials.create');
     }
 
     /**
@@ -137,7 +138,7 @@ class TestimonialController extends Controller
         $testimonial            = Testimonial::findOrFail($id);
         $data['testimonial']    = $testimonial;
 
-        return view('theme.adminlte.cms.testimonials.edit', $data);
+        return view('theme.coreui.cms.testimonials.edit', $data);
     }
 
     /**

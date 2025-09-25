@@ -1,4 +1,4 @@
-@extends('theme.adminlte.layouts.app')
+@extends('theme.coreui.layouts.app')
 
 @section('content-header')
   <div class="row mb-2">

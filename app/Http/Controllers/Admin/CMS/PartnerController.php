@@ -35,11 +35,11 @@ class PartnerController extends Controller
                 ->editColumn('created_at', function ($row) {
                     return $row->created_at?->format('d-M-Y  h:m A');
                 })
-                ->addColumn('is_active', fn($row) => $row->deleted_at ? '<span class="badge badge-danger">Deleted</span>' : '<span class="badge badge-success">Active</span>')
+                ->addColumn('is_active', fn($row) => $row->deleted_at ? '<span class="badge rounded-pill text-bg-danger text-white">Deleted</span>' : '<span class="badge rounded-pill text-bg-success text-white">Active</span>')
                 ->rawColumns(['logo', 'action', 'is_active'])
                 ->make(true);
         }
-        return view('theme.adminlte.cms.partners.index');
+        return view('theme.coreui.cms.partners.index');
     }
 
     /**
@@ -47,7 +47,7 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        $response['view'] =  view('theme.adminlte.cms.partners.create')->render();
+        $response['view'] =  view('theme.coreui.cms.partners.create')->render();
 
         return response()->json([
             'success' => true,
@@ -93,7 +93,7 @@ class PartnerController extends Controller
         $partner          = Partner::findOrFail($id);
         $data['partner'] = $partner;
 
-        $response['view'] =  view('theme.adminlte.cms.partners.edit', $data)->render();
+        $response['view'] =  view('theme.coreui.cms.partners.edit', $data)->render();
 
         return response()->json([
             'success'   => true,

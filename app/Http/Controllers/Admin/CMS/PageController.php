@@ -41,7 +41,7 @@ class PageController extends Controller
                 ->make(true);
         }
 
-        return view('theme.adminlte.cms.pages.index');
+        return view('theme.coreui.cms.pages.index');
     }
 
     public function create()
