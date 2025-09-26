@@ -6,16 +6,7 @@
   <li class="breadcrumb-item active">Edit</li>
 @endsection
 @section('content-header')
-  <div class="row mb-3">
-    <div class="col">
-      <h1 class="h3 mb-0">@lang('crud.edit_title', ['name' => 'Testimonial'])</h1>
-    </div>
-    <div class="col d-flex justify-content-end gap-2">
-      <a href="{{ route('admin.cms.testimonials.index') }}" type="button" class="btn btn-dark">
-        @lang('crud.back_to_list', ['name' => 'Testimonial'])
-      </a>
-    </div>
-  </div>
+  <x-coreui::content-header type="edit" name="Testimonial" :indexRoute="route('admin.cms.testimonials.index')" />
 @endsection
 
 

@@ -48,7 +48,7 @@ class PageController extends Controller
     {
         $page = new Page();
         $data['page'] = $page;
-        return view('theme.adminlte.cms.pages.create', $data);
+        return view('theme.coreui.cms.pages.create', $data);
     }
 
     public function store(Request $request)

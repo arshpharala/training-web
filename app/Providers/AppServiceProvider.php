@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         $this->registerAdminRoutes();
+
+        Blade::componentNamespace('App\\View\\Components', 'app');
+        Blade::anonymousComponentNamespace('theme.coreui.components', 'coreui');
     }
 
     protected function registerAdminRoutes()

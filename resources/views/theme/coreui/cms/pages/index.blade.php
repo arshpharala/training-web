@@ -1,16 +1,12 @@
 @extends('theme.coreui.layouts.app')
-
-@section('content-header')
-  <div class="row mb-2">
-    <div class="col-sm-6">
-      <h1 class="m-0">Pages</h1>
-    </div>
-    <div class="col-sm-6">
-      <a href="{{ route('admin.cms.pages.create') }}" class="btn btn-primary float-sm-right">Create Page</a>
-    </div>
-  </div>
+@section('breadcrumb')
+  <li class="breadcrumb-item">Home</li>
+  <li class="breadcrumb-item">CMS</li>
+  <li class="breadcrumb-item active">Page</li>
 @endsection
-
+@section('content-header')
+  <x-coreui::content-header type="list" name="Page" :createRoute="route('admin.cms.pages.create')" />
+@endsection
 @section('content')
   <div class="row">
     <div class="col-md-12">
@@ -42,8 +38,7 @@
         processing: true,
         serverSide: true,
         ajax: '{{ route('admin.cms.pages.index') }}',
-        columns: [
-          {
+        columns: [{
             data: 'title',
             name: 'title'
           },
@@ -65,5 +60,4 @@
       });
     });
   </script>
-
 @endpush

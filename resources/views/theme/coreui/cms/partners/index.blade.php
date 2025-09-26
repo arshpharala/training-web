@@ -7,20 +7,7 @@
   </li>
 @endsection
 @section('content-header')
-  <div class="row mb-3">
-    <div class="col">
-      <h1 class="h3 mb-0">@lang('crud.list_title', ['name' => 'Partner'])</h1>
-    </div>
-    <div class="col d-flex justify-content-end gap-2">
-      <button data-url="{{ route('admin.cms.partners.create') }}" type="button" class="btn btn-dark"
-        onclick="getAside()">
-        <svg class="icon me-1">
-          <use xlink:href="{{ asset('theme/coreui/vendors/@coreui/icons/svg/free.svg#cil-plus') }}"></use>
-        </svg>
-        @lang('crud.create')
-      </button>
-    </div>
-  </div>
+  <x-coreui::content-header type="list" name="Partner" :createRoute="route('admin.cms.partners.create')" aside="true" />
 @endsection
 @section('content')
   <div class="card">
